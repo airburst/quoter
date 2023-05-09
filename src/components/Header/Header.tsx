@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@components/Logo";
 import styles from "./Header.module.css";
-import { Navigation } from "@components/Navigation";
 
 export const Header = () => {
   return (
@@ -9,7 +8,7 @@ export const Header = () => {
       <Link href="/">
         <Logo />
       </Link>
-      <Navigation />
+      <button>Call Us</button>
     </header>
   );
 };

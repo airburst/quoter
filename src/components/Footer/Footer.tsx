@@ -1,8 +1,21 @@
-import { Text } from "@simplybusiness/mobius";
 import styles from "./Footer.module.css";
+
+export const Trustpilot = () => {
+  return <p>Trustpilot</p>;
+};
+
+export const Address = () => {
+  return <p>Address</p>;
+};
+
+export const Legal = () => {
+  return <p>Legal</p>;
+};
 
 export const Footer = () => (
   <footer className={styles.footer}>
-    <Text>&copy; 2023</Text>
+    <Trustpilot />
+    <Address />
+    <Legal />
   </footer>
 );
