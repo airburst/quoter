@@ -1,0 +1,7 @@
+.sb {
+  fill: url(#linear-gradient);
+}
+
+.text {
+  fill: var(--color-azure-700);
+}

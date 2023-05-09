@@ -1,0 +1,30 @@
+:root {
+  --link-color: var(--color-azure-500);
+  --background-color-light: var(--color-neutral-200);
+  --background-color-dark: var(--color-azure-600);
+  --text-inverted: var(--color-neutral-100);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-3);
+  background-color: var(--background-color-light);
+}

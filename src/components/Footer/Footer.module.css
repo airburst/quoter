@@ -1,0 +1,6 @@
+.footer {
+  text-align: center;
+  background-color: var(--background-color-dark);
+  color: var(--text-inverted);
+  padding: var(--size-30);
+}

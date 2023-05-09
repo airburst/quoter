@@ -1,0 +1,40 @@
+{
+  "name": "quotes-poc",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest",
+    "setup": "cd cli && node setup.js"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@simplybusiness/mobius": "^3.5.0",
+    "@simplybusiness/theme-sb": "^3.5.0",
+    "@types/node": "^20.1.1",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
+    "eslint": "8.40.0",
+    "eslint-config-next": "13.4.1",
+    "next": "13.4.1",
+    "prompts": "^2.4.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@simplybusiness/eslint-config": "^0.1.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.1",
+    "@types/testing-library__jest-dom": "^5.14.5",
+    "jest-environment-jsdom": "^29.5.0",
+    "prettier": "2.8.8",
+    "ts-jest": "^29.1.0"
+  }
+}

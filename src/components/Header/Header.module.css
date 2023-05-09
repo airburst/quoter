@@ -1,0 +1,6 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: var(--size-30);
+}
