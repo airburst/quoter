@@ -8,7 +8,7 @@ export const QuoteCard = () => {
       <div>
         <div>Promo banner</div>
         <header>
-          <img src="./partner-logo.png" />
+          {/* <img src="./partner-logo.png" /> */}
           <span>Cost</span>
         </header>
         <Rating />

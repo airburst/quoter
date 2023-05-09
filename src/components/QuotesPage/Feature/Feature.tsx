@@ -13,7 +13,7 @@ export const Feature = ({
 }) => {
   return (
     <li>
-      <img src={icon} />
+      {/* <img src={icon} /> */}
       <h3>{title}</h3>
       <p>{description}</p>
       {children}

@@ -9,7 +9,7 @@ export const ListItem = ({
 }) => {
   return (
     <li>
-      <img src={icon} />
+      {/* <img src={icon} /> */}
       {children}
     </li>
   );

@@ -10,9 +10,7 @@ export const Navigation = () => {
           <ActiveLink href="/">General Liability</ActiveLink>
         </ListItem>
       </List>
-      <button>
-        <img src="./toggle.png" alt="Toggle menu" />
-      </button>
+      <button>{/* <img src="./toggle.png" alt="Toggle menu" /> */}</button>
     </nav>
   );
 };
