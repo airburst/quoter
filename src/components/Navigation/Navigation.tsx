@@ -26,11 +26,11 @@ export const Navigation = () => {
     <nav className={containerClasses}>
       <List className={styles.list}>
         <ListItem className={styles.listItem}>
-          <Donut value="25" />
+          <Donut value="100" />
           <ActiveLink href="/">General Liability</ActiveLink>
         </ListItem>
         <ListItem className={styles.listItem}>
-          <Donut value="50" />
+          <Donut value="100" />
           <ActiveLink href="/page-1">Page 1</ActiveLink>
         </ListItem>
         <ListItem className={styles.listItem}>
