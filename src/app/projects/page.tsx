@@ -1,5 +1,3 @@
-import { Metadata } from "@components/Metadata";
-
 export default async function Projects() {
   const calculated = Promise.resolve(
     "Static Data is data that doesn't change often. For example, a blog post.",
@@ -7,7 +5,6 @@ export default async function Projects() {
 
   return (
     <>
-      <Metadata />
       <h1>Projects</h1>
       <p>
         This page uses <strong>static data fetching</strong>.

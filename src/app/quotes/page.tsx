@@ -1,4 +1,3 @@
-import { Metadata } from "@components/Metadata";
 import {
   BackLink,
   QuoteSection,
@@ -9,7 +8,6 @@ import {
 export default function Quotes() {
   return (
     <>
-      <Metadata />
       <BackLink />
       <Summary />
       <QuoteSection />
