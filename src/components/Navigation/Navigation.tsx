@@ -7,15 +7,10 @@ export const Navigation = () => {
     <nav className={styles.container}>
       <List className={styles.list}>
         <ListItem>
-          <ActiveLink href="/">Home</ActiveLink>
-        </ListItem>
-        <ListItem>
-          <ActiveLink href="/projects">Projects</ActiveLink>
-        </ListItem>
-        <ListItem>
-          <ActiveLink href="/about">About</ActiveLink>
+          <ActiveLink href="/">General Liability</ActiveLink>
         </ListItem>
       </List>
+      <button>{/* <img src="./toggle.png" alt="Toggle menu" /> */}</button>
     </nav>
   );
 };

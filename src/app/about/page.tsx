@@ -1,11 +1,9 @@
 import { Suspense } from "react";
-import { Metadata } from "@components/Metadata";
 import { Planets } from "./Planets";
 
 export default async function About() {
   return (
     <>
-      <Metadata />
       <main>
         <h1>About Us</h1>
         <p>
