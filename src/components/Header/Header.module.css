@@ -1,6 +1,21 @@
 .container {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  height: var(--size-70);
   text-align: center;
+}
+
+.innerWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin: 0 auto;
   padding: var(--size-30);
+  max-width: var(--max-page-width);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
 }
