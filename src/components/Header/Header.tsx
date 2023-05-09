@@ -1,14 +1,17 @@
 import Link from "next/link";
+import { Button } from "@simplybusiness/mobius";
 import { Logo } from "@components/Logo";
 import styles from "./Header.module.css";
 
 export const Header = () => {
   return (
     <header className={styles.container}>
-      <Link href="/">
-        <Logo />
-      </Link>
-      <button>Call Us</button>
+      <div className={styles.innerWrapper}>
+        <Link className={styles.logo} href="/">
+          <Logo />
+        </Link>
+        <Button variant="ghost">Call Us</Button>
+      </div>
     </header>
   );
 };
