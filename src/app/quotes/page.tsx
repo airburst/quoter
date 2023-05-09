@@ -1,9 +1,5 @@
-import {
-  BackLink,
-  QuoteSection,
-  SellingPoints,
-  Summary,
-} from "@components/QuotesPage";
+import { QuoteSection, SellingPoints, Summary } from "@components/QuotesPage";
+import { BackLink } from "@components/BackLink";
 
 export default function Quotes() {
   return (
