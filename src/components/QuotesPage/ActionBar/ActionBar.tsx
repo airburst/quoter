@@ -1,11 +1,15 @@
+import { Flex } from "@simplybusiness/mobius";
 import { EditLimits } from "./EditLimits";
-import { MonthlyYearlyToggle } from "./MonthlyYearlyToggle";
+import { Cadence } from "./Cadence";
+import { Section } from "@components/Section";
 
 export const ActionBar = () => {
   return (
-    <>
-      <EditLimits />
-      <MonthlyYearlyToggle />
-    </>
+    <Section>
+      <Flex justifyContent="space-between">
+        <EditLimits />
+        <Cadence />
+      </Flex>
+    </Section>
   );
 };

@@ -12,14 +12,14 @@ export const QuoteCard = () => {
       <Highlight />
       <Header />
       <Rating />
-      <Flex className={styles.body} gap="var(--size-20)" flexDirection="column">
+      <Flex className={styles.body}>
         <ListWithIcon
           title="Included with this policy"
           icon="tick"
           color="var(--color-valid)"
         >
           <ListItem>
-            <Flex justifyContent="space-between" className={styles.listItem}>
+            <Flex className={styles.listItem}>
               General Liability <strong>$2M</strong>
             </Flex>
           </ListItem>

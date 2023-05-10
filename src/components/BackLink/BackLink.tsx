@@ -13,7 +13,7 @@ export const BackLink = () => {
   return (
     <Section>
       <div className={styles.container}>
-        <Link href="#" onClick={goBack}>
+        <Link href="#" onClick={goBack} className={styles.link}>
           Back
         </Link>
       </div>
