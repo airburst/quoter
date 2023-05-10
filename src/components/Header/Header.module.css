@@ -1,8 +1,9 @@
 .container {
-  display: flex;
-  width: 100%;
+  width: var(--max-page-width);
   height: var(--size-70);
   text-align: center;
+  margin: 0 auto;
+  padding: var(--size-30) 16px;
 }
 
 .innerWrapper {
@@ -10,9 +11,6 @@
   flex-direction: row;
   flex-grow: 1;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: var(--size-30);
-  max-width: var(--max-page-width);
 }
 
 .logo {

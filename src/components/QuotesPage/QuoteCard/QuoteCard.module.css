@@ -1,6 +1,4 @@
 .container {
-  margin: 0 auto;
-  max-width: 400px;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   border-radius: var(--radius-1);
   overflow: hidden;
@@ -16,4 +14,7 @@
 
 .listItem {
   width: 100%;
+  justify-content: space-between;
+  gap: var(--size-20);
+  flex-direction: column;
 }

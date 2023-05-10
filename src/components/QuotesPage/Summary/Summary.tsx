@@ -5,7 +5,9 @@ import styles from "./Summary.module.css";
 export const Summary = () => {
   return (
     <Section>
-      <span className={styles.intro}>Here are your quotes for</span>
+      <Text variant="caption" elementType="span" className={styles.intro}>
+        Here are your quotes for
+      </Text>
       <h1 className={styles.title}>General Liability</h1>
       <Text elementType="p">
         Searching across <strong>13 carriers</strong> we found
