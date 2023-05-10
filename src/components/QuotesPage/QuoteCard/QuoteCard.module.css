@@ -9,6 +9,8 @@
 }
 
 .body {
+  flex-direction: column;
+  gap: var(--size-30);
   padding: var(--size-30);
 }
 
