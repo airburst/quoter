@@ -1,0 +1,7 @@
+.section {
+  padding: 0 var(--size-30);
+}
+
+.light {
+  background-color: var(--background-color-light);
+}

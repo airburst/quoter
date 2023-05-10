@@ -6,3 +6,4 @@ export * from "./Logo";
 export * from "./MainContent";
 export * from "./Navigation";
 export * from "./Providers";
+export * from "./Section";
