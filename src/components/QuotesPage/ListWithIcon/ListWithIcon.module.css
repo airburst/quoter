@@ -1,0 +1,13 @@
+.title {
+  text-transform: uppercase;
+  color: var(--color-text-medium);
+  margin: 0 0 var(--size-20);
+}
+
+.icon {
+  width: 12px;
+}
+
+.listItem {
+  width: 100%;
+}
