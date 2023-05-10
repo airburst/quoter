@@ -1,7 +1,9 @@
 import { ReactNode } from "react";
+import { Text, Flex } from "@simplybusiness/mobius";
+import styles from "./Feature.module.css";
 
 export const Feature = ({
-  icon,
+  // icon,
   title,
   description,
   children,
@@ -12,11 +14,17 @@ export const Feature = ({
   children?: ReactNode;
 }) => {
   return (
-    <li>
-      {/* <img src={icon} /> */}
-      <h3>{title}</h3>
-      <p>{description}</p>
-      {children}
-    </li>
+    <Flex style={{ margin: "var(--size-30) 0" }}>
+      <div className={styles.icon}>
+        <div className={styles.dot}></div>
+      </div>
+      <div className={styles.content}>
+        <Text elementType="h4" className={styles.noMargin}>
+          {title}
+        </Text>
+        <Text className={styles.text}>{description}</Text>
+        {children}
+      </div>
+    </Flex>
   );
 };

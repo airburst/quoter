@@ -1,0 +1,19 @@
+.container {
+  margin-top: var(--size-30);
+  /* Calculate width minus left div on mobile */
+  width: calc(100vw - var(--size-30) - 56px);
+  scroll-behavior: smooth;
+}
+
+.innerContainer {
+  display: flex;
+  gap: var(--size-30);
+  overflow-x: "scroll";
+}
+
+@media (min-width: 600px) {
+  .container {
+    /* Calculate width minus left div on larger viewports */
+    width: calc(600px - var(--size-30) - 88px);
+  }
+}
