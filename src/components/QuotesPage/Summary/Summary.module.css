@@ -1,0 +1,30 @@
+.container {
+  position: relative;
+  margin-bottom: var(--size-20);
+}
+
+.intro {
+  text-transform: uppercase;
+  font-size: var(--font-size-2);
+  letter-spacing: 1px;
+}
+
+.title {
+  position: relative;
+  margin-top: var(--size-10);
+  margin-bottom: var(--size-40);
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -1.5rem;
+  left: -0.5rem;
+  right: -0.5rem;
+  height: 2rem;
+  z-index: -1;
+  /* TODO: Replace with better underline */
+  background-image: url("./underline.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

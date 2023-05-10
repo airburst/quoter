@@ -21,7 +21,7 @@ body {
   margin: 0;
   font-family: var(--font-family-body);
   font-size: var(--font-size-3);
-  background-color: white;
+  background-color: var(--color-background);
 }
 
 #__next {
