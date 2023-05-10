@@ -1,5 +1,7 @@
-.icon {
-  padding-right: var(--size-30);
+.container {
+  display: flex;
+  gap: var(--size-30);
+  margin-bottom: var(--size-40);
 }
 
 .content {
@@ -18,6 +20,7 @@
   color: var(--color-neutral-400);
   margin-top: 0;
   margin-bottom: 0;
+  padding-right: var(--size-20);
 }
 
 .dot {

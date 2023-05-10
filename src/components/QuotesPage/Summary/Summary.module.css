@@ -1,3 +1,7 @@
+.container {
+  margin-bottom: var(--size-60);
+}
+
 .intro {
   text-transform: uppercase;
   font-size: var(--font-size-2);

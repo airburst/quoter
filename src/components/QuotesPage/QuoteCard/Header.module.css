@@ -1,5 +1,7 @@
 .container {
   padding: var(--size-30);
+  border-top-left-radius: var(--radius-1);
+  border-top-right-radius: var(--radius-1);
 }
 
 .amount {

@@ -8,7 +8,9 @@ export const QuoteActions = () => {
       gap="var(--size-30)"
       className={styles.container}
     >
-      <Button variant="secondary">Compare</Button>
+      <Button variant="secondary" className={styles.link}>
+        Compare
+      </Button>
       <LinkButton href="#" className={styles.link}>
         View Policy <Icon name="rightArrow" />
       </LinkButton>

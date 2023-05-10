@@ -1,15 +1,19 @@
+import { ReactNode } from "react";
 import { QuoteActions } from "../QuoteActions";
 import { Rating } from "../Rating";
-import styles from "./QuoteCard.module.css";
-import { Highlight } from "./Highlight";
 import { Header } from "./Header";
 import { Flex, ListItem } from "@simplybusiness/mobius";
 import { ListWithIcon } from "../ListWithIcon/ListWithIcon";
+import styles from "./QuoteCard.module.css";
 
-export const QuoteCard = () => {
+type Props = {
+  highlight?: ReactNode;
+};
+
+export const QuoteCard = ({ highlight }: Props) => {
   return (
     <li className={styles.container}>
-      <Highlight />
+      {highlight}
       <Header />
       <Rating />
       <Flex className={styles.body}>
@@ -19,7 +23,7 @@ export const QuoteCard = () => {
           color="var(--color-valid)"
         >
           <ListItem>
-            <Flex className={styles.listItem}>
+            <Flex flexDirection="row" className={styles.listItem}>
               General Liability <strong>$2M</strong>
             </Flex>
           </ListItem>

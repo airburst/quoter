@@ -8,7 +8,7 @@
 .innerContainer {
   display: flex;
   gap: var(--size-30);
-  overflow-x: "scroll";
+  overflow-x: scroll;
 }
 
 @media (min-width: 600px) {

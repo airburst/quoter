@@ -14,7 +14,7 @@ export const Feature = ({
   children?: ReactNode;
 }) => {
   return (
-    <Flex style={{ margin: "var(--size-30) 0" }}>
+    <div className={styles.container}>
       <div className={styles.icon}>
         <div className={styles.dot}></div>
       </div>
@@ -25,6 +25,6 @@ export const Feature = ({
         <Text className={styles.text}>{description}</Text>
         {children}
       </div>
-    </Flex>
+    </div>
   );
 };

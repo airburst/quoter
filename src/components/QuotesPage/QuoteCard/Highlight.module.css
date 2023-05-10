@@ -1,6 +1,8 @@
 .container {
   padding: var(--size-30);
   background-color: var(--color-background-highlight);
+  border-top-left-radius: var(--radius-1);
+  border-top-right-radius: var(--radius-1);
 }
 
 .text {

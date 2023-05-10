@@ -1,9 +1,10 @@
 .container {
-  width: var(--max-page-width);
+  width: 100%;
+  max-width: var(--max-page-width);
   height: var(--size-70);
   text-align: center;
   margin: 0 auto;
-  padding: var(--size-30) 16px;
+  padding: var(--size-30) 0;
 }
 
 .innerWrapper {
