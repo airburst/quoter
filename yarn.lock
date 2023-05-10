@@ -1251,6 +1251,11 @@
   resolved "https://registry.yarnpkg.com/@simplybusiness/icons/-/icons-3.4.5.tgz#24447db20b58907ee97acc2418a1e5eb1d0e3fa8"
   integrity sha512-A+uJxl1IXYcAT7AM5/oK5dVXNFiKSsavNujaw6QPnbF7OHEIxk1nEJJSSUc/jz6gXDVEjEkxrlJFnhyOQU8+kA==
 
+"@simplybusiness/icons@^3.5.0":
+  version "3.5.0"
+  resolved "https://bnw-registry.simplybusiness.io/repository/sb-npm/@simplybusiness/icons/-/icons-3.5.0.tgz#bc8fbc9f1101e27a4ff1062f63ab7c1f81d8549c"
+  integrity sha512-eKP+6X8qsB+bMD0qB6vNcL982TuQyTLMVrvew7U+KGqj+Rc09FpRJjXvgMDeujYRJTWESpNHr9kqwGmah8hlvg==
+
 "@simplybusiness/mobius@^3.5.0":
   version "3.5.0"
   resolved "https://bnw-registry.simplybusiness.io/repository/sb-npm/@simplybusiness/mobius/-/mobius-3.5.0.tgz#39a7498942cb1aa29417581c1d381bfdd4e0e3f7"

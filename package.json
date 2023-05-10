@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "@simplybusiness/icons": "^3.5.0",
     "@simplybusiness/mobius": "^3.5.0",
     "@simplybusiness/theme-sb": "^3.5.0",
     "@types/node": "^20.1.1",

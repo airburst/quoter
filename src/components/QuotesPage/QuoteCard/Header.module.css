@@ -1,0 +1,17 @@
+.container {
+  padding: var(--size-30);
+}
+
+.amount {
+  margin: 0;
+}
+
+.totalLabel {
+  text-transform: uppercase;
+  color: var(--color-text-medium);
+  text-align: right;
+}
+
+.totalAmount {
+  font-weight: var(--font-weight-bold);
+}

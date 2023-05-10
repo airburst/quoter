@@ -1,0 +1,14 @@
+.container {
+  padding: var(--size-30);
+  background-color: var(--color-background-highlight);
+}
+
+.text {
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.icon {
+  color: var(--color-secondary);
+}

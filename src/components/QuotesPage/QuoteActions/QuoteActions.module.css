@@ -1,0 +1,8 @@
+.container {
+  padding: var(--size-30);
+}
+
+.link {
+  flex: 1;
+  text-align: center;
+}
