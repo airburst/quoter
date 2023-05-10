@@ -1,6 +1,6 @@
 .container {
   padding: var(--size-30);
-  background-color: var(--color-background-light);
+  background-color: var(--color-background-highlight);
 }
 
 .text {

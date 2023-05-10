@@ -1,15 +1,18 @@
-import { Flex, Icon, List, ListItem, Text } from "@simplybusiness/mobius";
+import { Icon, List, Text } from "@simplybusiness/mobius";
 import type { IconName } from "@simplybusiness/icons";
 import styles from "./ListWithIcon.module.css";
+import { ReactNode } from "react";
 
 export const ListWithIcon = ({
   title,
   icon,
   color,
+  children,
 }: {
   title: string;
   icon: string;
   color: string;
+  children: ReactNode;
 }) => {
   return (
     <div>
@@ -27,13 +30,7 @@ export const ListWithIcon = ({
           />
         }
       >
-        <ListItem>
-          <Flex justifyContent="space-between" className={styles.listItem}>
-            General Liability <strong>$2m</strong>
-          </Flex>
-        </ListItem>
-        <ListItem>Additional Insureds</ListItem>
-        <ListItem>No Deductibles</ListItem>
+        {children}
       </List>
     </div>
   );

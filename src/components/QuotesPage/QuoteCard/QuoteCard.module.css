@@ -13,3 +13,7 @@
 .body {
   padding: var(--size-30);
 }
+
+.listItem {
+  width: 100%;
+}
