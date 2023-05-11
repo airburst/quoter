@@ -17,6 +17,7 @@
   margin: 2px;
   padding: var(--size-20) var(--size-30);
   font-weight: var(--font-weight-bold);
+  transition: all 0.25s ease-in-out;
 }
 
 .button:not(.buttonToggled) span:nth-of-type(1),
