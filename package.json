@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "setup": "cd cli && node setup.js"
+    "setup": "cd cli && node setup.js",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
