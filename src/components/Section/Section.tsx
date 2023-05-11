@@ -13,5 +13,9 @@ export const Section = ({ children, color }: Props) => {
     classes += ` ${styles[color]}`;
   }
 
-  return <div className={classes}>{children}</div>;
+  return (
+    <div className={classes}>
+      <div className={styles.innerWrapper}>{children}</div>
+    </div>
+  );
 };

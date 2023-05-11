@@ -8,7 +8,7 @@ export const SellingPoints = () => {
   return (
     <Section color="light">
       <div className={styles.container}>
-        <Text elementType="h3">Simply business is different.</Text>
+        <Text variant="h3">Simply business is different.</Text>
         <Feature
           icon="./feature-icon.png"
           title="Access top rated insurance carriers"

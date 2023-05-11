@@ -45,6 +45,7 @@ export const Navigation = () => {
             className={styles.button}
             variant="basic"
             size="small"
+            aria-label="Open or close navigation"
             onClick={handleClick}
           >
             <Icon className={iconClasses} name="chevronDown" />

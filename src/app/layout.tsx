@@ -1,10 +1,8 @@
 import { ReactNode } from "react";
 import { Metadata } from "next";
-import "@simplybusiness/theme-sb";
-
 import { Footer } from "@components/Footer";
 import { Header } from "@components/Header";
-import { MainContent } from "@components/MainContent";
+import "@simplybusiness/theme-sb";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -21,7 +19,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body>
         <Header />
-        <MainContent>{children}</MainContent>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

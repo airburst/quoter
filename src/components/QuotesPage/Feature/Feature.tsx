@@ -19,7 +19,7 @@ export const Feature = ({
         <div className={styles.dot}></div>
       </div>
       <div className={styles.content}>
-        <Text elementType="h4" className={styles.noMargin}>
+        <Text variant="h4" className={styles.noMargin}>
           {title}
         </Text>
         <Text className={styles.text}>{description}</Text>

@@ -9,7 +9,11 @@ export const Header = () => {
     <header className={styles.container}>
       <Section>
         <div className={styles.innerWrapper}>
-          <Link className={styles.logo} href="/">
+          <Link
+            className={styles.logo}
+            href="/"
+            aria-label="Link back to home page"
+          >
             <Logo />
           </Link>
           <Button variant="ghost">Call Us</Button>
