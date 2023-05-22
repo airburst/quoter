@@ -3,13 +3,12 @@
 import { Flex } from "@twilio-paste/core/flex";
 import { Heading } from "@twilio-paste/core/heading";
 import { Section } from "@components/Section";
-import { Button } from "@twilio-paste/core/button";
 import { Box } from "@twilio-paste/core/box";
 import { Input } from "@twilio-paste/core/input";
-import { ArrowForwardIcon } from "@twilio-paste/icons/esm/ArrowForwardIcon";
 import { SearchIcon } from "@twilio-paste/icons/esm/SearchIcon";
 import { Text } from "@twilio-paste/core/text";
 import { BackLink } from "@components/BackLink";
+import { NextButton } from "@components/NextButton";
 
 export default function Trade() {
   return (
@@ -25,7 +24,7 @@ export default function Trade() {
         <Text as="label" fontSize="fontSize40">
           Select the state that is your main location.
         </Text>
-        <Box marginTop="space40">
+        <Box paddingY="space40">
           <Input
             aria-describedby="payment_amount_help_text"
             aria-label="select state"
@@ -45,12 +44,7 @@ export default function Trade() {
           />
         </Box>
 
-        <Box marginY="space100">
-          <Button variant="primary" fullWidth>
-            Next
-            <ArrowForwardIcon decorative />
-          </Button>
-        </Box>
+        <NextButton href="/what-you-do" />
       </Section>
     </>
   );
