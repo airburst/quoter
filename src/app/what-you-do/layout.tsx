@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode } from "react";
 import { Navigation } from "@components/Navigation";
 
@@ -8,7 +10,7 @@ type PageLayoutProps = {
 export default function PageLayout({ children }: PageLayoutProps) {
   return (
     <>
-      <Navigation />
+      <Navigation completed={["100", "50"]} />
       {children}
     </>
   );

@@ -1,7 +1,5 @@
 "use client";
 
-// import { useFocusRing } from "@react-aria/focus";
-// import { useHover } from "@react-aria/interactions";
 import clsx from "clsx";
 import { Ref, Key, forwardRef } from "react";
 import { TradeProps } from "../types";
@@ -19,24 +17,16 @@ export type ListingItemProps = {
 
 export const ListingItem = forwardRef(
   (props: ListingItemProps, ref: Ref<ListingItemElementType>) => {
-    const { trade, /* selected, */ onClick } = props;
-    // const { isFocusVisible, focusProps } = useFocusRing({
-    //   within: false,
-    // });
-    // const { hoverProps, isHovered } = useHover({});
+    const { trade, onClick } = props;
     const classes = clsx(
       "chopin/TradeSelectorButton",
-      "chopin/TradeSelectorOption"
-      // {
-      //   "--is-focused": isFocusVisible || selected,
-      //   "--is-hovered": isHovered,
-      // },
+      "chopin/TradeSelectorOption",
     );
 
     const handleClick = () => onClick(trade);
 
     return (
-      <ListItem /* className="chopin/TradeSelectorListItem" */>
+      <ListItem>
         <Button
           variant="link"
           ref={ref}
@@ -44,12 +34,12 @@ export const ListingItem = forwardRef(
           onClick={handleClick}
           className={classes}
           data-key={trade.value}
-          // {...hoverProps}
-          // {...focusProps}
         >
           <span dangerouslySetInnerHTML={{ __html: trade.label }} />
         </Button>
       </ListItem>
     );
-  }
+  },
 );
+
+ListingItem.displayName = "ListingItem";
