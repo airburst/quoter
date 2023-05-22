@@ -4,7 +4,6 @@ import { Text } from "@twilio-paste/core/text";
 import { Brand } from "../InsurerLogos/Brand";
 import brand1 from "../InsurerLogos/images/brand1.png";
 import styles from "./Header.module.css";
-import { Stack } from "@twilio-paste/core";
 
 export const Header = () => {
   return (
