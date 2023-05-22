@@ -1,5 +1,6 @@
 export * from "./BackLink";
 export * from "./Footer";
+export * from "./Info";
 export * from "./Header";
 export * from "./Logo";
 export * from "./Navigation";
