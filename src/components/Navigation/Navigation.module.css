@@ -46,14 +46,10 @@
   text-decoration: none;
 }
 
-.icon {
-  transition: transform 0.15s ease-in-out;
-}
-
 .icon path {
   stroke: var(--link-color);
 }
 
 .iconOpen {
-  transform: rotate(180deg);
+  transform: translateY(0px);
 }
