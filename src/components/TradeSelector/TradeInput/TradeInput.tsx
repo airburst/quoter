@@ -9,6 +9,10 @@ import { Text } from "@twilio-paste/core/text";
 import { Input } from "@twilio-paste/core/input";
 import { Button } from "@twilio-paste/core/button";
 import { Flex } from "@twilio-paste/core/flex";
+import { Highlight } from "@components/Highlight";
+import { Box } from "@twilio-paste/core/box";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCamera } from "@fortawesome/free-solid-svg-icons";
 
 export type TradeInputProps = {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
@@ -57,19 +61,45 @@ export const TradeInput = (props: TradeInputProps) => {
   return (
     <div /* {...focusProps} */>
       {selectedTrade ? (
-        <Text as="p">
-          You have selected ‘<strong>{initialTrade}</strong>’ as your
-          trade/profession.{" "}
-          <Button
-            variant="link"
-            // type="button"
-            className="mobius/Link chopin/TradeSelectorButton"
-            aria-label="Change your selected profession"
-            onClick={onEdit}
-          >
-            Change
-          </Button>
-        </Text>
+        <Highlight>
+          <Flex>
+            <Flex grow paddingRight="space150" vAlignContent="top">
+              <Text as="p" fontSize="fontSize40">
+                You have selected ‘<strong>{initialTrade}</strong>’ as your
+                trade/profession.
+              </Text>
+            </Flex>
+            <Flex>
+              <Button
+                variant="link"
+                // type="button"
+                className="mobius/Link chopin/TradeSelectorButton"
+                aria-label="Change your selected profession"
+                onClick={onEdit}
+              >
+                Edit
+              </Button>
+            </Flex>
+          </Flex>
+          <Flex vertical>
+            <Box
+              borderTopStyle="solid"
+              borderTopWidth="borderWidth20"
+              borderTopColor="colorBorderInverseStrongest"
+              marginTop="space50"
+              paddingTop="space50"
+            >
+              <Box marginBottom="space30" color="colorTextBrandHighlight">
+                <FontAwesomeIcon icon={faCamera} size="3x" />
+              </Box>
+              <Text as="p" fontSize="fontSize40">
+                We define ‘
+                <strong>{/*initialTrade*/}Weeding Photography</strong>’ as the
+                art of practice of taking, editing, and processing photographs.
+              </Text>
+            </Box>
+          </Flex>
+        </Highlight>
       ) : (
         <Flex vAlignContent="center">
           <Flex grow paddingRight={isEditable ? "space50" : undefined}>
