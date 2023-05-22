@@ -10,8 +10,17 @@ import { useState } from "react";
 import clsx from "clsx";
 import styles from "./Navigation.module.css";
 
-export const Navigation = () => {
+type Props = {
+  completed?: string[];
+};
+
+export const Navigation = ({ completed }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const completedValues = completed?.slice(0, 5);
+  console.log(
+    "🚀 ~ file: Navigation.tsx:20 ~ Navigation ~ completedValues:",
+    completedValues,
+  );
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -31,7 +40,7 @@ export const Navigation = () => {
         <nav className={containerClasses}>
           <ul className={styles.list}>
             <li className={styles.listItem}>
-              <Donut value="50" />
+              <Donut value={completed?.[0] || "0"} />
               <ActiveLink href="/trade">Welcome</ActiveLink>
             </li>
             <li className={styles.listItem}>
@@ -51,6 +60,7 @@ export const Navigation = () => {
               <ActiveLink href="/checkout">Checkout</ActiveLink>
             </li>
           </ul>
+
           <Button
             className={styles.button}
             variant="secondary"

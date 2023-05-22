@@ -8,7 +8,7 @@ type PageLayoutProps = {
 export default function PageLayout({ children }: PageLayoutProps) {
   return (
     <>
-      <Navigation />
+      <Navigation completed={["50"]} />
       {children}
     </>
   );
