@@ -10,7 +10,7 @@ import { Text } from "@twilio-paste/core/text";
 import { BackLink } from "@components/BackLink";
 import { NextButton } from "@components/NextButton";
 
-export default function Trade() {
+export default function Location() {
   return (
     <>
       <BackLink />
