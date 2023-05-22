@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 import { Box } from "@twilio-paste/core/box";
 import { Text } from "@twilio-paste/core/text";
-import { Stack } from "@twilio-paste/core/stack";
-import { LightModeIcon } from "@twilio-paste/icons/esm/LightModeIcon";
+import { Flex } from "@twilio-paste/core/flex";
+import { LightbulbIcon } from "@components/Icon";
 
 type InfoProps = {
   children: ReactNode;
@@ -17,16 +17,14 @@ export const Info = (props: InfoProps) => {
       borderRadius="borderRadius30"
       borderTopLeftRadius="borderRadius0"
     >
-      <Stack orientation="horizontal" spacing="space50">
-        <LightModeIcon
-          decorative={true}
-          color="colorTextBrandHighlight"
-          size="sizeIcon40"
-        />
-        <Text as="p" fontSize="fontSize40">
+      <Flex>
+        <Box color="colorTextBrandHighlight" marginRight="space50">
+          <LightbulbIcon style={{ width: "12px" }} />
+        </Box>
+        <Text as="p" fontSize="fontSize30" color="colorTextWeak">
           {props.children}
         </Text>
-      </Stack>
+      </Flex>
     </Box>
   );
 };
