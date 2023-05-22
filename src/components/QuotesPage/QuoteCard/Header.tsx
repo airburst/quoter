@@ -1,4 +1,5 @@
 import { Flex } from "@twilio-paste/core/flex";
+import { Stack } from "@twilio-paste/core";
 import { Text } from "@twilio-paste/core/text";
 import { Brand } from "../InsurerLogos/Brand";
 import brand1 from "../InsurerLogos/images/brand1.png";
@@ -7,32 +8,30 @@ import { Stack } from "@twilio-paste/core";
 
 export const Header = () => {
   return (
-    <Flex padding="space50">
-      <Flex grow>
+    <Flex paddingY="space50">
+      <div className={styles.container}>
         <Brand key={brand1.src} imageData={brand1} desiredHeight={42} />
 
-        <Flex grow>
-          <Stack spacing="space40" orientation="vertical">
-            <Flex>
-              <Text fontSize="fontSize80" as="h2">
-                $48.91
-              </Text>
-              <Text className={styles.cadence} as="span">
-                /mo
-              </Text>
-            </Flex>
-
-            <Flex>
-              <Text className={styles.totalLabel} as="span">
-                Total
-              </Text>
-              <Text className={styles.totalAmount} as="span">
-                $587.92
-              </Text>
-            </Flex>
+        <Stack spacing="space40" orientation="vertical">
+          <Stack spacing="space20" orientation="horizontal">
+            <Text fontSize="fontSize80" as="h2">
+              $48.91
+            </Text>
+            <Text className={styles.cadence} as="span">
+              /mo
+            </Text>
           </Stack>
-        </Flex>
-      </Flex>
+
+          <Stack spacing="space20" orientation="horizontal">
+            <Text className={styles.totalLabel} as="span">
+              Total
+            </Text>
+            <Text className={styles.totalAmount} as="span">
+              $587.92
+            </Text>
+          </Stack>
+        </Stack>
+      </div>
     </Flex>
   );
 };

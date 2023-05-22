@@ -1,7 +1,7 @@
 .container {
-  padding: var(--size-30);
-  border-top-left-radius: var(--radius-1);
-  border-top-right-radius: var(--radius-1);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .amount {
@@ -16,4 +16,5 @@
 
 .totalAmount {
   font-weight: var(--font-weight-bold);
+  text-align: right;
 }

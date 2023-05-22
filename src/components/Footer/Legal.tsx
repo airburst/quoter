@@ -4,7 +4,12 @@ import { Text } from "@twilio-paste/core/Text";
 
 export const Legal = () => {
   return (
-    <Text as="p">
+    <Text
+      as="p"
+      color="colorTextInverse"
+      fontSize="fontSize40"
+      lineHeight="lineHeight40"
+    >
       &copy; Copyright 2023 Simply Business. All Rights Reserved. Simply
       Business, LLC is a licensed insurance producer in all U.S. States and the
       District of Columbia. Simply Business has its registered office at Simply

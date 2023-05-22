@@ -5,10 +5,20 @@ import { Text } from "@twilio-paste/core/Text";
 export const Address = () => {
   return (
     <div>
-      <Text as="p">
+      <Text
+        as="p"
+        color="colorTextInverse"
+        fontSize="fontSize40"
+        lineHeight="lineHeight40"
+      >
         <strong>Address</strong>
       </Text>
-      <Text as="p">
+      <Text
+        as="p"
+        color="colorTextInverse"
+        fontSize="fontSize40"
+        lineHeight="lineHeight40"
+      >
         Simply Business
         <br />1 Beacon Street
         <br />
