@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Section } from "@components/Section";
-import styles from "./Backlink.module.css";
+import { Box } from "@twilio-paste/core/box";
 
 export const BackLink = () => {
   const router = useRouter();
@@ -12,11 +12,11 @@ export const BackLink = () => {
 
   return (
     <Section>
-      <div className={styles.container}>
-        <Link href="#" onClick={goBack} className={styles.link}>
+      <Box paddingY="space40">
+        <Link href="#" onClick={goBack}>
           Back
         </Link>
-      </div>
+      </Box>
     </Section>
   );
 };

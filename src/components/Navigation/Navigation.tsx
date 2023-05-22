@@ -4,6 +4,7 @@ import { Button } from "@twilio-paste/core/Button";
 import { ChevronDownIcon } from "@twilio-paste/icons/esm/ChevronDownIcon";
 import { ActiveLink } from "./ActiveLink";
 import { Section } from "@components/Section";
+import { Separator } from "@twilio-paste/core/separator";
 import { Donut } from "./Donut";
 import { useState } from "react";
 import clsx from "clsx";
@@ -65,7 +66,7 @@ export const Navigation = () => {
           </Button>
         </nav>
       </Section>
-      <div className="mobius/DividerInner" />
+      <Separator orientation="horizontal" verticalSpacing="space20" />
     </>
   );
 };
