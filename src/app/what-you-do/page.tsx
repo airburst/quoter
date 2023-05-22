@@ -66,7 +66,7 @@ export default function WhatYouDo() {
           Your answers help us recommend coverage tailored to your
           business&apos;s needs
         </Info>
-        <NextButton />
+        <NextButton href="/coverages" />
       </Section>
     </>
   );

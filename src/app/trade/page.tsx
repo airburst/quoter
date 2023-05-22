@@ -15,7 +15,7 @@ export default function Trade() {
         </Heading>
       </Flex>
       <TradeSelector />
-      <NextButton />
+      <NextButton href="/location" />
     </Section>
   );
 }
