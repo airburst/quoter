@@ -11,8 +11,7 @@ import { Button } from "@twilio-paste/core/button";
 import { Flex } from "@twilio-paste/core/flex";
 import { Highlight } from "@components/Highlight";
 import { Box } from "@twilio-paste/core/box";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCamera } from "@fortawesome/free-solid-svg-icons";
+import { CameraIcon } from "@components/Icon";
 
 export type TradeInputProps = {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
@@ -89,8 +88,12 @@ export const TradeInput = (props: TradeInputProps) => {
               marginTop="space50"
               paddingTop="space50"
             >
-              <Box marginBottom="space30" color="colorTextBrandHighlight">
-                <FontAwesomeIcon icon={faCamera} size="3x" />
+              <Box
+                marginBottom="space30"
+                color="colorTextBrandHighlight"
+                width="30px"
+              >
+                <CameraIcon />
               </Box>
               <Text as="p" fontSize="fontSize40">
                 We define ‘
