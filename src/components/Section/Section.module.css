@@ -1,5 +1,6 @@
 .section {
   padding: 0 var(--size-30);
+  font-size: var(--font-size-3);
 }
 
 .innerWrapper {

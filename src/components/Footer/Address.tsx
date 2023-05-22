@@ -1,14 +1,14 @@
 "use client";
 
-import { Text } from "@simplybusiness/mobius";
+import { Text } from "@twilio-paste/core/Text";
 
 export const Address = () => {
   return (
     <div>
-      <Text>
+      <Text as="p">
         <strong>Address</strong>
       </Text>
-      <Text>
+      <Text as="p">
         Simply Business
         <br />1 Beacon Street
         <br />

@@ -1,4 +1,4 @@
-import { Text } from "@simplybusiness/mobius";
+import { Text } from "@twilio-paste/core/Text";
 import { Feature } from "../Feature";
 import { InsurerLogos } from "../InsurerLogos";
 import { Section } from "@components/Section";
@@ -8,7 +8,7 @@ export const SellingPoints = () => {
   return (
     <Section color="light">
       <div className={styles.container}>
-        <Text variant="h3">Simply business is different.</Text>
+        <Text as="h3">Simply business is different.</Text>
         <Feature
           icon="./feature-icon.png"
           title="Access top rated insurance carriers"

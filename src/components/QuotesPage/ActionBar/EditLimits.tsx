@@ -1,15 +1,17 @@
-import { Button, Flex, Text } from "@simplybusiness/mobius";
-import styles from "./EditLimits.module.css";
+import { Badge } from "@twilio-paste/core/badge";
+import { Stack } from "@twilio-paste/core/stack";
+import { Button } from "@twilio-paste/core/button";
+import { Flex } from "@twilio-paste/core/flex";
 
 export const EditLimits = () => {
   return (
-    <Flex alignItems="center" gap="var(--size-20)">
-      <Button variant="basic" size="small" className={styles.button}>
-        Edit Limits
-      </Button>
-      <Text variant="legal" elementType="span" className={styles.count}>
-        3
-      </Text>
+    <Flex grow>
+      <Stack orientation="horizontal" spacing="space30">
+        <Button variant="link">Edit Limits</Button>
+        <Badge as="span" variant="neutral_counter">
+          3
+        </Badge>
+      </Stack>
     </Flex>
   );
 };

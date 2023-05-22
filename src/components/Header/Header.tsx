@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "@simplybusiness/mobius";
+import { Button } from "@twilio-paste/core/Button";
 import { Logo } from "@components/Logo";
 import { Section } from "@components/Section";
 import styles from "./Header.module.css";
@@ -16,7 +16,7 @@ export const Header = () => {
           >
             <Logo />
           </Link>
-          <Button variant="ghost">Call Us</Button>
+          <Button variant="primary">Call Us</Button>
         </div>
       </Section>
     </header>

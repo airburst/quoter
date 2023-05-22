@@ -1,5 +1,5 @@
-import { Icon, List, Text } from "@simplybusiness/mobius";
-import type { IconName } from "@simplybusiness/icons";
+import { Text } from "@twilio-paste/core/text";
+import { UnorderedList } from "@twilio-paste/core/list";
 import styles from "./ListWithIcon.module.css";
 import { ReactNode } from "react";
 
@@ -16,22 +16,10 @@ export const ListWithIcon = ({
 }) => {
   return (
     <div>
-      <Text variant="caption" className={styles.title}>
+      <Text as="p" className={styles.title}>
         {title}
       </Text>
-      <List
-        icon={
-          <Icon
-            // TODO: this should be exported from Mobius
-            name={icon as IconName}
-            className={styles.icon}
-            // @ts-expect-error style prop should be allowed
-            style={{ color }}
-          />
-        }
-      >
-        {children}
-      </List>
+      <UnorderedList>{children}</UnorderedList>
     </div>
   );
 };

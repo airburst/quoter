@@ -1,8 +1,11 @@
+"use client";
+
 import { ReactNode } from "react";
 import { QuoteActions } from "../QuoteActions";
 import { Rating } from "../Rating";
 import { Header } from "./Header";
-import { Flex, ListItem } from "@simplybusiness/mobius";
+import { ListItem } from "@twilio-paste/core/list";
+import { Flex } from "@twilio-paste/core/flex";
 import { ListWithIcon } from "../ListWithIcon/ListWithIcon";
 import styles from "./QuoteCard.module.css";
 
@@ -16,14 +19,14 @@ export const QuoteCard = ({ highlight }: Props) => {
       {highlight}
       <Header />
       <Rating />
-      <Flex className={styles.body}>
+      <Flex padding="space50">
         <ListWithIcon
           title="Included with this policy"
           icon="tick"
           color="var(--color-valid)"
         >
           <ListItem>
-            <Flex flexDirection="row" className={styles.listItem}>
+            <Flex>
               General Liability <strong>$2M</strong>
             </Flex>
           </ListItem>

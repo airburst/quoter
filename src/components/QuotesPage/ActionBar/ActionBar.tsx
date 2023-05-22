@@ -1,10 +1,10 @@
-import { Flex } from "@simplybusiness/mobius";
+import { Flex } from "@twilio-paste/core/flex";
 import { EditLimits } from "./EditLimits";
 import { Cadence } from "./Cadence";
 
 export const ActionBar = () => {
   return (
-    <Flex justifyContent="space-between">
+    <Flex vAlignContent="center">
       <EditLimits />
       <Cadence />
     </Flex>

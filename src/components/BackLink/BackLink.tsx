@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { Link } from "@simplybusiness/mobius";
+import Link from "next/link";
 import { Section } from "@components/Section";
 import styles from "./Backlink.module.css";
 

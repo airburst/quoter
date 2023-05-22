@@ -1,8 +1,8 @@
-import { Text } from "@simplybusiness/mobius";
+import { Text } from "@twilio-paste/text";
 
 export default function Home() {
   return (
-    <Text elementType="h1" style={{ textAlign: "center" }}>
+    <Text as="h1" style={{ textAlign: "center" }}>
       Example component
     </Text>
   );

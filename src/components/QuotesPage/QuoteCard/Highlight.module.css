@@ -4,13 +4,3 @@
   border-top-left-radius: var(--radius-1);
   border-top-right-radius: var(--radius-1);
 }
-
-.text {
-  margin: 0;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.icon {
-  color: var(--color-secondary);
-}

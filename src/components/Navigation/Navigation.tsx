@@ -1,12 +1,13 @@
 "use client";
 
-import { Icon, List, ListItem, Button } from "@simplybusiness/mobius";
+import { Button } from "@twilio-paste/core/Button";
+import { ChevronDownIcon } from "@twilio-paste/icons/esm/ChevronDownIcon";
 import { ActiveLink } from "./ActiveLink";
-import styles from "./Navigation.module.css";
 import { Section } from "@components/Section";
 import { Donut } from "./Donut";
 import { useState } from "react";
 import clsx from "clsx";
+import styles from "./Navigation.module.css";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,28 +28,40 @@ export const Navigation = () => {
     <>
       <Section>
         <nav className={containerClasses}>
-          <List className={styles.list}>
-            <ListItem className={styles.listItem}>
-              <Donut value="100" />
-              <ActiveLink href="/">General Liability</ActiveLink>
-            </ListItem>
-            <ListItem className={styles.listItem}>
-              <Donut value="100" />
-              <ActiveLink href="/page-1">Page 1</ActiveLink>
-            </ListItem>
-            <ListItem className={styles.listItem}>
-              <Donut value="100" />
-              <ActiveLink href="/page-2">Page 2</ActiveLink>
-            </ListItem>
-          </List>
+          <ul className={styles.list}>
+            <li className={styles.listItem}>
+              <Donut value="50" />
+              <ActiveLink href="/trade">Welcome</ActiveLink>
+            </li>
+            <li className={styles.listItem}>
+              <Donut value="0" />
+              <ActiveLink href="/page-1">Coverage</ActiveLink>
+            </li>
+            <li className={styles.listItem}>
+              <Donut value="0" />
+              <ActiveLink href="/page-2">Application</ActiveLink>
+            </li>
+            <li className={styles.listItem}>
+              <Donut value="0" />
+              <ActiveLink href="/quotes">Quotes</ActiveLink>
+            </li>
+            <li className={styles.listItem}>
+              <Donut value="0" />
+              <ActiveLink href="/checkout">Checkout</ActiveLink>
+            </li>
+          </ul>
           <Button
             className={styles.button}
-            variant="basic"
+            variant="secondary"
             size="small"
             aria-label="Open or close navigation"
             onClick={handleClick}
           >
-            <Icon className={iconClasses} name="chevronDown" />
+            <ChevronDownIcon
+              className={iconClasses}
+              decorative={false}
+              title="Click to show navigation"
+            />
           </Button>
         </nav>
       </Section>
