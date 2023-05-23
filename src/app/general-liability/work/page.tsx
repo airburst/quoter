@@ -2,7 +2,6 @@
 
 import { BackLink } from "@components/BackLink";
 import { Box } from "@twilio-paste/core/box";
-import { Checkbox } from "@twilio-paste/core/checkbox";
 import { Heading } from "@twilio-paste/core/heading";
 import { NextButton } from "@components/NextButton";
 import { Section } from "@components/Section";
