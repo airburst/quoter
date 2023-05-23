@@ -16,6 +16,7 @@
 }
 
 .list {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -24,6 +25,16 @@
   margin: 0;
   padding-left: 0;
   overflow: hidden;
+}
+
+.list::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: calc(100% - 12px);
+  background: var(--color-neutral-300);
+  left: 10px;
+  top: 6px;
 }
 
 .listOpen {
