@@ -1,9 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { Flex } from "@twilio-paste/core/flex";
 import { Heading } from "@twilio-paste/core/heading";
 import { Text } from "@twilio-paste/core/text";
-import { Anchor } from "@twilio-paste/core/anchor";
 import { Button } from "@twilio-paste/core/button";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
@@ -33,7 +33,7 @@ export default function Information() {
           <Info>
             Some example outlining why its important for your specific trade...
           </Info>
-          <Anchor href="#">More Information</Anchor>
+          <Link href="#">More Information</Link>
         </Flex>
         <Box marginTop="space50">
           <Text as="h2" fontSize="fontSize50">
