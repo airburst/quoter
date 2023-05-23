@@ -59,12 +59,12 @@ export default function AboutYourBusiness() {
           </RadioGroup>
         </Box>
         <Box marginBottom="space100">
-          <Label htmlFor="author">When did you start your business?</Label>
+          <Label htmlFor="start-year">When did you start your business?</Label>
           <Text as="p" marginBottom="space50" color="colorTextWeak">
             This is when you first began conducting paid work and/or when you
             first registered your business.
           </Text>
-          <Select id="author">
+          <Select id="start-year">
             <Option value="" disabled selected>
               Please select
             </Option>
