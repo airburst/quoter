@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+}
+
+.container > *,
+.container label {
+  width: 100%;
+}
+
+.container label {
+  box-sizing: border-box;
+  border: var(--size-border-width) solid var(--color-azure-400);
+  padding-left: calc(var(--size-20) + var(--size-10));
+  padding-right: calc(var(--size-20) + var(--size-10));
+  padding-top: calc(var(--size-20) + var(--size-10));
+  padding-bottom: var(--size-10);
+  border-radius: var(--radius-1);
+}

@@ -5,8 +5,9 @@ import { Heading } from "@twilio-paste/core/heading";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
 import { BackLink } from "@components/BackLink";
-import { Checkbox, CheckboxGroup } from "@twilio-paste/core/checkbox";
+import { CheckboxGroup } from "@twilio-paste/core/checkbox";
 import { NextButton } from "@components/NextButton";
+import { CheckboxOption } from "@components/CheckboxOption";
 
 export default function WorkContinued() {
   return (
@@ -23,49 +24,52 @@ export default function WorkContinued() {
             name="services-materials-infrastructure"
             legend="Does the business perform any of the following services or use the following materials or infrastructure?"
           >
-            <Checkbox id="asbestos" value="asbestos">
+            <CheckboxOption id="asbestos" value="asbestos">
               Asbestos, lead, and mold evaluation or abatement
-            </Checkbox>
-            <Checkbox id="blasting" value="blasting">
+            </CheckboxOption>
+            <CheckboxOption id="blasting" value="blasting">
               Blasting
-            </Checkbox>
-            <Checkbox id="cranes" value="cranes">
+            </CheckboxOption>
+            <CheckboxOption id="cranes" value="cranes">
               Cranes, lifts, or bucket trucks
-            </Checkbox>
-            <Checkbox id="demolition" value="demolition">
+            </CheckboxOption>
+            <CheckboxOption id="demolition" value="demolition">
               Demolition
-            </Checkbox>
-            <Checkbox id="emergency-systems" value="emergency-systems">
+            </CheckboxOption>
+            <CheckboxOption id="emergency-systems" value="emergency-systems">
               Emergency systems
-            </Checkbox>
-            <Checkbox id="fire-suppresion" value="fire-suppresion">
+            </CheckboxOption>
+            <CheckboxOption id="fire-suppresion" value="fire-suppresion">
               Fire suppression
-            </Checkbox>
-            <Checkbox id="foundations" value="foundations">
+            </CheckboxOption>
+            <CheckboxOption id="foundations" value="foundations">
               Foundations
-            </Checkbox>
-            <Checkbox id="hazardous-material" value="hazardous-material">
+            </CheckboxOption>
+            <CheckboxOption id="hazardous-material" value="hazardous-material">
               Hazardous material or waste removal
-            </Checkbox>
-            <Checkbox id="hydraulic-fracturing" value="hydraulic-fracturing">
+            </CheckboxOption>
+            <CheckboxOption
+              id="hydraulic-fracturing"
+              value="hydraulic-fracturing"
+            >
               Hydraulic fracturing, hydrofracturing, or fracking
-            </Checkbox>
-            <Checkbox id="retaining-walls" value="retaining-walls">
+            </CheckboxOption>
+            <CheckboxOption id="retaining-walls" value="retaining-walls">
               Retaining walls
-            </Checkbox>
-            <Checkbox id="scaffolding" value="scaffolding">
+            </CheckboxOption>
+            <CheckboxOption id="scaffolding" value="scaffolding">
               Scaffolding operation
-            </Checkbox>
-            <Checkbox id="landfills" value="landfills">
+            </CheckboxOption>
+            <CheckboxOption id="landfills" value="landfills">
               Work at landfills (This does not include dropping off waste or
               debris)
-            </Checkbox>
-            <Checkbox id="hazarouds-projects" value="hazarouds-projects">
+            </CheckboxOption>
+            <CheckboxOption id="hazarouds-projects" value="hazarouds-projects">
               Any other similarly hazardous projects or materials
-            </Checkbox>
-            <Checkbox id="other" value="other">
+            </CheckboxOption>
+            <CheckboxOption id="other" value="other">
               None of the above
-            </Checkbox>
+            </CheckboxOption>
           </CheckboxGroup>
         </Box>
         <Box marginBottom="space100">
@@ -73,27 +77,27 @@ export default function WorkContinued() {
             name="statements"
             legend="Select all the statements that are true for your business:"
           >
-            <Checkbox id="banks" value="banks">
+            <CheckboxOption id="banks" value="banks">
               Work with banks or asset managers to repair, inspect, manage
               insurance claims, or maintain a foreclosed property
-            </Checkbox>
-            <Checkbox id="multi-location" value="multi-location">
+            </CheckboxOption>
+            <CheckboxOption id="multi-location" value="multi-location">
               Perform the same type of work in more than 15 units at a
               multi-unit location
-            </Checkbox>
-            <Checkbox id="new-developments" value="new-developments">
+            </CheckboxOption>
+            <CheckboxOption id="new-developments" value="new-developments">
               Perform work in new developments or tracts where there will be
               more than 10 units?
-            </Checkbox>
-            <Checkbox id="mass-produce" value="mass-produce">
+            </CheckboxOption>
+            <CheckboxOption id="mass-produce" value="mass-produce">
               Mass produce furniture or produce children&apos;s furniture?
-            </Checkbox>
-            <Checkbox id="hospitals" value="hospitals">
+            </CheckboxOption>
+            <CheckboxOption id="hospitals" value="hospitals">
               Perform work in hospitals
-            </Checkbox>
-            <Checkbox id="other" value="other">
+            </CheckboxOption>
+            <CheckboxOption id="other" value="other">
               None of the above
-            </Checkbox>
+            </CheckboxOption>
           </CheckboxGroup>
         </Box>
         <NextButton href="./previous-coverage" />

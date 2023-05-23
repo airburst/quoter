@@ -3,13 +3,13 @@
 import Link from "next/link";
 import { BackLink } from "@components/BackLink";
 import { Box } from "@twilio-paste/core/box";
-import { Checkbox } from "@twilio-paste/core/checkbox";
 import { Heading } from "@twilio-paste/core/heading";
 import { Info } from "@components/Info";
 import { Input } from "@twilio-paste/core/input";
 import { NextButton } from "@components/NextButton";
 import { Section } from "@components/Section";
 import { Text } from "@twilio-paste/core/text";
+import { CheckboxOption } from "@components/CheckboxOption";
 
 export default function Customer() {
   return (
@@ -83,11 +83,15 @@ export default function Customer() {
         </Box>
 
         <Box marginTop="space50">
-          <Checkbox id="keep_updated" value="keep_updated" name="keep_updated">
+          <CheckboxOption
+            id="keep_updated"
+            value="keep_updated"
+            name="keep_updated"
+          >
             Keep me updated on the latest small biz news, Simply Business
             updates, offers, and promotions. I understand I can unsubscribe at
             any time.
-          </Checkbox>
+          </CheckboxOption>
         </Box>
 
         <Box marginY="space100">

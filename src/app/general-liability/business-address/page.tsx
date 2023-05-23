@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { Box } from "@twilio-paste/core/box";
-import { Checkbox } from "@twilio-paste/core/checkbox";
 import { Heading } from "@twilio-paste/core/heading";
 import { Input } from "@twilio-paste/core/input";
 import { Label } from "@twilio-paste/core/label";
@@ -11,6 +10,7 @@ import { Text } from "@twilio-paste/core/text";
 import { BackLink } from "@components/BackLink";
 import { Section } from "@components/Section";
 import { SearchIcon } from "@twilio-paste/icons/esm/SearchIcon";
+import { CheckboxOption } from "@components/CheckboxOption";
 
 export default function BusinessAddress() {
   return (
@@ -49,7 +49,7 @@ export default function BusinessAddress() {
         <Link href="#">Enter manually</Link>
 
         <Box marginTop="space100">
-          <Checkbox
+          <CheckboxOption
             id="marketing_consent"
             value="marketing_consent"
             name="marketing_consent"
@@ -58,7 +58,7 @@ export default function BusinessAddress() {
             non-marketing and marketing text messages from or on behalf of
             Simply Business to the phone number(s) provided in this form. You
             understand that consent is not required to make a purchase.
-          </Checkbox>
+          </CheckboxOption>
         </Box>
 
         <Box marginY="space100">
