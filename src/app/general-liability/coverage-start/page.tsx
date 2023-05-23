@@ -4,13 +4,14 @@ import { useState } from "react";
 import { Box } from "@twilio-paste/core/box";
 import { Button } from "@twilio-paste/core/button";
 import { Heading } from "@twilio-paste/core/heading";
-import { Radio, RadioGroup } from "@twilio-paste/core/radio-group";
+import { RadioGroup } from "@twilio-paste/core/radio-group";
 import { Label } from "@twilio-paste/core/label";
 import { DatePicker } from "@twilio-paste/core/date-picker";
 import { useUID } from "@twilio-paste/core/uid-library";
 import { BackLink } from "@components/BackLink";
 import { Section } from "@components/Section";
 import { getToday, getTomorrow } from "@utils/dates";
+import { RadioOption } from "@components/RadioOption";
 
 export default function CoverageStart() {
   const [showDatePicker, setShowDatePicker] = useState<boolean>(false);
@@ -48,15 +49,15 @@ export default function CoverageStart() {
             legend="Choose your start date."
             onChange={handleDateChoice}
           >
-            <Radio id={useUID()} value="today" name="start_date">
+            <RadioOption id={useUID()} value="today" name="start_date">
               Today
-            </Radio>
-            <Radio id={useUID()} value="tomorrow" name="start_date">
+            </RadioOption>
+            <RadioOption id={useUID()} value="tomorrow" name="start_date">
               Tomorrow
-            </Radio>
-            <Radio id={useUID()} value="later" name="start_date">
+            </RadioOption>
+            <RadioOption id={useUID()} value="later" name="start_date">
               Later
-            </Radio>
+            </RadioOption>
           </RadioGroup>
         </Box>
 

@@ -5,11 +5,13 @@ import { Heading } from "@twilio-paste/core/heading";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
 import { BackLink } from "@components/BackLink";
-import { Radio, RadioGroup } from "@twilio-paste/core/radio-group";
-import { Checkbox, CheckboxGroup } from "@twilio-paste/core/checkbox";
+import { RadioGroup } from "@twilio-paste/core/radio-group";
+import { CheckboxGroup } from "@twilio-paste/core/checkbox";
 import { useUID } from "@twilio-paste/core/uid-library";
 import { NextButton } from "@components/NextButton";
 import { Info } from "@components/Info";
+import { RadioOption } from "@components/RadioOption";
+import { CheckboxOption } from "@components/CheckboxOption";
 
 export default function WhatYouDo() {
   return (
@@ -26,23 +28,27 @@ export default function WhatYouDo() {
             name="business-operation"
             legend="Where does your business operate?"
           >
-            <Radio id={useUID()} value="home-only" name="business-operation">
+            <RadioOption
+              id={useUID()}
+              value="home-only"
+              name="business-operation"
+            >
               Home only
-            </Radio>
-            <Radio
+            </RadioOption>
+            <RadioOption
               id={useUID()}
               value="home-and-client-locations"
               name="business-operation"
             >
               Home and client locations
-            </Radio>
-            <Radio
+            </RadioOption>
+            <RadioOption
               id={useUID()}
               value="own-rent-space"
               name="business-operation"
             >
               Own/rent space
-            </Radio>
+            </RadioOption>
           </RadioGroup>
         </Box>
         <Box marginBottom="space100">
@@ -50,16 +56,16 @@ export default function WhatYouDo() {
             name="applicable-statements"
             legend="Select all statements that apply to your business."
           >
-            <Checkbox id="provides_services" value="provides_services">
+            <CheckboxOption id="provides_services" value="provides_services">
               I provide services or advice to my customers.
-            </Checkbox>
-            <Checkbox id="has_employees" value="has_employees">
+            </CheckboxOption>
+            <CheckboxOption id="has_employees" value="has_employees">
               I have employees, contractors, and/or subcontractors.
-            </Checkbox>
-            <Checkbox id="collects_Data" value="collects_Data">
+            </CheckboxOption>
+            <CheckboxOption id="collects_Data" value="collects_Data">
               I collect and/or store customer data (ex: credit card details,
               names and addresses, health info, etc.)
-            </Checkbox>
+            </CheckboxOption>
           </CheckboxGroup>
         </Box>
         <Info>

@@ -6,8 +6,9 @@ import { Heading } from "@twilio-paste/core/heading";
 import { NextButton } from "@components/NextButton";
 import { Section } from "@components/Section";
 import { Stack } from "@twilio-paste/core/stack";
-import { Radio, RadioGroup } from "@twilio-paste/core/radio-group";
+import { RadioGroup } from "@twilio-paste/core/radio-group";
 import { useUID } from "@twilio-paste/core/uid-library";
+import { RadioOption } from "@components/RadioOption";
 
 export default function Work() {
   return (
@@ -25,15 +26,15 @@ export default function Work() {
             name="type_of_work"
             legend="What type of work do you perform?"
           >
-            <Radio id={useUID()} value="residential" name="type_of_work">
+            <RadioOption id={useUID()} value="residential" name="type_of_work">
               Residential work
-            </Radio>
-            <Radio id={useUID()} value="commercial" name="type_of_work">
+            </RadioOption>
+            <RadioOption id={useUID()} value="commercial" name="type_of_work">
               Commercial work
-            </Radio>
-            <Radio id={useUID()} value="both" name="type_of_work">
+            </RadioOption>
+            <RadioOption id={useUID()} value="both" name="type_of_work">
               Both
-            </Radio>
+            </RadioOption>
           </RadioGroup>
         </Box>
 
@@ -43,12 +44,12 @@ export default function Work() {
             legend="Do you work on exterior buildings?"
           >
             <Stack orientation="horizontal" spacing="space50">
-              <Radio id={useUID()} value="yes" name="external_buildings">
+              <RadioOption id={useUID()} value="yes" name="external_buildings">
                 Yes
-              </Radio>
-              <Radio id={useUID()} value="no" name="external_buildings">
+              </RadioOption>
+              <RadioOption id={useUID()} value="no" name="external_buildings">
                 No
-              </Radio>
+              </RadioOption>
             </Stack>
           </RadioGroup>
         </Box>
@@ -60,12 +61,12 @@ export default function Work() {
             helpText="Industrial work typically pertains to work performed in manufacturing facilities, including factories and warehouses."
           >
             <Stack orientation="horizontal" spacing="space50">
-              <Radio id={useUID()} value="yes" name="industrial_work">
+              <RadioOption id={useUID()} value="yes" name="industrial_work">
                 Yes
-              </Radio>
-              <Radio id={useUID()} value="no" name="industrial_work">
+              </RadioOption>
+              <RadioOption id={useUID()} value="no" name="industrial_work">
                 No
-              </Radio>
+              </RadioOption>
             </Stack>
           </RadioGroup>
         </Box>

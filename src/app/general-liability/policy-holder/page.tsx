@@ -5,9 +5,10 @@ import { Heading } from "@twilio-paste/core/heading";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
 import { BackLink } from "@components/BackLink";
-import { Radio, RadioGroup } from "@twilio-paste/core/radio-group";
+import { RadioGroup } from "@twilio-paste/core/radio-group";
 import { useUID } from "@twilio-paste/core/uid-library";
 import { NextButton } from "@components/NextButton";
+import { RadioOption } from "@components/RadioOption";
 
 export default function PolicyHolder() {
   return (
@@ -26,12 +27,12 @@ export default function PolicyHolder() {
             legend="Will you be the policyholder?"
             helpText="The policyholder is the person or organization who owns the insurance policy."
           >
-            <Radio id={useUID()} value="yes" name="policy-holder">
+            <RadioOption id={useUID()} value="yes" name="policy-holder">
               Yes, I am purchasing for my own business
-            </Radio>
-            <Radio id={useUID()} value="no" name="policy-holder">
+            </RadioOption>
+            <RadioOption id={useUID()} value="no" name="policy-holder">
               No, I am acting on behalf of the business owner
-            </Radio>
+            </RadioOption>
           </RadioGroup>
         </Box>
         <NextButton href="./customer" />

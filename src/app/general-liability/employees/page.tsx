@@ -6,7 +6,7 @@ import { Heading } from "@twilio-paste/core/heading";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
 import { BackLink } from "@components/BackLink";
-import { Radio, RadioGroup } from "@twilio-paste/core/radio-group";
+import { RadioGroup } from "@twilio-paste/core/radio-group";
 import { useUID } from "@twilio-paste/core/uid-library";
 import { NextButton } from "@components/NextButton";
 import { Label } from "@twilio-paste/core/label";
@@ -14,7 +14,9 @@ import { NumberInput } from "@components/NumberInput";
 import { HelpText } from "@twilio-paste/core/help-text";
 import { Text } from "@twilio-paste/core/text";
 import { Stack } from "@twilio-paste/core/stack";
-import { CheckboxGroup, Checkbox } from "@twilio-paste/core/checkbox";
+import { CheckboxGroup } from "@twilio-paste/core/checkbox";
+import { RadioOption } from "@components/RadioOption";
+import { CheckboxOption } from "@components/CheckboxOption";
 
 export default function Employees() {
   const [isAdditionalVisible, setIsAdditionalVisible] = useState(false);
@@ -66,12 +68,12 @@ export default function Employees() {
             onChange={handleChange}
           >
             <Stack orientation="horizontal" spacing="space50">
-              <Radio id={useUID()} value="yes" name="subcontractors">
+              <RadioOption id={useUID()} value="yes" name="subcontractors">
                 Yes
-              </Radio>
-              <Radio id={useUID()} value="no" name="subcontractors">
+              </RadioOption>
+              <RadioOption id={useUID()} value="no" name="subcontractors">
                 No
-              </Radio>
+              </RadioOption>
             </Stack>
           </RadioGroup>
         </Box>
@@ -84,24 +86,27 @@ export default function Employees() {
                 legend="What do your subcontractors do on your behalf?"
                 helpText="Select all that apply"
               >
-                <Checkbox id="family-dwellings" value="family-dwellings">
+                <CheckboxOption id="family-dwellings" value="family-dwellings">
                   Work on 1 or 2 Family Dwellings
-                </Checkbox>
-                <Checkbox
+                </CheckboxOption>
+                <CheckboxOption
                   id="commercial-buildings"
                   value="commercial-buildings"
                 >
                   Work on Commercial Buildings
-                </Checkbox>
-                <Checkbox
+                </CheckboxOption>
+                <CheckboxOption
                   id="industrial-buildings"
                   value="industrial-buildings"
                 >
                   Work on Industrial Buildings
-                </Checkbox>
-                <Checkbox id="unrelated-buildings" value="unrelated-buildings">
+                </CheckboxOption>
+                <CheckboxOption
+                  id="unrelated-buildings"
+                  value="unrelated-buildings"
+                >
                   Work unrelated to any buildings
-                </Checkbox>
+                </CheckboxOption>
               </CheckboxGroup>
             </Box>
             <Box marginBottom="space100">
@@ -111,12 +116,20 @@ export default function Employees() {
                 helpText="Without documentation of a certificate of insurance listing you or your business as an additional insured, some policies may not cover a claim related to subcontractors."
               >
                 <Stack orientation="horizontal" spacing="space50">
-                  <Radio id={radioYesId} value="yes" name="proof-of-insurance">
+                  <RadioOption
+                    id={radioYesId}
+                    value="yes"
+                    name="proof-of-insurance"
+                  >
                     Yes
-                  </Radio>
-                  <Radio id={radioNoId} value="no" name="proof-of-insurance">
+                  </RadioOption>
+                  <RadioOption
+                    id={radioNoId}
+                    value="no"
+                    name="proof-of-insurance"
+                  >
                     No
-                  </Radio>
+                  </RadioOption>
                 </Stack>
               </RadioGroup>
             </Box>

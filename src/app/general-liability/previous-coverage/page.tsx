@@ -6,9 +6,10 @@ import { Heading } from "@twilio-paste/core/heading";
 import { NextButton } from "@components/NextButton";
 import { Section } from "@components/Section";
 import { Stack } from "@twilio-paste/core/stack";
-import { Radio, RadioGroup } from "@twilio-paste/core/radio-group";
+import { RadioGroup } from "@twilio-paste/core/radio-group";
 import { UnorderedList, ListItem } from "@twilio-paste/core/list";
 import { useUID } from "@twilio-paste/core/uid-library";
+import { RadioOption } from "@components/RadioOption";
 
 export default function PreviousCoverage() {
   return (
@@ -26,12 +27,12 @@ export default function PreviousCoverage() {
             name="existing_policy"
             legend="Do you currently have an insurance policy in effect for the coverage you have requested?"
           >
-            <Radio id={useUID()} value="yes" name="existing_policy">
+            <RadioOption id={useUID()} value="yes" name="existing_policy">
               Yes, I&apos;m currently covered
-            </Radio>
-            <Radio id={useUID()} value="no" name="existing_policy">
+            </RadioOption>
+            <RadioOption id={useUID()} value="no" name="existing_policy">
               No, I&apos;m not covered
-            </Radio>
+            </RadioOption>
           </RadioGroup>
         </Box>
 
@@ -64,12 +65,12 @@ export default function PreviousCoverage() {
               <ListItem>Your business has ever declared bankruptcy</ListItem>
             </UnorderedList>
             <Stack orientation="horizontal" spacing="space50">
-              <Radio id={useUID()} value="yes" name="policy_statements">
+              <RadioOption id={useUID()} value="yes" name="policy_statements">
                 Yes
-              </Radio>
-              <Radio id={useUID()} value="no" name="policy_statements">
+              </RadioOption>
+              <RadioOption id={useUID()} value="no" name="policy_statements">
                 No
-              </Radio>
+              </RadioOption>
             </Stack>
           </RadioGroup>
         </Box>
