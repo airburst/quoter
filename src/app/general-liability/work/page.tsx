@@ -5,10 +5,10 @@ import { Box } from "@twilio-paste/core/box";
 import { Heading } from "@twilio-paste/core/heading";
 import { NextButton } from "@components/NextButton";
 import { Section } from "@components/Section";
-import { Stack } from "@twilio-paste/core/stack";
 import { RadioGroup } from "@twilio-paste/core/radio-group";
 import { useUID } from "@twilio-paste/core/uid-library";
 import { RadioOption } from "@components/RadioOption";
+import { FlexWithGap } from "@components/FlexWithGap";
 
 export default function Work() {
   return (
@@ -43,14 +43,14 @@ export default function Work() {
             name="external_buildings"
             legend="Do you work on exterior buildings?"
           >
-            <Stack orientation="horizontal" spacing="space50">
+            <FlexWithGap>
               <RadioOption id={useUID()} value="yes" name="external_buildings">
                 Yes
               </RadioOption>
               <RadioOption id={useUID()} value="no" name="external_buildings">
                 No
               </RadioOption>
-            </Stack>
+            </FlexWithGap>
           </RadioGroup>
         </Box>
 
@@ -60,14 +60,14 @@ export default function Work() {
             legend="Do you perform industrial work?"
             helpText="Industrial work typically pertains to work performed in manufacturing facilities, including factories and warehouses."
           >
-            <Stack orientation="horizontal" spacing="space50">
+            <FlexWithGap>
               <RadioOption id={useUID()} value="yes" name="industrial_work">
                 Yes
               </RadioOption>
               <RadioOption id={useUID()} value="no" name="industrial_work">
                 No
               </RadioOption>
-            </Stack>
+            </FlexWithGap>
           </RadioGroup>
         </Box>
 

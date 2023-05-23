@@ -1,0 +1,16 @@
+.container {
+  margin-top: var(--size-30);
+}
+
+.container > * {
+  gap: var(--size-30);
+}
+
+.container button {
+  padding: 10px 11px;
+  border-radius: 50%;
+}
+
+.container input {
+  text-align: center;
+}
