@@ -1,9 +1,7 @@
 "use client";
 
-import { Anchor } from "@twilio-paste/core/anchor";
 import { BackLink } from "@components/BackLink";
 import { Box } from "@twilio-paste/core/box";
-import { Checkbox } from "@twilio-paste/core/checkbox";
 import { Heading } from "@twilio-paste/core/heading";
 import { Info } from "@components/Info";
 import { Input } from "@twilio-paste/core/input";

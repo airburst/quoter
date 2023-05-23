@@ -91,7 +91,7 @@ export default function Customer() {
         </Box>
 
         <Box marginY="space100">
-          <NextButton href="#" />
+          <NextButton href="./about-your-business" />
         </Box>
       </Section>
     </>

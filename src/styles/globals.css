@@ -153,3 +153,13 @@ body {
   font-size: var(--font-size-3);
   background-color: var(--color-background);
 }
+
+/* Paste overrides */
+
+/* Radio legends */
+fieldset > legend > span > span,
+label > span > span {
+  font-size: var(--font-size-4);
+  line-height: var(--size-40);
+  margin-bottom: var(--size-20);
+}

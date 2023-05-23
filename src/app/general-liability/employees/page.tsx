@@ -40,10 +40,12 @@ export default function Employees() {
             Great, can you tell us more about who works for your business.
           </Heading>
         </Flex>
+
         <Box marginBottom="space100">
           <Label htmlFor="owner-count">Number of owners</Label>
           <NumberInput id="owner-count" />
         </Box>
+
         <Box marginBottom="space100">
           <Label htmlFor="employee-count">Number of employees</Label>
           <HelpText>
@@ -55,6 +57,7 @@ export default function Employees() {
           </HelpText>
           <NumberInput id="employee-count" />
         </Box>
+
         <Box marginBottom="space100">
           <RadioGroup
             name="subcontractors"
@@ -72,6 +75,7 @@ export default function Employees() {
             </Stack>
           </RadioGroup>
         </Box>
+
         {isAdditionalVisible && (
           <>
             <Box marginBottom="space100">
@@ -118,7 +122,7 @@ export default function Employees() {
             </Box>
           </>
         )}
-        <NextButton href="/before-we-continue" />
+        <NextButton href="./before-we-continue" />
       </Section>
     </>
   );

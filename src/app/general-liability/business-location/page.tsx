@@ -81,7 +81,7 @@ export default function BusinessLocation() {
             </Info>
           </Box>
         )}
-        <NextButton href="/employees" />
+        <NextButton href="./employees" />
       </Section>
     </>
   );

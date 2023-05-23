@@ -61,7 +61,7 @@ export default function Coverages() {
             <CheckboxCard id="cyber" title="Cyber" />
           </CheckboxGroup>
         </Box>
-        <NextButton href="/what-you-do" />
+        <NextButton href="/general-liability" />
       </Section>
     </>
   );

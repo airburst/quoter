@@ -19,6 +19,7 @@ export default function PolicyHolder() {
             First, let us check something.
           </Heading>
         </Flex>
+
         <Box marginBottom="space100">
           <RadioGroup
             name="policy-holder"

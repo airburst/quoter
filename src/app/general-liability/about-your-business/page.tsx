@@ -23,6 +23,7 @@ export default function AboutYourBusiness() {
             Great to meet you John! Can you tell us more about your business.
           </Heading>
         </Flex>
+
         <Box marginBottom="space100">
           <RadioGroup
             name="secondary-service"
@@ -39,6 +40,7 @@ export default function AboutYourBusiness() {
             </Stack>
           </RadioGroup>
         </Box>
+
         <Box marginBottom="space100">
           <RadioGroup
             name="legal-structure"
@@ -58,6 +60,7 @@ export default function AboutYourBusiness() {
             </Radio>
           </RadioGroup>
         </Box>
+
         <Box marginBottom="space100">
           <Label htmlFor="start-year">When did you start your business?</Label>
           <Text as="p" marginBottom="space50" color="colorTextWeak">
@@ -74,7 +77,7 @@ export default function AboutYourBusiness() {
             <Option value="5+">More than 5 years ago</Option>
           </Select>
         </Box>
-        <NextButton href="/customer-details" />
+        <NextButton href="./business-location" />
       </Section>
     </>
   );
