@@ -155,7 +155,7 @@ body {
   background-color: var(--color-background);
 }
 
-body > :first-of-type(div) {
+body > div:first-of-type {
   height: 100%;
   display: flex;
   flex-direction: column;
