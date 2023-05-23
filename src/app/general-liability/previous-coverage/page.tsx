@@ -5,11 +5,11 @@ import { Box } from "@twilio-paste/core/box";
 import { Heading } from "@twilio-paste/core/heading";
 import { NextButton } from "@components/NextButton";
 import { Section } from "@components/Section";
-import { Stack } from "@twilio-paste/core/stack";
 import { RadioGroup } from "@twilio-paste/core/radio-group";
 import { UnorderedList, ListItem } from "@twilio-paste/core/list";
 import { useUID } from "@twilio-paste/core/uid-library";
 import { RadioOption } from "@components/RadioOption";
+import { FlexWithGap } from "@components/FlexWithGap";
 
 export default function PreviousCoverage() {
   return (
@@ -64,14 +64,14 @@ export default function PreviousCoverage() {
               </ListItem>
               <ListItem>Your business has ever declared bankruptcy</ListItem>
             </UnorderedList>
-            <Stack orientation="horizontal" spacing="space50">
+            <FlexWithGap>
               <RadioOption id={useUID()} value="yes" name="policy_statements">
                 Yes
               </RadioOption>
               <RadioOption id={useUID()} value="no" name="policy_statements">
                 No
               </RadioOption>
-            </Stack>
+            </FlexWithGap>
           </RadioGroup>
         </Box>
 

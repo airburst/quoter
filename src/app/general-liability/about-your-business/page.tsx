@@ -8,11 +8,11 @@ import { BackLink } from "@components/BackLink";
 import { RadioGroup } from "@twilio-paste/core/radio-group";
 import { useUID } from "@twilio-paste/core/uid-library";
 import { NextButton } from "@components/NextButton";
-import { Stack } from "@twilio-paste/core/stack";
 import { Label } from "@twilio-paste/core/label";
 import { Select, Option } from "@twilio-paste/core/select";
 import { Text } from "@twilio-paste/core/text";
 import { RadioOption } from "@components/RadioOption";
+import { FlexWithGap } from "@components/FlexWithGap";
 
 export default function AboutYourBusiness() {
   return (
@@ -31,14 +31,14 @@ export default function AboutYourBusiness() {
             legend="Do you provide a secondary service for customers that is a significant part of your business?"
             helpText="If your business fits in more than one box, tell us about it here."
           >
-            <Stack orientation="horizontal" spacing="space50">
+            <FlexWithGap>
               <RadioOption id={useUID()} value="yes" name="secondary-service">
                 Yes
               </RadioOption>
               <RadioOption id={useUID()} value="no" name="secondary-service">
                 No
               </RadioOption>
-            </Stack>
+            </FlexWithGap>
           </RadioGroup>
         </Box>
 

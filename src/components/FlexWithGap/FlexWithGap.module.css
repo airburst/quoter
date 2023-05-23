@@ -1,0 +1,3 @@
+.container div[data-paste-element="FLEX"] {
+  gap: var(--size-30);
+}
