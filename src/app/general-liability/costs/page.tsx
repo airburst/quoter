@@ -79,11 +79,11 @@ export default function Costs() {
             }
           />
           <Info>
-            <Text as="p">
+            <Text as="span">
               <strong>Include</strong> yourself, full-time employyes, part-time
               employees and temporary employees (W2).
             </Text>
-            <Text as="p" paddingTop="space40">
+            <Text as="span" paddingTop="space40">
               <strong>Do not include</strong> subcontractors (1099). Please note
               the payroll may be adjusted to meet state requirements.
             </Text>
