@@ -71,7 +71,7 @@ export default function Work() {
         </Box>
 
         <Box marginY="space100">
-          <NextButton href="#" />
+          <NextButton href="./work-continued" />
         </Box>
       </Section>
     </>

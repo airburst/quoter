@@ -121,7 +121,7 @@ export default function Costs() {
         </Box>
 
         <Box marginY="space100">
-          <NextButton href="#" />
+          <NextButton href="./work" />
         </Box>
       </Section>
     </>

@@ -41,7 +41,7 @@ export default function CustomiseQuotes() {
             />
           </CheckboxGroup>
         </Box>
-        <NextButton href="/general-liability" />
+        <NextButton href="./coverage-start" />
       </Section>
     </>
   );

@@ -8,7 +8,7 @@ import { BackLink } from "@components/BackLink";
 import { Checkbox, CheckboxGroup } from "@twilio-paste/core/checkbox";
 import { NextButton } from "@components/NextButton";
 
-export default function AboutYourWorkContinued() {
+export default function WorkContinued() {
   return (
     <>
       <BackLink />
@@ -96,7 +96,7 @@ export default function AboutYourWorkContinued() {
             </Checkbox>
           </CheckboxGroup>
         </Box>
-        <NextButton href="/coverages" />
+        <NextButton href="./previous-coverage" />
       </Section>
     </>
   );

@@ -67,10 +67,8 @@ export default function AboutYourBusiness() {
             This is when you first began conducting paid work and/or when you
             first registered your business.
           </Text>
-          <Select id="start-year">
-            <Option value="" disabled selected>
-              Please select
-            </Option>
+          <Select id="start-year" defaultValue="">
+            <Option value="">Please select</Option>
             <Option value="1">Less than a year ago</Option>
             <Option value="2">2 years ago</Option>
             <Option value="3-5">3-5 years ago</Option>

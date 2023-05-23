@@ -75,7 +75,7 @@ export default function PreviousCoverage() {
         </Box>
 
         <Box marginY="space100">
-          <NextButton href="#" />
+          <NextButton href="./business-address" />
         </Box>
       </Section>
     </>
