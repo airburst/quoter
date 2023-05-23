@@ -43,11 +43,13 @@ export const Navigation = ({ completed }: Props) => {
             </li>
             <li className={styles.listItem}>
               <Donut value={completedValues?.[1] || "0"} />
-              <ActiveLink href="/page-1">Coverage</ActiveLink>
+              <ActiveLink href="/what-you-do">Coverage</ActiveLink>
             </li>
             <li className={styles.listItem}>
               <Donut value={completedValues?.[2] || "0"} />
-              <ActiveLink href="/page-2">Application</ActiveLink>
+              <ActiveLink href="/general-liability">
+                General Liability
+              </ActiveLink>
             </li>
             <li className={styles.listItem}>
               <Donut value={completedValues?.[3] || "0"} />

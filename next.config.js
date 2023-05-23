@@ -8,6 +8,11 @@ const nextConfig = {
         destination: "/trade",
         permanent: true,
       },
+      {
+        source: "/general-liability",
+        destination: "/general-liability/info",
+        permanent: true,
+      },
     ];
   },
 };
