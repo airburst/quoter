@@ -1,6 +1,6 @@
 "use client";
 
-import { Anchor } from "@twilio-paste/core/anchor";
+import Link from "next/link";
 import { BackLink } from "@components/BackLink";
 import { Box } from "@twilio-paste/core/box";
 import { Checkbox } from "@twilio-paste/core/checkbox";
@@ -20,7 +20,7 @@ export default function Customer() {
           <Heading as="h2" variant="heading10">
             Amazing, we should get to know you better.
           </Heading>
-          <Anchor href="#">More Information</Anchor>
+          <Link href="#">More Information</Link>
         </Box>
 
         <Box marginTop="space50">

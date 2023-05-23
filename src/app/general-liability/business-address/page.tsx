@@ -1,6 +1,6 @@
 "use client";
 
-import { Anchor } from "@twilio-paste/core/anchor";
+import Link from "next/link";
 import { Box } from "@twilio-paste/core/box";
 import { Checkbox } from "@twilio-paste/core/checkbox";
 import { Heading } from "@twilio-paste/core/heading";
@@ -46,7 +46,7 @@ export default function BusinessAddress() {
             }
           />
         </Box>
-        <Anchor href="#">Enter manually</Anchor>
+        <Link href="#">Enter manually</Link>
 
         <Box marginTop="space100">
           <Checkbox
