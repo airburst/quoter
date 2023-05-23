@@ -9,26 +9,15 @@ import { Radio, RadioGroup } from "@twilio-paste/core/radio-group";
 import { useUID } from "@twilio-paste/core/uid-library";
 import { NextButton } from "@components/NextButton";
 import { Label } from "@twilio-paste/core/label";
-import { Button } from "@twilio-paste/core/button";
-import { MinusIcon, PlusIcon } from "@components/Icon";
 import { useState } from "react";
-import { Input } from "@twilio-paste/core/input";
 import { Info } from "@components/Info";
+import { NumberInput } from "@components/NumberInput";
 
 export default function BusinessLocation() {
   const [isCountVisible, setIsCountVisible] = useState(false);
-  const [count, setCount] = useState(1);
 
   const handleChange = () => {
     setIsCountVisible(true);
-  };
-
-  const decrement = () => {
-    setCount(count - 1);
-  };
-
-  const increment = () => {
-    setCount(count + 1);
   };
 
   return (
@@ -85,20 +74,7 @@ export default function BusinessLocation() {
             <Label htmlFor="location-count">
               How many locations does your business own or rent?
             </Label>
-            <Flex vAlignContent="center">
-              <Button variant="primary_icon" size="icon" onClick={decrement}>
-                <MinusIcon style={{ width: "30px" }} />
-              </Button>
-              <Input
-                id="location-count"
-                name="location-count"
-                type="text"
-                defaultValue={count}
-              />
-              <Button variant="primary_icon" size="icon" onClick={increment}>
-                <PlusIcon style={{ width: "30px" }} />
-              </Button>
-            </Flex>
+            <NumberInput id="location-count" />
             <Info>
               If your business is solely based out of your home, select
               &quot;1&quot;
