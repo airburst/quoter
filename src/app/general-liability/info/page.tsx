@@ -20,7 +20,7 @@ const coverItems = [
   "Third-party medical payments",
 ];
 
-export default function WhatYouDo() {
+export default function Information() {
   return (
     <>
       <BackLink />
@@ -47,7 +47,7 @@ export default function WhatYouDo() {
           />
         </Box>
         <Box marginY="space100">
-          <Button variant="primary" as="a" fullWidth href="#">
+          <Button variant="primary" as="a" fullWidth href="./policy-holder">
             Start
           </Button>
         </Box>

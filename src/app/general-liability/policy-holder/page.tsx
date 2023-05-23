@@ -33,7 +33,7 @@ export default function PolicyHolder() {
             </Radio>
           </RadioGroup>
         </Box>
-        <NextButton href="/customer-details" />
+        <NextButton href="./customer" />
       </Section>
     </>
   );
