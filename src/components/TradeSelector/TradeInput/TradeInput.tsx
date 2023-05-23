@@ -12,6 +12,7 @@ import { Flex } from "@twilio-paste/core/flex";
 import { Highlight } from "@components/Highlight";
 import { Box } from "@twilio-paste/core/box";
 import { CameraIcon } from "@components/Icon";
+import { SearchIcon } from "@twilio-paste/icons/esm/SearchIcon";
 
 export type TradeInputProps = {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
@@ -116,6 +117,15 @@ export const TradeInput = (props: TradeInputProps) => {
               onChange={onChange}
               ref={inputRef}
               value={value}
+              insertBefore={
+                <Text
+                  color="colorTextWeak"
+                  as="span"
+                  fontWeight="fontWeightSemibold"
+                >
+                  <SearchIcon decorative />
+                </Text>
+              }
             />
           </Flex>
           <Flex>
