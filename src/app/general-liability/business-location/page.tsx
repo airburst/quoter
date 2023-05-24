@@ -1,7 +1,5 @@
 "use client";
 
-import { Flex } from "@twilio-paste/core/flex";
-import { Heading } from "@twilio-paste/core/heading";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
 import { BackButton } from "@components/BackButton";
@@ -13,6 +11,7 @@ import { useState } from "react";
 import { Info } from "@components/Info";
 import { NumberInput } from "@components/NumberInput";
 import { RadioOption } from "@components/RadioOption";
+import { PageTitle } from "@components/PageTitle";
 
 export default function BusinessLocation() {
   const [isCountVisible, setIsCountVisible] = useState(false);
@@ -25,11 +24,7 @@ export default function BusinessLocation() {
     <>
       <BackButton />
       <Section>
-        <Flex paddingY="space40">
-          <Heading as="h2" variant="heading10">
-            Now, let’s move on to where you do business from.
-          </Heading>
-        </Flex>
+        <PageTitle title="Now, let’s move on to where you do business from." />
         <Box marginBottom="space100">
           <RadioGroup
             name="location"

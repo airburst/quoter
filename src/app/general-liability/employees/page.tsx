@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Flex } from "@twilio-paste/core/flex";
-import { Heading } from "@twilio-paste/core/heading";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
 import { BackButton } from "@components/BackButton";
@@ -37,11 +35,7 @@ export default function Employees() {
     <>
       <BackButton />
       <Section>
-        <Flex paddingY="space40">
-          <Heading as="h2" variant="heading10">
-            Great, can you tell us more about who works for your business.
-          </Heading>
-        </Flex>
+        <PageTitle title="Great, can you tell us more about who works for your business." />
 
         <Box marginBottom="space100">
           <Label htmlFor="owner-count">Number of owners</Label>

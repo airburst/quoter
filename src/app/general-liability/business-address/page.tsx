@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { Box } from "@twilio-paste/core/box";
-import { Heading } from "@twilio-paste/core/heading";
 import { Input } from "@twilio-paste/core/input";
 import { Label } from "@twilio-paste/core/label";
 import { NextButton } from "@components/NextButton";
@@ -11,17 +10,14 @@ import { BackButton } from "@components/BackButton";
 import { Section } from "@components/Section";
 import { SearchIcon } from "@twilio-paste/icons/esm/SearchIcon";
 import { CheckboxOption } from "@components/CheckboxOption";
+import { PageTitle } from "@components/PageTitle";
 
 export default function BusinessAddress() {
   return (
     <>
       <BackButton />
       <Section>
-        <Box paddingY="space40">
-          <Heading as="h2" variant="heading10">
-            Okay. next we need your business address.
-          </Heading>
-        </Box>
+        <PageTitle title="Okay. next we need your business address." />
 
         <Box marginTop="space50">
           <Label htmlFor="business_name">Business name</Label>
