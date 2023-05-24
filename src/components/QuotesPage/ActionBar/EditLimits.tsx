@@ -1,7 +1,7 @@
-import { Badge } from "@twilio-paste/core/badge";
-import { Stack } from "@twilio-paste/core/stack";
-import { Button } from "@twilio-paste/core/button";
-import { Flex } from "@twilio-paste/core/flex";
+import { Badge } from "@twilio-paste/badge";
+import { Stack } from "@twilio-paste/stack";
+import { Button } from "@twilio-paste/button";
+import { Flex } from "@twilio-paste/flex";
 
 export const EditLimits = () => {
   return (

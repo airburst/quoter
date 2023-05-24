@@ -1,7 +1,7 @@
 "use client";
 
 import { Section } from "@components/Section";
-import { Box } from "@twilio-paste/core/box";
+import { Box } from "@twilio-paste/box";
 import { BackButton } from "@components/BackButton";
 import { PageTitle } from "@components/PageTitle";
 

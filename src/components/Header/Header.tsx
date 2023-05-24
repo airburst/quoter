@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "@twilio-paste/core/Button";
+import { Button } from "@twilio-paste/button";
 import { Logo } from "@components/Logo";
 import { Section } from "@components/Section";
 import styles from "./Header.module.css";

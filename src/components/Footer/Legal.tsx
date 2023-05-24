@@ -1,6 +1,6 @@
 "use client";
 
-import { Text } from "@twilio-paste/core/Text";
+import { Text } from "@twilio-paste/text";
 
 export const Legal = () => {
   return (

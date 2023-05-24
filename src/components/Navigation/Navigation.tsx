@@ -1,15 +1,15 @@
 "use client";
 
-import { Button } from "@twilio-paste/core/Button";
+import { useState } from "react";
+import clsx from "clsx";
+import { Button } from "@twilio-paste/button";
+import { Separator } from "@twilio-paste/separator";
+import { Box } from "@twilio-paste/box";
 import { ChevronDownIcon } from "@twilio-paste/icons/esm/ChevronDownIcon";
 import { ChevronUpIcon } from "@twilio-paste/icons/esm/ChevronUpIcon";
 import { ActiveLink } from "./ActiveLink";
 import { Section } from "@components/Section";
-import { Separator } from "@twilio-paste/core/separator";
-import { Box } from "@twilio-paste/core/box";
 import { Donut } from "./Donut";
-import { useState } from "react";
-import clsx from "clsx";
 import styles from "./Navigation.module.css";
 
 type Props = {

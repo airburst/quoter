@@ -1,6 +1,6 @@
-import { Stack } from "@twilio-paste/core/stack";
-import { Text } from "@twilio-paste/core/text";
-import { Badge } from "@twilio-paste/core/badge";
+import { Stack } from "@twilio-paste/stack";
+import { Text } from "@twilio-paste/text";
+import { Badge } from "@twilio-paste/badge";
 import { ArrowForwardIcon } from "@twilio-paste/icons/esm/ArrowForwardIcon";
 import styles from "./Highlight.module.css";
 

@@ -1,12 +1,12 @@
 "use client";
 
 import { Section } from "@components/Section";
-import { Box } from "@twilio-paste/core/box";
+import { Box } from "@twilio-paste/box";
 import { BackButton } from "@components/BackButton";
-import { RadioGroup } from "@twilio-paste/core/radio-group";
-import { useUID } from "@twilio-paste/core/uid-library";
+import { RadioGroup } from "@twilio-paste/radio-group";
+import { useUID } from "@twilio-paste/uid-library";
 import { NextButton } from "@components/NextButton";
-import { Label } from "@twilio-paste/core/label";
+import { Label } from "@twilio-paste/label";
 import { useState } from "react";
 import { Info } from "@components/Info";
 import { NumberInput } from "@components/NumberInput";
@@ -89,7 +89,7 @@ export default function BusinessLocation() {
             </Info>
           </Box>
         )}
-        <NextButton href="./employees" />
+        <NextButton href="/general-liability/employees" />
       </Section>
     </>
   );

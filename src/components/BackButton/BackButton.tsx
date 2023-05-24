@@ -2,8 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import { Section } from "@components/Section";
-import { Box } from "@twilio-paste/core/box";
-import { Button } from "@twilio-paste/core/button";
+import { Box } from "@twilio-paste/box";
+import { Button } from "@twilio-paste/button";
 
 export const BackButton = () => {
   const router = useRouter();

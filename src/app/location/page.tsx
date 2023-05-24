@@ -1,10 +1,10 @@
 "use client";
 
 import { Section } from "@components/Section";
-import { Box } from "@twilio-paste/core/box";
-import { Input } from "@twilio-paste/core/input";
+import { Box } from "@twilio-paste/box";
+import { Input } from "@twilio-paste/input";
 import { SearchIcon } from "@twilio-paste/icons/esm/SearchIcon";
-import { Text } from "@twilio-paste/core/text";
+import { Text } from "@twilio-paste/text";
 import { BackButton } from "@components/BackButton";
 import { NextButton } from "@components/NextButton";
 import { PageTitle } from "@components/PageTitle";

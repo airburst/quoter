@@ -1,9 +1,9 @@
 "use client";
 
 import { ReactNode } from "react";
-import { Flex } from "@twilio-paste/core/flex";
-import { Text } from "@twilio-paste/core/text";
-import { Separator } from "@twilio-paste/core/separator";
+import { Flex } from "@twilio-paste/flex";
+import { Text } from "@twilio-paste/text";
+import { Separator } from "@twilio-paste/separator";
 import { AcceptIcon } from "@twilio-paste/icons/esm/AcceptIcon";
 import { PlusIcon } from "@twilio-paste/icons/esm/PlusIcon";
 import { QuoteActions } from "../QuoteActions";

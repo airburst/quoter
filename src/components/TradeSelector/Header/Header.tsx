@@ -1,8 +1,8 @@
 // import { FocusableElement } from "@react-types/shared";
 // import { DOMAttributes } from "react";
 
-import { Label } from "@twilio-paste/core/label";
-import { Heading } from "@twilio-paste/core/heading";
+import { Label } from "@twilio-paste/label";
+import { Heading } from "@twilio-paste/heading";
 import { Text } from "@twilio-paste/text";
 import type { LabelProps } from "../types";
 

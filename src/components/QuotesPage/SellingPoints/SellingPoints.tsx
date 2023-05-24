@@ -1,4 +1,4 @@
-import { Text } from "@twilio-paste/core/Text";
+import { Text } from "@twilio-paste/text";
 import { Feature } from "../Feature";
 import { InsurerLogos } from "../InsurerLogos";
 import { Section } from "@components/Section";

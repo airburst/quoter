@@ -1,14 +1,14 @@
 "use client";
 
 import { Section } from "@components/Section";
-import { Box } from "@twilio-paste/core/box";
+import { Box } from "@twilio-paste/box";
 import { BackButton } from "@components/BackButton";
-import { RadioGroup } from "@twilio-paste/core/radio-group";
-import { useUID } from "@twilio-paste/core/uid-library";
+import { RadioGroup } from "@twilio-paste/radio-group";
+import { useUID } from "@twilio-paste/uid-library";
 import { NextButton } from "@components/NextButton";
-import { Label } from "@twilio-paste/core/label";
-import { Select, Option } from "@twilio-paste/core/select";
-import { Text } from "@twilio-paste/core/text";
+import { Label } from "@twilio-paste/label";
+import { Select, Option } from "@twilio-paste/select";
+import { Text } from "@twilio-paste/text";
 import { RadioOption } from "@components/RadioOption";
 import { FlexWithGap } from "@components/FlexWithGap";
 import { PageTitle } from "@components/PageTitle";
@@ -79,7 +79,7 @@ export default function AboutYourBusiness() {
             <Option value="5+">More than 5 years ago</Option>
           </Select>
         </Box>
-        <NextButton href="./business-location" />
+        <NextButton href="/general-liability/business-location" />
       </Section>
     </>
   );

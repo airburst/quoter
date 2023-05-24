@@ -1,11 +1,11 @@
 "use client";
 
 import { BackButton } from "@components/BackButton";
-import { Box } from "@twilio-paste/core/box";
+import { Box } from "@twilio-paste/box";
 import { NextButton } from "@components/NextButton";
 import { Section } from "@components/Section";
-import { RadioGroup } from "@twilio-paste/core/radio-group";
-import { useUID } from "@twilio-paste/core/uid-library";
+import { RadioGroup } from "@twilio-paste/radio-group";
+import { useUID } from "@twilio-paste/uid-library";
 import { RadioOption } from "@components/RadioOption";
 import { FlexWithGap } from "@components/FlexWithGap";
 import { PageTitle } from "@components/PageTitle";
@@ -68,7 +68,7 @@ export default function Work() {
         </Box>
 
         <Box marginY="space100">
-          <NextButton href="./work-continued" />
+          <NextButton href="/general-liability/work-continued" />
         </Box>
       </Section>
     </>

@@ -5,12 +5,12 @@ import { AriaLabelingProps, DOMProps } from "@react-types/shared";
 // import clsx from "clsx";
 // import { useFocusRing } from "@react-aria/focus";
 // import { useHover } from "@react-aria/interactions";
-import { Text } from "@twilio-paste/core/text";
-import { Input } from "@twilio-paste/core/input";
-import { Button } from "@twilio-paste/core/button";
-import { Flex } from "@twilio-paste/core/flex";
+import { Text } from "@twilio-paste/text";
+import { Input } from "@twilio-paste/input";
+import { Button } from "@twilio-paste/button";
+import { Flex } from "@twilio-paste/flex";
 import { Highlight } from "@components/Highlight";
-import { Box } from "@twilio-paste/core/box";
+import { Box } from "@twilio-paste/box";
 import { CameraIcon } from "@components/Icon";
 import { SearchIcon } from "@twilio-paste/icons/esm/SearchIcon";
 

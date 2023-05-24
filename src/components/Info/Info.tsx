@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import { Box } from "@twilio-paste/core/box";
-import { Text } from "@twilio-paste/core/text";
-import { Flex } from "@twilio-paste/core/flex";
+import { Box } from "@twilio-paste/box";
+import { Text } from "@twilio-paste/text";
+import { Flex } from "@twilio-paste/flex";
 import { LightbulbIcon } from "@components/Icon";
 
 type InfoProps = {

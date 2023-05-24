@@ -1,5 +1,5 @@
-import { Button } from "@twilio-paste/core/button";
-import { Flex } from "@twilio-paste/core/flex";
+import { Button } from "@twilio-paste/button";
+import { Flex } from "@twilio-paste/flex";
 import { ArrowForwardIcon } from "@twilio-paste/icons/esm/ArrowForwardIcon";
 import styles from "./QuoteActions.module.css";
 

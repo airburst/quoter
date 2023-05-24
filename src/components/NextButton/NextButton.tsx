@@ -1,7 +1,7 @@
 import { useRouter } from "next/navigation";
-import { Button } from "@twilio-paste/core/button";
+import { Button } from "@twilio-paste/button";
 import { ArrowRightIcon } from "@components/Icon";
-import { Box } from "@twilio-paste/core/box";
+import { Box } from "@twilio-paste/box";
 
 type NextButtonProps = {
   href: string;

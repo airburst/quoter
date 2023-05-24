@@ -2,16 +2,16 @@
 
 import { useState } from "react";
 import { Section } from "@components/Section";
-import { Box } from "@twilio-paste/core/box";
+import { Box } from "@twilio-paste/box";
 import { BackButton } from "@components/BackButton";
-import { RadioGroup } from "@twilio-paste/core/radio-group";
-import { useUID } from "@twilio-paste/core/uid-library";
+import { RadioGroup } from "@twilio-paste/radio-group";
+import { useUID } from "@twilio-paste/uid-library";
 import { NextButton } from "@components/NextButton";
-import { Label } from "@twilio-paste/core/label";
+import { Label } from "@twilio-paste/label";
 import { NumberInput } from "@components/NumberInput";
-import { HelpText } from "@twilio-paste/core/help-text";
-import { Text } from "@twilio-paste/core/text";
-import { CheckboxGroup } from "@twilio-paste/core/checkbox";
+import { HelpText } from "@twilio-paste/help-text";
+import { Text } from "@twilio-paste/text";
+import { CheckboxGroup } from "@twilio-paste/checkbox";
 import { RadioOption } from "@components/RadioOption";
 import { CheckboxOption } from "@components/CheckboxOption";
 import { FlexWithGap } from "@components/FlexWithGap";
@@ -130,7 +130,7 @@ export default function Employees() {
             </Box>
           </>
         )}
-        <NextButton href="./costs" />
+        <NextButton href="/general-liability/costs" />
       </Section>
     </>
   );

@@ -1,8 +1,8 @@
 "use client";
 
 import { Section } from "@components/Section";
-import { Box } from "@twilio-paste/core/box";
-import { CheckboxGroup } from "@twilio-paste/core/checkbox";
+import { Box } from "@twilio-paste/box";
+import { CheckboxGroup } from "@twilio-paste/checkbox";
 import { BackButton } from "@components/BackButton";
 import { NextButton } from "@components/NextButton";
 import { CheckboxCard } from "@components/CheckboxCard";
@@ -36,7 +36,7 @@ export default function CustomiseQuotes() {
             />
           </CheckboxGroup>
         </Box>
-        <NextButton href="./coverage-start" />
+        <NextButton href="/general-liability/coverage-start" />
       </Section>
     </>
   );

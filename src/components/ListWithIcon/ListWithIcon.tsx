@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import { Box } from "@twilio-paste/core/box";
-import { Stack } from "@twilio-paste/core/stack";
-import { Text } from "@twilio-paste/core/text";
+import { Box } from "@twilio-paste/box";
+import { Stack } from "@twilio-paste/stack";
+import { Text } from "@twilio-paste/text";
 import styles from "./ListWithIcon.module.css";
 
 type Props = {

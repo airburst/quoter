@@ -1,8 +1,8 @@
 "use client";
 
 import { Section } from "@components/Section";
-import { Box } from "@twilio-paste/core/box";
-import { CheckboxGroup } from "@twilio-paste/core/checkbox";
+import { Box } from "@twilio-paste/box";
+import { CheckboxGroup } from "@twilio-paste/checkbox";
 import { BackButton } from "@components/BackButton";
 import { NextButton } from "@components/NextButton";
 import { CameraIcon, ShieldHalvedIcon, SquarePlusIcon } from "@components/Icon";

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Box } from "@twilio-paste/core/box";
+import { Box } from "@twilio-paste/box";
 
 type HighlightProps = {
   children: ReactNode;

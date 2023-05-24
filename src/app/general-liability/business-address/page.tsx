@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { Box } from "@twilio-paste/core/box";
-import { Input } from "@twilio-paste/core/input";
-import { Label } from "@twilio-paste/core/label";
+import { Box } from "@twilio-paste/box";
+import { Input } from "@twilio-paste/input";
+import { Label } from "@twilio-paste/label";
 import { NextButton } from "@components/NextButton";
-import { Text } from "@twilio-paste/core/text";
+import { Text } from "@twilio-paste/text";
 import { BackButton } from "@components/BackButton";
 import { Section } from "@components/Section";
 import { SearchIcon } from "@twilio-paste/icons/esm/SearchIcon";
@@ -58,7 +58,7 @@ export default function BusinessAddress() {
         </Box>
 
         <Box marginY="space100">
-          <NextButton href="./customise-quotes" />
+          <NextButton href="/general-liability/customise-quotes" />
         </Box>
       </Section>
     </>

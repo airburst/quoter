@@ -1,4 +1,4 @@
-import { Text } from "@twilio-paste/core/Text";
+import { Text } from "@twilio-paste/text";
 import { Section } from "@components/Section";
 import styles from "./Summary.module.css";
 

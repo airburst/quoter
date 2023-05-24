@@ -3,8 +3,8 @@
 import clsx from "clsx";
 import { Ref, Key, forwardRef } from "react";
 import { TradeProps } from "../types";
-import { ListItem } from "@twilio-paste/core/list";
-import { Button } from "@twilio-paste/core/button";
+import { ListItem } from "@twilio-paste/list";
+import { Button } from "@twilio-paste/button";
 
 export type ListingItemElementType = HTMLButtonElement;
 

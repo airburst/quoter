@@ -1,9 +1,9 @@
 "use client";
 
 import { Section } from "@components/Section";
-import { Box } from "@twilio-paste/core/box";
+import { Box } from "@twilio-paste/box";
 import { BackButton } from "@components/BackButton";
-import { CheckboxGroup } from "@twilio-paste/core/checkbox";
+import { CheckboxGroup } from "@twilio-paste/checkbox";
 import { NextButton } from "@components/NextButton";
 import { CheckboxOption } from "@components/CheckboxOption";
 import { PageTitle } from "@components/PageTitle";
@@ -95,7 +95,7 @@ export default function WorkContinued() {
             </CheckboxOption>
           </CheckboxGroup>
         </Box>
-        <NextButton href="./previous-coverage" />
+        <NextButton href="/general-liability/previous-coverage" />
       </Section>
     </>
   );

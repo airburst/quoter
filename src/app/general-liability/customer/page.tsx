@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { BackButton } from "@components/BackButton";
-import { Box } from "@twilio-paste/core/box";
+import { Box } from "@twilio-paste/box";
 import { Info } from "@components/Info";
-import { Input } from "@twilio-paste/core/input";
+import { Input } from "@twilio-paste/input";
 import { NextButton } from "@components/NextButton";
 import { Section } from "@components/Section";
-import { Text } from "@twilio-paste/core/text";
+import { Text } from "@twilio-paste/text";
 import { CheckboxOption } from "@components/CheckboxOption";
 import { PageTitle } from "@components/PageTitle";
 
@@ -93,7 +93,7 @@ export default function Customer() {
         </Box>
 
         <Box marginY="space100">
-          <NextButton href="./about-your-business" />
+          <NextButton href="/general-liability/about-your-business" />
         </Box>
       </Section>
     </>

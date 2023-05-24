@@ -1,12 +1,12 @@
 "use client";
 
 import { BackButton } from "@components/BackButton";
-import { Box } from "@twilio-paste/core/box";
+import { Box } from "@twilio-paste/box";
 import { NextButton } from "@components/NextButton";
 import { Section } from "@components/Section";
-import { RadioGroup } from "@twilio-paste/core/radio-group";
-import { UnorderedList, ListItem } from "@twilio-paste/core/list";
-import { useUID } from "@twilio-paste/core/uid-library";
+import { RadioGroup } from "@twilio-paste/radio-group";
+import { UnorderedList, ListItem } from "@twilio-paste/list";
+import { useUID } from "@twilio-paste/uid-library";
 import { RadioOption } from "@components/RadioOption";
 import { FlexWithGap } from "@components/FlexWithGap";
 import { PageTitle } from "@components/PageTitle";
@@ -72,7 +72,7 @@ export default function PreviousCoverage() {
         </Box>
 
         <Box marginY="space100">
-          <NextButton href="./business-address" />
+          <NextButton href="/general-liability/business-address" />
         </Box>
       </Section>
     </>

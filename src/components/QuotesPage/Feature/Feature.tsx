@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Text } from "@twilio-paste/core/text";
+import { Text } from "@twilio-paste/text";
 import styles from "./Feature.module.css";
 
 export const Feature = ({

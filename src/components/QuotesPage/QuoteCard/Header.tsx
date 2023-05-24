@@ -1,6 +1,6 @@
-import { Flex } from "@twilio-paste/core/flex";
-import { Stack } from "@twilio-paste/core";
-import { Text } from "@twilio-paste/core/text";
+import { Flex } from "@twilio-paste/flex";
+import { Stack } from "@twilio-paste/stack";
+import { Text } from "@twilio-paste/text";
 import { Brand } from "../InsurerLogos/Brand";
 import brand1 from "../InsurerLogos/images/brand1.png";
 import styles from "./Header.module.css";

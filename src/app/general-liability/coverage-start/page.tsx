@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { Box } from "@twilio-paste/core/box";
-import { Button } from "@twilio-paste/core/button";
-import { RadioGroup } from "@twilio-paste/core/radio-group";
-import { Label } from "@twilio-paste/core/label";
-import { DatePicker } from "@twilio-paste/core/date-picker";
-import { useUID } from "@twilio-paste/core/uid-library";
+import { Box } from "@twilio-paste/box";
+import { Button } from "@twilio-paste/button";
+import { RadioGroup } from "@twilio-paste/radio-group";
+import { Label } from "@twilio-paste/label";
+import { DatePicker } from "@twilio-paste/date-picker";
+import { useUID } from "@twilio-paste/uid-library";
 import { BackButton } from "@components/BackButton";
 import { Section } from "@components/Section";
 import { getToday, getTomorrow } from "@utils/dates";

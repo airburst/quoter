@@ -1,11 +1,11 @@
 "use client";
 
-import { Flex } from "@twilio-paste/core/flex";
-import { Button } from "@twilio-paste/core/button";
+import { Flex } from "@twilio-paste/flex";
+import { Button } from "@twilio-paste/button";
 import { MinusIcon, PlusIcon } from "@components/Icon";
 import { useState } from "react";
-import { Input } from "@twilio-paste/core/input";
-import { Box } from "@twilio-paste/core/box";
+import { Input } from "@twilio-paste/input";
+import { Box } from "@twilio-paste/box";
 import styles from "./NumberInput.module.css";
 
 type NumberInputProps = {

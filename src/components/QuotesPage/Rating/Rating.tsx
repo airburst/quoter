@@ -1,8 +1,8 @@
 "use client";
 
-import { Flex } from "@twilio-paste/core/flex";
-import { Stack } from "@twilio-paste/core/stack";
-import { Text } from "@twilio-paste/core/text";
+import { Flex } from "@twilio-paste/flex";
+import { Stack } from "@twilio-paste/stack";
+import { Text } from "@twilio-paste/text";
 import { StarIcon } from "@twilio-paste/icons/esm/StarIcon";
 import styles from "./Rating.module.css";
 

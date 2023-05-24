@@ -1,5 +1,5 @@
-import { Box } from "@twilio-paste/core/box";
-import { Heading } from "@twilio-paste/core/heading";
+import { Box } from "@twilio-paste/box";
+import { Heading } from "@twilio-paste/heading";
 
 type PageTitleProps = {
   title: string;

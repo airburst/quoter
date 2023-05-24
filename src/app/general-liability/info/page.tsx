@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Flex } from "@twilio-paste/core/flex";
-import { Heading } from "@twilio-paste/core/heading";
-import { Text } from "@twilio-paste/core/text";
-import { Button } from "@twilio-paste/core/button";
+import { Flex } from "@twilio-paste/flex";
+import { Heading } from "@twilio-paste/heading";
+import { Text } from "@twilio-paste/text";
+import { Button } from "@twilio-paste/button";
 import { Section } from "@components/Section";
-import { Box } from "@twilio-paste/core/box";
+import { Box } from "@twilio-paste/box";
 import { AcceptIcon } from "@twilio-paste/icons/esm/AcceptIcon";
 import { BackButton } from "@components/BackButton";
 import { Info } from "@components/Info";
@@ -47,7 +47,12 @@ export default function Information() {
           />
         </Box>
         <Box marginY="space100">
-          <Button variant="primary" as="a" fullWidth href="./policy-holder">
+          <Button
+            variant="primary"
+            as="a"
+            fullWidth
+            href="/general-liability/policy-holder"
+          >
             Start
           </Button>
         </Box>

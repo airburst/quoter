@@ -2,7 +2,7 @@
 import { MutableRefObject } from "react";
 import { TradeProps } from "../types";
 import { ListingItem } from "./ListingItem";
-import { UnorderedList } from "@twilio-paste/core/list";
+import { UnorderedList } from "@twilio-paste/list";
 import styles from "../styles/shared.module.css";
 
 export type ListingProps = {
@@ -38,7 +38,7 @@ export const Listing = (props: ListingProps) => {
             <ListingItem
               key={trade.value}
               trade={trade}
-              ref={(el) => {
+              ref={el => {
                 if (!el || !resultRefs) return;
                 resultRefs.current[id] = el;
               }}

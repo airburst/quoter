@@ -1,14 +1,14 @@
 "use client";
 
 import { useMemo, useState, useRef, useEffect, ChangeEvent } from "react";
-import { Box } from "@twilio-paste/core/box";
+import { Box } from "@twilio-paste/box";
 import { InputRef, TradeProps, TradeSelectorProps } from "./types";
 import { getConfig } from "./config";
 import { useTradeSelectorUrl } from "./useTradeSelectorUrl";
 import { useFetchTrades } from "./useFetchTrades";
 import { Header } from "./Header";
 import { TradeInput } from "./TradeInput";
-import { Text } from "@twilio-paste/core/text";
+import { Text } from "@twilio-paste/text";
 import { SearchResults } from "./SearchResults";
 import { Footer } from "./Footer";
 

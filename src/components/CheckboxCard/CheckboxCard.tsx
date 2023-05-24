@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
-import { Flex } from "@twilio-paste/core/flex";
-import { Box } from "@twilio-paste/core/box";
-import { Button } from "@twilio-paste/core/button";
-import { Text } from "@twilio-paste/core/text";
-import { Checkbox } from "@twilio-paste/core/checkbox";
+import { Flex } from "@twilio-paste/flex";
+import { Box } from "@twilio-paste/box";
+import { Button } from "@twilio-paste/button";
+import { Text } from "@twilio-paste/text";
+import { Checkbox } from "@twilio-paste/checkbox";
 import styles from "./CheckboxCard.module.css";
 
 type CheckboxCard = {

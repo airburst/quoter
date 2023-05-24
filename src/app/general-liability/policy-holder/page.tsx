@@ -1,10 +1,10 @@
 "use client";
 
 import { Section } from "@components/Section";
-import { Box } from "@twilio-paste/core/box";
+import { Box } from "@twilio-paste/box";
 import { BackButton } from "@components/BackButton";
-import { RadioGroup } from "@twilio-paste/core/radio-group";
-import { useUID } from "@twilio-paste/core/uid-library";
+import { RadioGroup } from "@twilio-paste/radio-group";
+import { useUID } from "@twilio-paste/uid-library";
 import { NextButton } from "@components/NextButton";
 import { RadioOption } from "@components/RadioOption";
 import { PageTitle } from "@components/PageTitle";
@@ -30,7 +30,7 @@ export default function PolicyHolder() {
             </RadioOption>
           </RadioGroup>
         </Box>
-        <NextButton href="./customer" />
+        <NextButton href="/general-liability/customer" />
       </Section>
     </>
   );

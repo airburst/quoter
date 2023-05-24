@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import { CustomizationProvider } from "@twilio-paste/core/customization";
+import { CustomizationProvider } from "@twilio-paste/customization";
 import { Footer } from "@components/Footer";
 import { Header } from "@components/Header";
 import CustomTheme from "../themes/theme.json";

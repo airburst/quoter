@@ -1,11 +1,11 @@
 "use client";
 
 import { Section } from "@components/Section";
-import { Box } from "@twilio-paste/core/box";
+import { Box } from "@twilio-paste/box";
 import { BackButton } from "@components/BackButton";
-import { RadioGroup } from "@twilio-paste/core/radio-group";
-import { CheckboxGroup } from "@twilio-paste/core/checkbox";
-import { useUID } from "@twilio-paste/core/uid-library";
+import { RadioGroup } from "@twilio-paste/radio-group";
+import { CheckboxGroup } from "@twilio-paste/checkbox";
+import { useUID } from "@twilio-paste/uid-library";
 import { NextButton } from "@components/NextButton";
 import { Info } from "@components/Info";
 import { RadioOption } from "@components/RadioOption";

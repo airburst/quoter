@@ -1,4 +1,4 @@
-import { Flex } from "@twilio-paste/core/flex";
+import { Flex } from "@twilio-paste/flex";
 import { EditLimits } from "./EditLimits";
 import { Cadence } from "./Cadence";
 

@@ -1,12 +1,12 @@
 "use client";
 
 import { BackButton } from "@components/BackButton";
-import { Box } from "@twilio-paste/core/box";
+import { Box } from "@twilio-paste/box";
 import { Info } from "@components/Info";
-import { Input } from "@twilio-paste/core/input";
+import { Input } from "@twilio-paste/input";
 import { NextButton } from "@components/NextButton";
 import { Section } from "@components/Section";
-import { Text } from "@twilio-paste/core/text";
+import { Text } from "@twilio-paste/text";
 import { DollarSignIcon } from "@components/Icon/DollarSignIcon";
 import { PageTitle } from "@components/PageTitle";
 
@@ -117,7 +117,7 @@ export default function Costs() {
         </Box>
 
         <Box marginY="space100">
-          <NextButton href="./work" />
+          <NextButton href="/general-liability/work" />
         </Box>
       </Section>
     </>

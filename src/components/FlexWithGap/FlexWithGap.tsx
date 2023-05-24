@@ -1,5 +1,5 @@
-import { Box } from "@twilio-paste/core/box";
-import { Flex } from "@twilio-paste/core/flex";
+import { Box } from "@twilio-paste/box";
+import { Flex } from "@twilio-paste/flex";
 import { ReactNode } from "react";
 import styles from "./FlexWithGap.module.css";
 
