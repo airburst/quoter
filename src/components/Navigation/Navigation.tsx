@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
+import { useAtom } from "jotai";
 import { Button } from "@twilio-paste/button";
 import { Separator } from "@twilio-paste/separator";
 import { Box } from "@twilio-paste/box";
@@ -11,14 +12,32 @@ import { ActiveLink } from "./ActiveLink";
 import { Section } from "@components/Section";
 import { Donut } from "./Donut";
 import styles from "./Navigation.module.css";
+import { navigationAtom } from "./state";
 
 type Props = {
   completed?: string[];
 };
 
 export const Navigation = ({ completed }: Props) => {
+  const [navigation, setNavigation] = useAtom(navigationAtom);
   const [isOpen, setIsOpen] = useState(false);
-  const completedValues = completed?.slice(0, 5);
+  const { steps } = navigation;
+
+  const newSteps = completed
+    ? steps.map((link, index) => {
+        return {
+          ...link,
+          completed: completed[index] || "0",
+        };
+      })
+    : steps;
+
+  useEffect(() => {
+    setNavigation(nav => ({
+      ...nav,
+      steps: newSteps,
+    }));
+  }, []);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -37,28 +56,15 @@ export const Navigation = ({ completed }: Props) => {
       <Section>
         <nav className={containerClasses}>
           <ul className={styles.list}>
-            <li className={styles.listItem}>
-              <Donut value={completedValues?.[0] || "0"} />
-              <ActiveLink href="/trade">Welcome</ActiveLink>
-            </li>
-            <li className={styles.listItem}>
-              <Donut value={completedValues?.[1] || "0"} />
-              <ActiveLink href="/what-you-do">Coverage</ActiveLink>
-            </li>
-            <li className={styles.listItem}>
-              <Donut value={completedValues?.[2] || "0"} />
-              <ActiveLink href="/general-liability">
-                General Liability
-              </ActiveLink>
-            </li>
-            <li className={styles.listItem}>
-              <Donut value={completedValues?.[3] || "0"} />
-              <ActiveLink href="/quotes">Quotes</ActiveLink>
-            </li>
-            <li className={styles.listItem}>
-              <Donut value={completedValues?.[4] || "0"} />
-              <ActiveLink href="/checkout">Checkout</ActiveLink>
-            </li>
+            {navigation.steps.map(step => {
+              const { label, href, completed } = step;
+              return (
+                <li key={href} className={styles.listItem}>
+                  <Donut value={completed} />
+                  <ActiveLink href={href}>{label}</ActiveLink>
+                </li>
+              );
+            })}
           </ul>
 
           <Box className={iconClasses}>
