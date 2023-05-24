@@ -778,6 +778,11 @@
     "@styled-system/core" "^5.1.2"
     "@styled-system/css" "^5.1.5"
 
+"@swc-jotai/react-refresh@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@swc-jotai/react-refresh/-/react-refresh-0.0.8.tgz#ff337d1cb50a2964a751fa4e580bc90b367fd5c5"
+  integrity sha512-fHMenTg1jeETEShCh/wlDxRpR6DZAXIuDuFIB9fZ4yf+JfrWzQkPIvPN3E0efSpOham9ucRspS0uI82PxBbCjg==
+
 "@swc/helpers@0.5.1":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.5.1.tgz#e9031491aa3f26bfcc974a67f48bd456c8a5357a"
@@ -3432,6 +3437,11 @@ jest-util@^29.0.0, jest-util@^29.5.0:
     ci-info "^3.2.0"
     graceful-fs "^4.2.9"
     picomatch "^2.2.3"
+
+jotai@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/jotai/-/jotai-2.1.0.tgz#b1a9525345518453802e4a64d99e2800598bab76"
+  integrity sha512-fR82PtHAmEQrc/daMEYGc4EteW96/b6wodtDSCzLvoJA/6y4YG70er4hh2f8CYwYjqwQ0eZUModGfG4DmwkTyQ==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"

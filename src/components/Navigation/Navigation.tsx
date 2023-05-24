@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
+import { useAtom } from "jotai";
 import { Button } from "@twilio-paste/button";
 import { Separator } from "@twilio-paste/separator";
 import { Box } from "@twilio-paste/box";
@@ -11,14 +13,41 @@ import { ActiveLink } from "./ActiveLink";
 import { Section } from "@components/Section";
 import { Donut } from "./Donut";
 import styles from "./Navigation.module.css";
+import { navigationAtom } from "./state";
 
 type Props = {
   completed?: string[];
 };
 
 export const Navigation = ({ completed }: Props) => {
+  const pathname = usePathname();
+  const [navigation, setNavigation] = useAtom(navigationAtom);
   const [isOpen, setIsOpen] = useState(false);
-  const completedValues = completed?.slice(0, 5);
+  const { steps } = navigation;
+
+  const newSteps = completed
+    ? steps.map((link, index) => {
+        return {
+          ...link,
+          completed: completed[index] || "0",
+        };
+      })
+    : steps;
+
+  const currentStepId = navigation.steps.findIndex(
+    step => step.href === pathname,
+  );
+
+  const currentStep =
+    currentStepId > -1 ? navigation.steps[currentStepId] : null;
+
+  useEffect(() => {
+    setNavigation(nav => ({
+      ...nav,
+      steps: newSteps,
+      currentStep: currentStepId,
+    }));
+  }, []);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -32,33 +61,51 @@ export const Navigation = ({ completed }: Props) => {
     [styles.iconOpen]: isOpen,
   });
 
+  const listClasses = clsx(styles.list, {
+    [styles.listOpen]: isOpen,
+  });
+
+  const listItemClasses = (index: number) => {
+    return clsx(styles.listItem, {
+      [styles.invisible]: !isOpen || currentStepId === index,
+      [styles.visible]: isOpen,
+    });
+  };
+
+  const currentStepClasses = clsx(styles.listItem, styles.listItemCurrent);
+  // TODO: read CSS variable?
+  const listItemHeight = 40;
+  const currentStepY = isOpen ? Math.abs(currentStepId) * listItemHeight : 0;
+
   return (
     <>
       <Section>
         <nav className={containerClasses}>
-          <ul className={styles.list}>
-            <li className={styles.listItem}>
-              <Donut value={completedValues?.[0] || "0"} />
-              <ActiveLink href="/trade">Welcome</ActiveLink>
-            </li>
-            <li className={styles.listItem}>
-              <Donut value={completedValues?.[1] || "0"} />
-              <ActiveLink href="/what-you-do">Coverage</ActiveLink>
-            </li>
-            <li className={styles.listItem}>
-              <Donut value={completedValues?.[2] || "0"} />
-              <ActiveLink href="/general-liability">
-                General Liability
-              </ActiveLink>
-            </li>
-            <li className={styles.listItem}>
-              <Donut value={completedValues?.[3] || "0"} />
-              <ActiveLink href="/quotes">Quotes</ActiveLink>
-            </li>
-            <li className={styles.listItem}>
-              <Donut value={completedValues?.[4] || "0"} />
-              <ActiveLink href="/checkout">Checkout</ActiveLink>
-            </li>
+          <ul className={listClasses}>
+            {/* TODO: move to its own component */}
+            {currentStep && (
+              <li
+                className={currentStepClasses}
+                role="presentation"
+                style={{
+                  transform: `translateY(${currentStepY}px)`,
+                }}
+              >
+                <Donut value={currentStep.completed} />
+                <ActiveLink href={currentStep.href}>
+                  {currentStep.label}
+                </ActiveLink>
+              </li>
+            )}
+            {navigation.steps.map((step, index) => {
+              const { label, href, completed } = step;
+              return (
+                <li key={href} className={listItemClasses(index)}>
+                  <Donut value={completed} />
+                  <ActiveLink href={href}>{label}</ActiveLink>
+                </li>
+              );
+            })}
           </ul>
 
           <Box className={iconClasses}>

@@ -31,14 +31,15 @@
   content: "";
   position: absolute;
   width: 3px;
-  height: calc(100% - 12px);
-  background: var(--color-neutral-300);
+  height: calc(100% - 32px);
+  background-color: transparent;
   left: 9px;
-  top: 6px;
+  top: 26px;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.listOpen {
-  grid-template-rows: 1fr;
+.listOpen::before {
+  background-color: var(--color-neutral-300);
 }
 
 .listItem {
@@ -46,6 +47,20 @@
   align-items: center;
   gap: var(--size-30);
   padding: calc(var(--size-20) - 2px) 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.listItemCurrent {
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.invisible {
+  opacity: 0;
 }
 
 .link {
