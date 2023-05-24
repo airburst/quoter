@@ -15,7 +15,7 @@ export default function Coverages() {
     <>
       <BackLink />
       <Section>
-        <Flex paddingBottom="space40">
+        <Flex paddingY="space40">
           <Heading as="h2" variant="heading10">
             Select all the coverage you would like quotes for today.
           </Heading>

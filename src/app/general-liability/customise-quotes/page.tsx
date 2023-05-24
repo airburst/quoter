@@ -14,7 +14,7 @@ export default function CustomiseQuotes() {
     <>
       <BackLink />
       <Section>
-        <Flex paddingBottom="space40">
+        <Flex paddingY="space40">
           <Heading as="h2" variant="heading10">
             Almost there, now you can customise your quotes.
           </Heading>

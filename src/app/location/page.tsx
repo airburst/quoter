@@ -15,7 +15,7 @@ export default function Location() {
     <>
       <BackLink />
       <Section>
-        <Flex paddingBottom="space40">
+        <Flex paddingY="space40">
           <Heading as="h2" variant="heading10">
             Nice, where is your |TRADE| buisness located?
           </Heading>
