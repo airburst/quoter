@@ -15,6 +15,7 @@ import { CheckboxGroup } from "@twilio-paste/core/checkbox";
 import { RadioOption } from "@components/RadioOption";
 import { CheckboxOption } from "@components/CheckboxOption";
 import { FlexWithGap } from "@components/FlexWithGap";
+import { PageTitle } from "@components/PageTitle";
 
 export default function Employees() {
   const [isAdditionalVisible, setIsAdditionalVisible] = useState(false);
