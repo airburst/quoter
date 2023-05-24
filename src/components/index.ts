@@ -1,4 +1,4 @@
-export * from "./BackLink";
+export * from "./BackButton";
 export * from "./CheckboxCard";
 export * from "./CheckboxOption";
 export * from "./Footer";

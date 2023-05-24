@@ -1,25 +1,20 @@
 "use client";
 
-import { Flex } from "@twilio-paste/core/flex";
-import { Heading } from "@twilio-paste/core/heading";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { RadioGroup } from "@twilio-paste/core/radio-group";
 import { useUID } from "@twilio-paste/core/uid-library";
 import { NextButton } from "@components/NextButton";
 import { RadioOption } from "@components/RadioOption";
+import { PageTitle } from "@components/PageTitle";
 
 export default function PolicyHolder() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
-        <Flex paddingY="space40">
-          <Heading as="h2" variant="heading10">
-            First, let us check something.
-          </Heading>
-        </Flex>
+        <PageTitle title="First, let us check something." />
 
         <Box marginBottom="space100">
           <RadioGroup

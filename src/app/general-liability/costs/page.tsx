@@ -1,25 +1,21 @@
 "use client";
 
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { Box } from "@twilio-paste/core/box";
-import { Heading } from "@twilio-paste/core/heading";
 import { Info } from "@components/Info";
 import { Input } from "@twilio-paste/core/input";
 import { NextButton } from "@components/NextButton";
 import { Section } from "@components/Section";
 import { Text } from "@twilio-paste/core/text";
 import { DollarSignIcon } from "@components/Icon/DollarSignIcon";
+import { PageTitle } from "@components/PageTitle";
 
 export default function Costs() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
-        <Box paddingY="space40">
-          <Heading as="h2" variant="heading10">
-            Before we continue...
-          </Heading>
-        </Box>
+        <PageTitle title="Before we continue..." />
 
         <Box marginTop="space50">
           <Text as="h2" fontSize="fontSize40">

@@ -1,25 +1,21 @@
 "use client";
 
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { Box } from "@twilio-paste/core/box";
-import { Heading } from "@twilio-paste/core/heading";
 import { NextButton } from "@components/NextButton";
 import { Section } from "@components/Section";
 import { RadioGroup } from "@twilio-paste/core/radio-group";
 import { useUID } from "@twilio-paste/core/uid-library";
 import { RadioOption } from "@components/RadioOption";
 import { FlexWithGap } from "@components/FlexWithGap";
+import { PageTitle } from "@components/PageTitle";
 
 export default function Work() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
-        <Box paddingY="space40">
-          <Heading as="h2" variant="heading10">
-            Next, let&apos;s get some info about the kind of work you do.
-          </Heading>
-        </Box>
+        <PageTitle title="Next, let's get some info about the kind of work you do." />
 
         <Box marginTop="space50">
           <RadioGroup

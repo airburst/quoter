@@ -1,24 +1,19 @@
 "use client";
 
-import { Flex } from "@twilio-paste/core/flex";
-import { Heading } from "@twilio-paste/core/heading";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
 import { CheckboxGroup } from "@twilio-paste/core/checkbox";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { NextButton } from "@components/NextButton";
 import { CheckboxCard } from "@components/CheckboxCard";
+import { PageTitle } from "@components/PageTitle";
 
 export default function CustomiseQuotes() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
-        <Flex paddingBottom="space40">
-          <Heading as="h2" variant="heading10">
-            Almost there, now you can customise your quotes.
-          </Heading>
-        </Flex>
+        <PageTitle title="Almost there, now you can customise your quotes." />
         <Box marginBottom="space100">
           <CheckboxGroup
             name="additional-options"

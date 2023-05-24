@@ -8,7 +8,7 @@ import { Button } from "@twilio-paste/core/button";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
 import { AcceptIcon } from "@twilio-paste/icons/esm/AcceptIcon";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { Info } from "@components/Info";
 import { ListWithIcon } from "@components/ListWithIcon";
 
@@ -23,7 +23,7 @@ const coverItems = [
 export default function Information() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
         <Flex paddingY="space40" vertical>
           <Text as="p">LET&apos;S START YOUR QUOTE FOR</Text>

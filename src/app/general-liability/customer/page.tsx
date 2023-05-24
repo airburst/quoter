@@ -1,25 +1,23 @@
 "use client";
 
 import Link from "next/link";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { Box } from "@twilio-paste/core/box";
-import { Heading } from "@twilio-paste/core/heading";
 import { Info } from "@components/Info";
 import { Input } from "@twilio-paste/core/input";
 import { NextButton } from "@components/NextButton";
 import { Section } from "@components/Section";
 import { Text } from "@twilio-paste/core/text";
 import { CheckboxOption } from "@components/CheckboxOption";
+import { PageTitle } from "@components/PageTitle";
 
 export default function Customer() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
-        <Box paddingY="space40">
-          <Heading as="h2" variant="heading10">
-            Amazing, we should get to know you better.
-          </Heading>
+        <PageTitle title="Amazing, we should get to know you better." />
+        <Box marginTop="spaceNegative40" marginBottom="space40">
           <Link href="#">More Information</Link>
         </Box>
 

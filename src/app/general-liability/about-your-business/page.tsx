@@ -1,10 +1,8 @@
 "use client";
 
-import { Flex } from "@twilio-paste/core/flex";
-import { Heading } from "@twilio-paste/core/heading";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { RadioGroup } from "@twilio-paste/core/radio-group";
 import { useUID } from "@twilio-paste/core/uid-library";
 import { NextButton } from "@components/NextButton";
@@ -17,13 +15,9 @@ import { FlexWithGap } from "@components/FlexWithGap";
 export default function AboutYourBusiness() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
-        <Flex paddingY="space40">
-          <Heading as="h2" variant="heading10">
-            Great to meet you John! Can you tell us more about your business.
-          </Heading>
-        </Flex>
+        <PageTitle title="Great to meet you John! Can you tell us more about your business." />
 
         <Box marginBottom="space100">
           <RadioGroup

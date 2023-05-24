@@ -1,24 +1,19 @@
 "use client";
 
-import { Flex } from "@twilio-paste/core/flex";
-import { Heading } from "@twilio-paste/core/heading";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { CheckboxGroup } from "@twilio-paste/core/checkbox";
 import { NextButton } from "@components/NextButton";
 import { CheckboxOption } from "@components/CheckboxOption";
+import { PageTitle } from "@components/PageTitle";
 
 export default function WorkContinued() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
-        <Flex paddingY="space40">
-          <Heading as="h2" variant="heading10">
-            Next, let’s get some info about the kind of work you do.
-          </Heading>
-        </Flex>
+        <PageTitle title="Next, let’s get some info about the kind of work you do." />
         <Box marginBottom="space100">
           <CheckboxGroup
             name="services-materials-infrastructure"

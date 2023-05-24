@@ -1,17 +1,11 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
-import styles from "./BackLink.module.css";
+import { Button } from "@twilio-paste/core/button";
 
-type BackLinkProps = {
-  href?: string;
-};
-
-export const BackLink = (props: BackLinkProps) => {
-  const { href = "#" } = props;
+export const BackButton = () => {
   const router = useRouter();
   const goBack = () => router.back();
 
@@ -22,9 +16,9 @@ export const BackLink = (props: BackLinkProps) => {
         paddingBottom="space40"
         color="colorTextPrimary"
       >
-        <Link href={href} onClick={goBack} className={styles.link}>
+        <Button variant="link" onClick={goBack}>
           Back
-        </Link>
+        </Button>
       </Box>
     </Section>
   );

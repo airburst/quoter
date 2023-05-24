@@ -1,25 +1,20 @@
 "use client";
 
-import { Flex } from "@twilio-paste/core/flex";
-import { Heading } from "@twilio-paste/core/heading";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
 import { CheckboxGroup } from "@twilio-paste/core/checkbox";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { NextButton } from "@components/NextButton";
 import { CameraIcon, ShieldHalvedIcon, SquarePlusIcon } from "@components/Icon";
 import { CheckboxCard } from "@components/CheckboxCard";
+import { PageTitle } from "@components/PageTitle";
 
 export default function Coverages() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
-        <Flex paddingBottom="space40">
-          <Heading as="h2" variant="heading10">
-            Select all the coverage you would like quotes for today.
-          </Heading>
-        </Flex>
+        <PageTitle title=" Select all the coverage you would like quotes for today." />
         <Box marginBottom="space100">
           <CheckboxGroup
             name="coverages"

@@ -3,15 +3,15 @@
 import { useState } from "react";
 import { Box } from "@twilio-paste/core/box";
 import { Button } from "@twilio-paste/core/button";
-import { Heading } from "@twilio-paste/core/heading";
 import { RadioGroup } from "@twilio-paste/core/radio-group";
 import { Label } from "@twilio-paste/core/label";
 import { DatePicker } from "@twilio-paste/core/date-picker";
 import { useUID } from "@twilio-paste/core/uid-library";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { Section } from "@components/Section";
 import { getToday, getTomorrow } from "@utils/dates";
 import { RadioOption } from "@components/RadioOption";
+import { PageTitle } from "@components/PageTitle";
 
 export default function CoverageStart() {
   const [showDatePicker, setShowDatePicker] = useState<boolean>(false);
@@ -35,13 +35,9 @@ export default function CoverageStart() {
 
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
-        <Box paddingY="space40">
-          <Heading as="h2" variant="heading10">
-            Last thing. When would you like your coverage to start?
-          </Heading>
-        </Box>
+        <PageTitle title="Last thing. When would you like your coverage to start?" />
 
         <Box marginTop="space50">
           <RadioGroup

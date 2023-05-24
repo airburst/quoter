@@ -1,25 +1,20 @@
 "use client";
 
-import { Flex } from "@twilio-paste/core/flex";
-import { Heading } from "@twilio-paste/core/heading";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
 import { Input } from "@twilio-paste/core/input";
 import { SearchIcon } from "@twilio-paste/icons/esm/SearchIcon";
 import { Text } from "@twilio-paste/core/text";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { NextButton } from "@components/NextButton";
+import { PageTitle } from "@components/PageTitle";
 
 export default function Location() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
-        <Flex paddingBottom="space40">
-          <Heading as="h2" variant="heading10">
-            Nice, where is your |TRADE| buisness located?
-          </Heading>
-        </Flex>
+        <PageTitle title="Nice, where is your |TRADE| buisness located?" />
 
         <Text as="label" fontSize="fontSize40">
           Select the state that is your main location.
