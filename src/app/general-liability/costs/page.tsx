@@ -1,6 +1,6 @@
 "use client";
 
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { Box } from "@twilio-paste/core/box";
 import { Heading } from "@twilio-paste/core/heading";
 import { Info } from "@components/Info";
@@ -13,7 +13,7 @@ import { DollarSignIcon } from "@components/Icon/DollarSignIcon";
 export default function Costs() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
         <Box paddingY="space40">
           <Heading as="h2" variant="heading10">

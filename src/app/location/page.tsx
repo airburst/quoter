@@ -7,13 +7,13 @@ import { Box } from "@twilio-paste/core/box";
 import { Input } from "@twilio-paste/core/input";
 import { SearchIcon } from "@twilio-paste/icons/esm/SearchIcon";
 import { Text } from "@twilio-paste/core/text";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { NextButton } from "@components/NextButton";
 
 export default function Location() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
         <Flex paddingY="space40">
           <Heading as="h2" variant="heading10">

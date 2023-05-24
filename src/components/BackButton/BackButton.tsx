@@ -5,7 +5,7 @@ import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
 import { Button } from "@twilio-paste/core/button";
 
-export const BackLink = () => {
+export const BackButton = () => {
   const router = useRouter();
   const goBack = () => router.back();
 

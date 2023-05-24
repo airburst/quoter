@@ -7,7 +7,7 @@ import { Input } from "@twilio-paste/core/input";
 import { Label } from "@twilio-paste/core/label";
 import { NextButton } from "@components/NextButton";
 import { Text } from "@twilio-paste/core/text";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { Section } from "@components/Section";
 import { SearchIcon } from "@twilio-paste/icons/esm/SearchIcon";
 import { CheckboxOption } from "@components/CheckboxOption";
@@ -15,7 +15,7 @@ import { CheckboxOption } from "@components/CheckboxOption";
 export default function BusinessAddress() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
         <Box paddingY="space40">
           <Heading as="h2" variant="heading10">

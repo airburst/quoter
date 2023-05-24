@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { Box } from "@twilio-paste/core/box";
 import { Heading } from "@twilio-paste/core/heading";
 import { Info } from "@components/Info";
@@ -14,7 +14,7 @@ import { CheckboxOption } from "@components/CheckboxOption";
 export default function Customer() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
         <Box paddingY="space40">
           <Heading as="h2" variant="heading10">

@@ -1,12 +1,12 @@
 "use client";
 
 import { QuoteSection, SellingPoints, Summary } from "@components/QuotesPage";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 
 export default function Quotes() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Summary />
       <QuoteSection />
       <SellingPoints />

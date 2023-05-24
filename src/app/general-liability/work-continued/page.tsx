@@ -4,7 +4,7 @@ import { Flex } from "@twilio-paste/core/flex";
 import { Heading } from "@twilio-paste/core/heading";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { CheckboxGroup } from "@twilio-paste/core/checkbox";
 import { NextButton } from "@components/NextButton";
 import { CheckboxOption } from "@components/CheckboxOption";
@@ -12,7 +12,7 @@ import { CheckboxOption } from "@components/CheckboxOption";
 export default function WorkContinued() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
         <Flex paddingY="space40">
           <Heading as="h2" variant="heading10">

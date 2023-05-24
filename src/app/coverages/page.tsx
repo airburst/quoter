@@ -5,7 +5,7 @@ import { Heading } from "@twilio-paste/core/heading";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
 import { CheckboxGroup } from "@twilio-paste/core/checkbox";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { NextButton } from "@components/NextButton";
 import { CameraIcon, ShieldHalvedIcon, SquarePlusIcon } from "@components/Icon";
 import { CheckboxCard } from "@components/CheckboxCard";
@@ -13,7 +13,7 @@ import { CheckboxCard } from "@components/CheckboxCard";
 export default function Coverages() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
         <Flex paddingY="space40">
           <Heading as="h2" variant="heading10">

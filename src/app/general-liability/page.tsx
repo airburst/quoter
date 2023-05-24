@@ -4,12 +4,12 @@ import { Flex } from "@twilio-paste/core/flex";
 import { Heading } from "@twilio-paste/core/heading";
 import { Section } from "@components/Section";
 import { Box } from "@twilio-paste/core/box";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 
 export default function WhatYouDo() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
         <Flex paddingY="space40">
           <Heading as="h2" variant="heading10">

@@ -8,7 +8,7 @@ import { RadioGroup } from "@twilio-paste/core/radio-group";
 import { Label } from "@twilio-paste/core/label";
 import { DatePicker } from "@twilio-paste/core/date-picker";
 import { useUID } from "@twilio-paste/core/uid-library";
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { Section } from "@components/Section";
 import { getToday, getTomorrow } from "@utils/dates";
 import { RadioOption } from "@components/RadioOption";
@@ -35,7 +35,7 @@ export default function CoverageStart() {
 
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
         <Box paddingY="space40">
           <Heading as="h2" variant="heading10">

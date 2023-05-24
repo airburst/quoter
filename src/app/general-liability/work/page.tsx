@@ -1,6 +1,6 @@
 "use client";
 
-import { BackLink } from "@components/BackLink";
+import { BackButton } from "@components/BackButton";
 import { Box } from "@twilio-paste/core/box";
 import { Heading } from "@twilio-paste/core/heading";
 import { NextButton } from "@components/NextButton";
@@ -13,7 +13,7 @@ import { FlexWithGap } from "@components/FlexWithGap";
 export default function Work() {
   return (
     <>
-      <BackLink />
+      <BackButton />
       <Section>
         <Box paddingY="space40">
           <Heading as="h2" variant="heading10">
