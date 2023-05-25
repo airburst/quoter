@@ -30,6 +30,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^0.10.1",
     "@react-types/shared": "^3.18.0",
     "@swc-jotai/react-refresh": "^0.0.8",
     "@testing-library/jest-dom": "^5.16.5",

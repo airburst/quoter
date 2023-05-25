@@ -7,6 +7,8 @@ type PageLayoutProps = {
   children: ReactNode;
 };
 
+export const runtime = 'edge';
+
 export default function PageLayout({ children }: PageLayoutProps) {
   return (
     <>

@@ -5,6 +5,8 @@ import { TradeSelector } from "@components/TradeSelector";
 import { NextButton } from "@components/NextButton";
 import { PageTitle } from "@components/PageTitle";
 
+export const runtime = 'edge';
+
 export default function Trade() {
   return (
     <Section>
