@@ -3,6 +3,7 @@ export const getProgress: Record<string, number[]> = {
   "/location": [100],
   "/what-you-do": [100, 50],
   "/coverages": [100, 75],
+  "/general-liability": [100, 100, 10],
   "/general-liability/info": [100, 100, 10],
   "/general-liability/policy-holder": [100, 100, 18],
   "/general-liability/customer": [100, 100, 26],
