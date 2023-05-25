@@ -6,6 +6,7 @@ import { MinusIcon, PlusIcon } from "@components/Icon";
 import { useState } from "react";
 import { Input } from "@twilio-paste/input";
 import { Box } from "@twilio-paste/box";
+import { CircularIcon } from "@components/CircularIcon";
 import styles from "./NumberInput.module.css";
 
 type NumberInputProps = {
@@ -33,8 +34,12 @@ export const NumberInput = (props: NumberInputProps) => {
   return (
     <Box className={styles.container}>
       <Flex vAlignContent="center">
-        <Button variant="secondary" size="icon_small" onClick={decrement}>
-          <MinusIcon style={{ width: "14px" }} />
+        <Button variant="primary_icon" onClick={decrement}>
+          <CircularIcon
+            backgroundColor="colorBackgroundBrand"
+            size="14px"
+            icon={<MinusIcon />}
+          />
         </Button>
         <Input
           id={id}
@@ -43,8 +48,12 @@ export const NumberInput = (props: NumberInputProps) => {
           value={count.toString()}
           onChange={update}
         />
-        <Button variant="secondary" size="icon_small" onClick={increment}>
-          <PlusIcon style={{ width: "14px" }} />
+        <Button variant="primary_icon" onClick={increment}>
+          <CircularIcon
+            backgroundColor="colorBackgroundBrand"
+            size="14px"
+            icon={<PlusIcon />}
+          />
         </Button>
       </Flex>
     </Box>
