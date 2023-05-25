@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "@react-types/shared": "^3.18.0",
-    "@swc-jotai/react-refresh": "^0.0.8",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",

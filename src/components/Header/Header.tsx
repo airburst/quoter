@@ -1,10 +1,15 @@
+"use client";
+
 import Link from "next/link";
+import { useFlags } from "launchdarkly-react-client-sdk";
 import { Button } from "@twilio-paste/button";
 import { Logo } from "@components/Logo";
 import { Section } from "@components/Section";
 import styles from "./Header.module.css";
 
 export const Header = () => {
+  const { headerButtonText } = useFlags();
+
   return (
     <header className={styles.container}>
       <Section>
@@ -16,7 +21,7 @@ export const Header = () => {
           >
             <Logo />
           </Link>
-          <Button variant="primary">Call Us</Button>
+          <Button variant="primary">{headerButtonText || "Call Us"}</Button>
         </div>
       </Section>
     </header>

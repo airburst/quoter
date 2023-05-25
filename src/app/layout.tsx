@@ -1,9 +1,9 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ComponentType, ReactNode } from "react";
+import { withLDProvider } from "launchdarkly-react-client-sdk";
 import { CustomizationProvider } from "@twilio-paste/customization";
-import { Footer } from "@components/Footer";
-import { Header } from "@components/Header";
+import { ConditionalLayout } from "./conditionalLayout";
 import CustomTheme from "../themes/theme.json";
 import "../styles/globals.css";
 import "../styles/fonts.css";
@@ -12,17 +12,19 @@ type RootLayoutProps = {
   children: ReactNode;
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
+const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning={true}>
         {/* @ts-expect-error generics in Paste theme */}
         <CustomizationProvider baseTheme="default" theme={CustomTheme}>
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <ConditionalLayout>{children}</ConditionalLayout>
         </CustomizationProvider>
       </body>
     </html>
   );
-}
+};
+
+export default withLDProvider({
+  clientSideID: "646e39d1dcc9a5126764267f",
+})(RootLayout as ComponentType<{}>);

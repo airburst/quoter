@@ -1,11 +1,9 @@
-_pipeline
-_terraform
-README-bnw-init.md
-
 # Cypress
+
 cypress/videos
 cypress/screenshots
 
 # Node
+
 node_modules
 .next
