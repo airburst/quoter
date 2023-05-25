@@ -1,9 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import clsx from "clsx";
-import { usePathname } from "next/navigation";
 import { useAtom } from "jotai";
+import { useState, useEffect } from "react";
+import clsx from "clsx";
 import { Button } from "@twilio-paste/button";
 import { Separator } from "@twilio-paste/separator";
 import { Box } from "@twilio-paste/box";
@@ -13,45 +12,41 @@ import { ActiveLink } from "./ActiveLink";
 import { Section } from "@components/Section";
 import { Donut } from "./Donut";
 import styles from "./Navigation.module.css";
-import { navigationAtom } from "./state";
+import { NAV_STEPS } from "@/constants";
+import { navState } from "./store";
 
 type Props = {
-  completed?: string[];
+  progress?: string[];
 };
 
-export const Navigation = ({ completed }: Props) => {
-  const pathname = usePathname();
-  const [navigation, setNavigation] = useAtom(navigationAtom);
+export const Navigation = ({ progress }: Props) => {
+  const [_, setProgress] = useAtom(navState);
   const [isOpen, setIsOpen] = useState(false);
-  const { steps } = navigation;
 
-  const newSteps = completed
-    ? steps.map((link, index) => {
-        return {
-          ...link,
-          completed: completed[index] || "0",
-        };
-      })
-    : steps;
+  const nav = NAV_STEPS.map((step, index) => {
+    const completedVal = progress && progress[index];
+    return {
+      ...step,
+      progress: completedVal,
+    };
+  });
 
-  const currentStepId = navigation.steps.findIndex(
-    step => step.href === pathname,
+  const navProgress = nav.reduce(
+    (acc: string[], currVal) =>
+      currVal.progress ? [...acc, currVal.progress] : [...acc],
+    [],
   );
 
-  const currentStep =
-    currentStepId > -1 ? navigation.steps[currentStepId] : null;
-
-  useEffect(() => {
-    setNavigation(nav => ({
-      ...nav,
-      steps: newSteps,
-      currentStep: currentStepId,
-    }));
-  }, []);
+  const currentStepId = progress ? progress.length - 1 : -1;
+  const currentStep = currentStepId > -1 ? nav[currentStepId] : null;
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    setProgress(() => navProgress);
+  }, []);
 
   const containerClasses = clsx(styles.container, {
     [styles.containerOpen]: isOpen,
@@ -91,17 +86,17 @@ export const Navigation = ({ completed }: Props) => {
                   transform: `translateY(${currentStepY}px)`,
                 }}
               >
-                <Donut value={currentStep.completed} />
+                <Donut value={currentStep.progress} />
                 <ActiveLink href={currentStep.href}>
                   {currentStep.label}
                 </ActiveLink>
               </li>
             )}
-            {navigation.steps.map((step, index) => {
-              const { label, href, completed } = step;
+            {nav.map((step, index) => {
+              const { label, href, progress } = step;
               return (
                 <li key={href} className={listItemClasses(index)}>
-                  <Donut value={completed} />
+                  <Donut value={progress} />
                   <ActiveLink href={href}>{label}</ActiveLink>
                 </li>
               );

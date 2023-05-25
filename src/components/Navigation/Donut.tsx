@@ -1,6 +1,10 @@
 import styles from "./Donut.module.css";
 
-export const Donut = ({ value }: { value: string }) => {
+type DonutProps = {
+  value?: string;
+};
+
+export const Donut = ({ value = "0" }: DonutProps) => {
   return (
     <span
       className={styles.container}
