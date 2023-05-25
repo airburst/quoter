@@ -1,14 +1,15 @@
 import { ReactNode } from "react";
 import { Text } from "@twilio-paste/text";
 import styles from "./Feature.module.css";
+import { CircularIcon } from "@components/CircularIcon";
 
 export const Feature = ({
-  // icon,
+  icon,
   title,
   description,
   children,
 }: {
-  icon: string;
+  icon: ReactNode;
   title: string;
   description: string;
   children?: ReactNode;
@@ -16,7 +17,11 @@ export const Feature = ({
   return (
     <div className={styles.container}>
       <div className={styles.icon}>
-        <div className={styles.dot}></div>
+        <CircularIcon
+          backgroundColor="colorBackgroundBrandHighlight"
+          size="20px"
+          icon={icon}
+        />
       </div>
       <div className={styles.content}>
         <Text as="h4" className={styles.noMargin}>

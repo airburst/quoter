@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  padding: 10px;
+}
+
+.container > svg {
+  color: white;
+  width: var(--size);
+  height: var(--size);
+}

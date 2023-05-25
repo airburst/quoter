@@ -1,6 +1,7 @@
 export * from "./BackButton";
 export * from "./CheckboxCard";
 export * from "./CheckboxOption";
+export * from "./CircularIcon";
 export * from "./Footer";
 export * from "./Header";
 export * from "./Info";

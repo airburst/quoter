@@ -1,5 +1,7 @@
 export * from "./ArrowRightIcon";
 export * from "./CameraIcon";
+export * from "./FileLinesIcon";
+export * from "./HeadsetIcon";
 export * from "./LightbulbIcon";
 export * from "./MinusIcon";
 export * from "./PlusIcon";
