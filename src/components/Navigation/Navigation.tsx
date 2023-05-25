@@ -1,8 +1,8 @@
 "use client";
 
-import { useAtom } from "jotai";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
 import { Button } from "@twilio-paste/button";
 import { Separator } from "@twilio-paste/separator";
 import { Box } from "@twilio-paste/box";
@@ -13,29 +13,19 @@ import { Section } from "@components/Section";
 import { Donut } from "./Donut";
 import styles from "./Navigation.module.css";
 import { NAV_STEPS } from "@/constants";
-import { navState } from "./store";
+import { getProgress } from "./getProgress";
 
-type Props = {
-  progress?: string[];
-};
-
-export const Navigation = ({ progress }: Props) => {
-  const [_, setProgress] = useAtom(navState);
+export const Navigation = () => {
+  const pathname = usePathname();
+  const progress = getProgress[pathname];
   const [isOpen, setIsOpen] = useState(false);
 
   const nav = NAV_STEPS.map((step, index) => {
-    const completedVal = progress && progress[index];
     return {
       ...step,
-      progress: completedVal,
+      progress: progress[index] || 0,
     };
   });
-
-  const navProgress = nav.reduce(
-    (acc: string[], currVal) =>
-      currVal.progress ? [...acc, currVal.progress] : [...acc],
-    [],
-  );
 
   const currentStepId = progress ? progress.length - 1 : -1;
   const currentStep = currentStepId > -1 ? nav[currentStepId] : null;
@@ -43,10 +33,6 @@ export const Navigation = ({ progress }: Props) => {
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
-
-  useEffect(() => {
-    setProgress(() => navProgress);
-  }, []);
 
   const containerClasses = clsx(styles.container, {
     [styles.containerOpen]: isOpen,
@@ -86,17 +72,17 @@ export const Navigation = ({ progress }: Props) => {
                   transform: `translateY(${currentStepY}px)`,
                 }}
               >
-                <Donut value={currentStep.progress} />
+                <Donut value={currentStep.progress.toString()} />
                 <ActiveLink href={currentStep.href}>
                   {currentStep.label}
                 </ActiveLink>
               </li>
             )}
             {nav.map((step, index) => {
-              const { label, href, progress } = step;
+              const { label, href, progress: stepProgress } = step;
               return (
                 <li key={href} className={listItemClasses(index)}>
-                  <Donut value={progress} />
+                  <Donut value={stepProgress.toString()} />
                   <ActiveLink href={href}>{label}</ActiveLink>
                 </li>
               );
