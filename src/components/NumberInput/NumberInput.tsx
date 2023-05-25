@@ -17,11 +17,17 @@ export const NumberInput = (props: NumberInputProps) => {
   const [count, setCount] = useState(1);
 
   const decrement = () => {
-    setCount(count - 1);
+    if (count > 1) {
+      setCount(count - 1);
+    }
   };
 
   const increment = () => {
     setCount(count + 1);
+  };
+
+  const update = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setCount(+e.target.value);
   };
 
   return (
@@ -30,7 +36,13 @@ export const NumberInput = (props: NumberInputProps) => {
         <Button variant="secondary" size="icon_small" onClick={decrement}>
           <MinusIcon style={{ width: "14px" }} />
         </Button>
-        <Input id={id} name={id} type="text" defaultValue={count} />
+        <Input
+          id={id}
+          name={id}
+          type="number"
+          value={count.toString()}
+          onChange={update}
+        />
         <Button variant="secondary" size="icon_small" onClick={increment}>
           <PlusIcon style={{ width: "14px" }} />
         </Button>
