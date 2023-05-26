@@ -14,7 +14,7 @@ export default function Location() {
     <>
       <BackButton />
       <Section>
-        <PageTitle title="Nice, where is your |TRADE| business located?" />
+        <PageTitle title="Nice, where is your photography business located?" />
 
         <Text as="label" fontSize="fontSize40">
           Select the state that is your main location.

@@ -15,19 +15,21 @@ import { PageTitle } from "@components/PageTitle";
 
 export default function CoverageStart() {
   const [showDatePicker, setShowDatePicker] = useState<boolean>(false);
-  const [startDate, setStartDate] = useState<string | undefined>(undefined);
-  const isReadOnly = !!startDate;
+  const [isReadOnly, setIsReadOnly] = useState<boolean>(false);
+  const [startDate, setStartDate] = useState<string | undefined>(getToday());
 
   const handleDateChoice = (value: string) => {
     switch (value) {
       case "today":
         setStartDate(getToday());
+        setIsReadOnly(true);
         break;
       case "tomorrow":
         setStartDate(getTomorrow());
+        setIsReadOnly(true);
         break;
       default:
-        setStartDate("");
+        setIsReadOnly(false);
         break;
     }
     setShowDatePicker(true);
@@ -68,7 +70,7 @@ export default function CoverageStart() {
               min={getToday()}
               value={startDate}
               readOnly={isReadOnly}
-              onChange={evt => console.log(evt.target.value)}
+              onChange={evt => setStartDate(evt.target.value)}
             />
           </Box>
         )}
