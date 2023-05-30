@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <Info>
       You can also choose from the{" "}
-      <Link href="/components">full list of professions</Link>.
+      <Link href="#">full list of professions</Link>.
     </Info>
   );
 };
