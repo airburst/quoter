@@ -40,3 +40,5 @@ cli/setup.txt
 # Firebase
 firebase-debug.log
 .firebase
+
+.idea/*
