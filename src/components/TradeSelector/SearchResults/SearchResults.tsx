@@ -70,11 +70,14 @@ export const SearchResults = (props: SearchResultsProps) => {
 
   const handleKeyDown = useCallback(
     (event: KeyboardEvent) => {
-      if (!dialogRef.current?.open || !results) return;
+      if (!dialogRef.current?.open || !results) {
+        return;
+      }
 
       if (event.code === "ArrowDown") {
         if (focusId === results.length - 1) {
           setFocusId(0);
+
           return;
         }
 
@@ -84,6 +87,7 @@ export const SearchResults = (props: SearchResultsProps) => {
       if (event.code === "ArrowUp") {
         if (focusId === 0) {
           setFocusId(results.length - 1);
+
           return;
         }
 
@@ -97,6 +101,7 @@ export const SearchResults = (props: SearchResultsProps) => {
       if (event.code === "Enter") {
         if (focusId === 0 && results) {
           const [firstTrade] = results;
+
           handleTradeClick(firstTrade);
         }
       }
@@ -128,7 +133,9 @@ export const SearchResults = (props: SearchResultsProps) => {
     }
   }, [isOpen, inputRef]);
 
-  if (!isOpen) return null;
+  if (!isOpen) {
+    return null;
+  }
 
   const searchResponseExact = results
     ? results.filter((result: TradeProps) => result.type === "exact")

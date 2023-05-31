@@ -101,6 +101,7 @@ describe("SearchResults", () => {
       );
 
       const button = container.querySelector("button");
+
       expect(button).toHaveClass("--is-focused");
 
       fireEvent.keyDown(container, {

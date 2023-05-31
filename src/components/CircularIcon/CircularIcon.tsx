@@ -12,6 +12,7 @@ type CircularIconProps = {
 
 export const CircularIcon = (props: CircularIconProps) => {
   const { backgroundColor, size, icon } = props;
+
   return (
     <Box
       backgroundColor={backgroundColor}

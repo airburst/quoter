@@ -2,6 +2,7 @@ import { IconProps } from "./types";
 
 export const ShieldHalvedIcon = (props: IconProps) => {
   const { ref, ...otherProps } = props;
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

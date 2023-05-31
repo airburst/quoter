@@ -7,7 +7,9 @@ export type TradeSelectorUrlOptions = {
 };
 
 function addQueryParam(url: URL, key: string, value?: string) {
-  if (value) url.searchParams.set(key, value);
+  if (value) {
+    url.searchParams.set(key, value);
+  }
 }
 
 export function useTradeSelectorUrl(
@@ -17,10 +19,12 @@ export function useTradeSelectorUrl(
 ) {
   return useMemo(() => {
     const url = new URL(tradeApi);
+
     addQueryParam(url, "q", userInput);
     addQueryParam(url, "vertical", vertical);
     addQueryParam(url, "search_scope", searchScope);
     addQueryParam(url, "site", site);
+
     return url;
   }, [tradeApi, userInput, vertical, searchScope, site]);
 }

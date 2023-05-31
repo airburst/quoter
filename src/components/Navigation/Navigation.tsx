@@ -80,6 +80,7 @@ export const Navigation = () => {
             )}
             {nav.map((step, index) => {
               const { label, href, progress: stepProgress } = step;
+
               return (
                 <li key={href} className={listItemClasses(index)}>
                   <Donut value={stepProgress.toString()} />

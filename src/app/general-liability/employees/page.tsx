@@ -23,6 +23,7 @@ export default function Employees() {
   const handleChange = (value: string) => {
     if (value === "yes") {
       setIsAdditionalVisible(true);
+
       return;
     }
 

@@ -16,6 +16,7 @@ type CheckboxCard = {
 
 export const CheckboxCard = (props: CheckboxCard) => {
   const { id, icon, price, title, description } = props;
+
   return (
     <Box
       className={styles.container}

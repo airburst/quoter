@@ -28,7 +28,7 @@ export const NumberInput = (props: NumberInputProps) => {
   };
 
   const update = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCount(+e.target.value);
+    setCount(Number(e.target.value));
   };
 
   return (

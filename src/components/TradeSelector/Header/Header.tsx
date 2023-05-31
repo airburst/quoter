@@ -17,7 +17,9 @@ export type HeaderProps = {
 export const Header = (props: HeaderProps) => {
   const { isOpen, /* labelProps, */ labels } = props;
 
-  if (!isOpen) return null;
+  if (!isOpen) {
+    return null;
+  }
 
   return (
     <>

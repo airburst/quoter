@@ -12,6 +12,7 @@ const getConfig = () => {
   if (env === "production") {
     return { env, ...production, appId, ...rest };
   }
+
   if (env === "test") {
     return { env, ...test, appId, ...rest };
   }
