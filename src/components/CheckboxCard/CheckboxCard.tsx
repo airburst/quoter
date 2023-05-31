@@ -6,7 +6,7 @@ import { Text } from "@twilio-paste/text";
 import { Checkbox } from "@twilio-paste/checkbox";
 import styles from "./CheckboxCard.module.css";
 
-type CheckboxCard = {
+type CheckboxCardProps = {
   id: string;
   icon?: ReactNode;
   price?: string;
@@ -14,7 +14,7 @@ type CheckboxCard = {
   description?: string;
 };
 
-export const CheckboxCard = (props: CheckboxCard) => {
+export const CheckboxCard = (props: CheckboxCardProps) => {
   const { id, icon, price, title, description } = props;
 
   return (
