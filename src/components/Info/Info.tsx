@@ -8,7 +8,7 @@ type InfoProps = {
   children: ReactNode;
 };
 
-export const Info = (props: InfoProps) => {
+export const Info = ({ children }: InfoProps) => {
   return (
     <Box
       backgroundColor="colorBackgroundDecorative10Weakest"
@@ -22,7 +22,7 @@ export const Info = (props: InfoProps) => {
           <LightbulbIcon style={{ width: "12px" }} />
         </Box>
         <Text as="p" fontSize="fontSize30" color="colorTextWeak">
-          {props.children}
+          {children}
         </Text>
       </Flex>
     </Box>

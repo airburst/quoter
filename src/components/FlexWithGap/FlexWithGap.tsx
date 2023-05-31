@@ -7,10 +7,10 @@ type FlexWithGapProps = {
   children: ReactNode;
 };
 
-export const FlexWithGap = (props: FlexWithGapProps) => {
+export const FlexWithGap = ({ children }: FlexWithGapProps) => {
   return (
     <Box className={styles.container}>
-      <Flex>{props.children}</Flex>
+      <Flex>{children}</Flex>
     </Box>
   );
 };
