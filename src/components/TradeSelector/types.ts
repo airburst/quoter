@@ -1,4 +1,4 @@
-import { Ref, RefAttributes } from "react";
+import { Ref, RefAttributes, ElementType } from "react";
 import { DOMProps } from "@react-types/shared";
 
 export type DialogRef = HTMLDialogElement;
@@ -69,7 +69,7 @@ export interface TradeSelectorProps
     RefAttributes<TradeSelectorElementType> {
   /** Custom class name for setting specific CSS */
   className?: string;
-  elementType?: string | React.ElementType;
+  elementType?: string | ElementType;
   onTradeSelected?: (trade: TradeProps | string) => void;
   labels?: LabelProps;
   hideLabel?: boolean;
