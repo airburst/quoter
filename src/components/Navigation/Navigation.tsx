@@ -27,8 +27,11 @@ export const Navigation = () => {
     };
   });
 
-  const currentStepId = progress ? progress.length - 1 : -1;
-  const currentStep = currentStepId > -1 ? nav[currentStepId] : null;
+  const SINGLE_ITEM = 1;
+  const LAST_ITEM = progress.length - SINGLE_ITEM;
+  const NO_ITEM = -1;
+  const currentStepId = progress ? LAST_ITEM : NO_ITEM;
+  const currentStep = currentStepId > NO_ITEM ? nav[currentStepId] : null;
 
   const handleClick = () => {
     setIsOpen(!isOpen);

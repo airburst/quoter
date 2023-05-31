@@ -8,4 +8,7 @@ const formatDate = (date?: Date): string =>
 
 export const getToday = (): string => formatDate();
 
-export const getTomorrow = (): string => formatDate(addDays(new Date(), 1));
+const AMOUNT_OF_DAYS_TO_BE_ADDED = 1;
+
+export const getTomorrow = (): string =>
+  formatDate(addDays(new Date(), AMOUNT_OF_DAYS_TO_BE_ADDED));

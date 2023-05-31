@@ -70,28 +70,30 @@ export const SearchResults = (props: SearchResultsProps) => {
 
   const handleKeyDown = useCallback(
     (event: KeyboardEvent) => {
+      const SINGLE_ITEM = 1;
+
       if (!dialogRef.current?.open || !results) {
         return;
       }
 
       if (event.code === "ArrowDown") {
-        if (focusId === results.length - 1) {
+        if (focusId === results.length - SINGLE_ITEM) {
           setFocusId(0);
 
           return;
         }
 
-        setFocusId(focusId + 1);
+        setFocusId(focusId + SINGLE_ITEM);
       }
 
       if (event.code === "ArrowUp") {
         if (focusId === 0) {
-          setFocusId(results.length - 1);
+          setFocusId(results.length - SINGLE_ITEM);
 
           return;
         }
 
-        setFocusId(focusId - 1);
+        setFocusId(focusId - SINGLE_ITEM);
       }
 
       if (event.code === "Escape") {
@@ -146,6 +148,35 @@ export const SearchResults = (props: SearchResultsProps) => {
     : [];
 
   const noResults = results?.length === 0;
+  const searchResults = noResults ? (
+    <header className={styles.TradeSelectorListTitle}>
+      <a href={fallbackUrl} className={styles.TradeSelectorListTitleLink}>
+        {labels.noResults}
+      </a>
+    </header>
+  ) : (
+    <>
+      {searchResponseExact.length > 0 && (
+        <Listing
+          title={labels.exact}
+          trades={searchResponseExact}
+          resultRefs={resultRefs}
+          onClick={handleTradeClick}
+          selectedId={focusId}
+        />
+      )}
+      {searchResponseSuggested.length > 0 && (
+        <Listing
+          title={labels.suggested}
+          trades={searchResponseSuggested}
+          resultRefs={resultRefs}
+          refCountStart={searchResponseExact.length}
+          onClick={handleTradeClick}
+          selectedId={focusId}
+        />
+      )}
+    </>
+  );
 
   return (
     <dialog className={classes} ref={dialogRef} aria-describedby={describedBy}>
@@ -153,34 +184,8 @@ export const SearchResults = (props: SearchResultsProps) => {
         <header className={styles.TradeSelectorListTitle}>
           {labels.loading}
         </header>
-      ) : noResults ? (
-        <header className={styles.TradeSelectorListTitle}>
-          <a href={fallbackUrl} className={styles.TradeSelectorListTitleLink}>
-            {labels.noResults}
-          </a>
-        </header>
       ) : (
-        <>
-          {searchResponseExact.length > 0 && (
-            <Listing
-              title={labels.exact}
-              trades={searchResponseExact}
-              resultRefs={resultRefs}
-              onClick={handleTradeClick}
-              selectedId={focusId}
-            />
-          )}
-          {searchResponseSuggested.length > 0 && (
-            <Listing
-              title={labels.suggested}
-              trades={searchResponseSuggested}
-              resultRefs={resultRefs}
-              refCountStart={searchResponseExact.length}
-              onClick={handleTradeClick}
-              selectedId={focusId}
-            />
-          )}
-        </>
+        searchResults
       )}
     </dialog>
   );

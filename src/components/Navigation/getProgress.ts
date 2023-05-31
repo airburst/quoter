@@ -1,21 +1,38 @@
+const COMPLETED = 100;
+const HALF = 50;
+const THREE_QUARTERS = 75;
+
+// Plain numbers
+const TEN = 10;
+const EIGHTEEN = 18;
+const TWENTY_SIX = 26;
+const THIRTY_FOUR = 34;
+const FOURTY_TWO = 42;
+const FIFTY_EIGHT = 58;
+const SIXTY_SIX = 66;
+const SEVENTY_FOUR = 74;
+const EIGHTY_TWO = 82;
+const NINETY = 90;
+const NINETY_EIGHT = 98;
+
 export const getProgress: Record<string, number[]> = {
-  "/trade": [50],
-  "/location": [100],
-  "/what-you-do": [100, 50],
-  "/coverages": [100, 75],
-  "/general-liability": [100, 100, 10],
-  "/general-liability/info": [100, 100, 10],
-  "/general-liability/policy-holder": [100, 100, 18],
-  "/general-liability/customer": [100, 100, 26],
-  "/general-liability/about-your-business": [100, 100, 34],
-  "/general-liability/business-location": [100, 100, 42],
-  "/general-liability/employees": [100, 100, 50],
-  "/general-liability/costs": [100, 100, 58],
-  "/general-liability/work": [100, 100, 66],
-  "/general-liability/work-continued": [100, 100, 74],
-  "/general-liability/previous-coverage": [100, 100, 82],
-  "/general-liability/business-address": [100, 100, 90],
-  "/general-liability/customise-quotes": [100, 100, 98],
-  "/general-liability/coverage-start": [100, 100, 100],
-  "/quotes": [100, 100, 100, 50],
+  "/trade": [HALF],
+  "/location": [COMPLETED],
+  "/what-you-do": [COMPLETED, HALF],
+  "/coverages": [COMPLETED, THREE_QUARTERS],
+  "/general-liability": [COMPLETED, COMPLETED, TEN],
+  "/general-liability/info": [COMPLETED, COMPLETED, TEN],
+  "/general-liability/policy-holder": [COMPLETED, COMPLETED, EIGHTEEN],
+  "/general-liability/customer": [COMPLETED, COMPLETED, TWENTY_SIX],
+  "/general-liability/about-your-business": [COMPLETED, COMPLETED, THIRTY_FOUR],
+  "/general-liability/business-location": [COMPLETED, COMPLETED, FOURTY_TWO],
+  "/general-liability/employees": [COMPLETED, COMPLETED, HALF],
+  "/general-liability/costs": [COMPLETED, COMPLETED, FIFTY_EIGHT],
+  "/general-liability/work": [COMPLETED, COMPLETED, SIXTY_SIX],
+  "/general-liability/work-continued": [COMPLETED, COMPLETED, SEVENTY_FOUR],
+  "/general-liability/previous-coverage": [COMPLETED, COMPLETED, EIGHTY_TWO],
+  "/general-liability/business-address": [COMPLETED, COMPLETED, NINETY],
+  "/general-liability/customise-quotes": [COMPLETED, COMPLETED, NINETY_EIGHT],
+  "/general-liability/coverage-start": [COMPLETED, COMPLETED, COMPLETED],
+  "/quotes": [COMPLETED, COMPLETED, COMPLETED, HALF],
 };
