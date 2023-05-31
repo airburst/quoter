@@ -5,7 +5,7 @@ type HighlightProps = {
   children: ReactNode;
 };
 
-export const Highlight = (props: HighlightProps) => {
+export const Highlight = ({ children }: HighlightProps) => {
   return (
     <Box
       backgroundColor="colorBackgroundBrandHighlightWeakest"
@@ -16,7 +16,7 @@ export const Highlight = (props: HighlightProps) => {
       borderLeftWidth="borderWidth30"
       borderLeftStyle="solid"
     >
-      {props.children}
+      {children}
     </Box>
   );
 };

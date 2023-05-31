@@ -9,6 +9,7 @@ import { CameraIcon, ShieldHalvedIcon, SquarePlusIcon } from "@components/Icon";
 import { CheckboxCard } from "@components/CheckboxCard";
 import { PageTitle } from "@components/PageTitle";
 
+// eslint-disable-next-line react/function-component-definition
 export default function Coverages() {
   return (
     <>

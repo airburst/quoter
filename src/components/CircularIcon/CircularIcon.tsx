@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, CSSProperties } from "react";
 import { Box } from "@twilio-paste/box";
 import type { ResponsiveValue } from "@twilio-paste/styling-library";
 import type { ThemeShape } from "@twilio-paste/theme";
@@ -12,12 +12,13 @@ type CircularIconProps = {
 
 export const CircularIcon = (props: CircularIconProps) => {
   const { backgroundColor, size, icon } = props;
+
   return (
     <Box
       backgroundColor={backgroundColor}
       className={styles.container}
       borderRadius="borderRadiusCircle"
-      style={{ "--size": size } as React.CSSProperties}
+      style={{ "--size": size } as CSSProperties}
     >
       {icon}
     </Box>

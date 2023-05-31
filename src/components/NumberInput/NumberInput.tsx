@@ -3,7 +3,7 @@
 import { Flex } from "@twilio-paste/flex";
 import { Button } from "@twilio-paste/button";
 import { MinusIcon, PlusIcon } from "@components/Icon";
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
 import { Input } from "@twilio-paste/input";
 import { Box } from "@twilio-paste/box";
 import { CircularIcon } from "@components/CircularIcon";
@@ -15,20 +15,25 @@ type NumberInputProps = {
 
 export const NumberInput = (props: NumberInputProps) => {
   const { id } = props;
-  const [count, setCount] = useState(1);
+  const INITIAL_COUNT = 1;
+  const [count, setCount] = useState(INITIAL_COUNT);
 
   const decrement = () => {
-    if (count > 1) {
-      setCount(count - 1);
+    const SINGLE_ITEM = 1;
+
+    if (count > SINGLE_ITEM) {
+      setCount(count - SINGLE_ITEM);
     }
   };
 
   const increment = () => {
-    setCount(count + 1);
+    const SINGLE_ITEM = 1;
+
+    setCount(count + SINGLE_ITEM);
   };
 
-  const update = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCount(+e.target.value);
+  const update = (e: ChangeEvent<HTMLInputElement>) => {
+    setCount(Number(e.target.value));
   };
 
   return (

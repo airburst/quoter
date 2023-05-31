@@ -12,6 +12,7 @@ import { SearchIcon } from "@twilio-paste/icons/esm/SearchIcon";
 import { CheckboxOption } from "@components/CheckboxOption";
 import { PageTitle } from "@components/PageTitle";
 
+// eslint-disable-next-line react/function-component-definition
 export default function BusinessAddress() {
   return (
     <>

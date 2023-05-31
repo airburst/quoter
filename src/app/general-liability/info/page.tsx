@@ -20,6 +20,7 @@ const coverItems = [
   "Third-party medical payments",
 ];
 
+// eslint-disable-next-line react/function-component-definition
 export default function Information() {
   return (
     <>

@@ -18,7 +18,8 @@ export const Legal = () => {
       Inc., License #0M20593. In the state of New York we operate under the name
       Simply Business Insurance Agency. In the state of Texas we operate under
       the name, U.S. Simply Business, Inc. For more information, please refer to
-      our <a href="#">Privacy Policy</a> and <a href="#">Terms & Conditions</a>.
+      our <a href="#privacy-policy">Privacy Policy</a> and{" "}
+      <a href="#terms-and-conditions">Terms & Conditions</a>.
     </Text>
   );
 };

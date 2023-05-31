@@ -15,7 +15,7 @@ type RootLayoutProps = {
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true}>
+      <body suppressHydrationWarning>
         {/* @ts-expect-error generics in Paste theme */}
         <CustomizationProvider baseTheme="default" theme={CustomTheme}>
           <ConditionalLayout>{children}</ConditionalLayout>

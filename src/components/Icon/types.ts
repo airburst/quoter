@@ -1,3 +1,8 @@
-import { SVGProps } from "react";
+import { RefAttributes, CSSProperties } from "react";
+import { DOMProps } from "@react-types/shared";
 
-export type IconProps = SVGProps<SVGElement>;
+export interface IconSVGProps extends DOMProps, RefAttributes<SVGSVGElement> {
+  style?: CSSProperties;
+}
+
+export type IconProps = IconSVGProps;

@@ -8,6 +8,7 @@ type Props = {
 
 export const Section = ({ children, color }: Props) => {
   let classes = `${styles.section}`;
+
   // Set background colour
   if (color) {
     classes += ` ${styles[color]}`;

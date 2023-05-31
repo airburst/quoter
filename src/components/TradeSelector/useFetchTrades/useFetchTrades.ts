@@ -18,6 +18,7 @@ export const useFetchTrades = (endpoint: URL, debounceInMs: number) => {
           signal,
         });
         const json = await response.json();
+
         setIsLoading(false);
 
         if (!response.ok) {
@@ -25,6 +26,7 @@ export const useFetchTrades = (endpoint: URL, debounceInMs: number) => {
         }
 
         setError(null);
+
         return setTrades(json.results);
       } catch (err) {
         if (err instanceof Error && err.name !== "AbortError") {
@@ -45,6 +47,7 @@ export const useFetchTrades = (endpoint: URL, debounceInMs: number) => {
 
       const fetchData = debounce(async () => {
         const { signal } = controller;
+
         await getTrades(signal);
       }, debounceInMs);
 

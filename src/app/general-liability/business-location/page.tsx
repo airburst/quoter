@@ -13,6 +13,7 @@ import { NumberInput } from "@components/NumberInput";
 import { RadioOption } from "@components/RadioOption";
 import { PageTitle } from "@components/PageTitle";
 
+// eslint-disable-next-line react/function-component-definition
 export default function BusinessLocation() {
   const [isCountVisible, setIsCountVisible] = useState(false);
 

@@ -15,10 +15,14 @@ import { Footer } from "./Footer";
 export const ERROR_MESSAGE_SERVICE_UNAVAILABLE =
   "The service is currently unavailable. Please try again later";
 
+const MIN_INPUT_DEFAULT = 3;
+
+const API_REQUEST_DEBOUNCE_IN_MS_DEFAULT = 250;
+
 export const TradeSelector = (props: TradeSelectorProps) => {
   const {
-    minInput = 3,
-    apiRequestDebounceInMs = 250,
+    minInput = MIN_INPUT_DEFAULT,
+    apiRequestDebounceInMs = API_REQUEST_DEBOUNCE_IN_MS_DEFAULT,
     urls,
     labels,
     // className,

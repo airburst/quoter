@@ -10,6 +10,7 @@ import { RadioOption } from "@components/RadioOption";
 import { FlexWithGap } from "@components/FlexWithGap";
 import { PageTitle } from "@components/PageTitle";
 
+// eslint-disable-next-line react/function-component-definition
 export default function Work() {
   return (
     <>

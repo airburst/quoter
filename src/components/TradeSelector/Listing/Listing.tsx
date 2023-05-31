@@ -34,12 +34,15 @@ export const Listing = (props: ListingProps) => {
         {trades.map((trade, i) => {
           const id = refCountStart + i;
           const selected = selectedId === id;
+
           return (
             <ListingItem
               key={trade.value}
               trade={trade}
               ref={el => {
-                if (!el || !resultRefs) return;
+                if (!el || !resultRefs) {
+                  return;
+                }
                 resultRefs.current[id] = el;
               }}
               onClick={onClick}
