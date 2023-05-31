@@ -8,6 +8,7 @@ import { NextButton } from "@components/NextButton";
 import { CheckboxOption } from "@components/CheckboxOption";
 import { PageTitle } from "@components/PageTitle";
 
+// eslint-disable-next-line react/function-component-definition
 export default function WorkContinued() {
   return (
     <>

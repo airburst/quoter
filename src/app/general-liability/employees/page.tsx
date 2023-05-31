@@ -17,6 +17,7 @@ import { CheckboxOption } from "@components/CheckboxOption";
 import { FlexWithGap } from "@components/FlexWithGap";
 import { PageTitle } from "@components/PageTitle";
 
+// eslint-disable-next-line react/function-component-definition
 export default function Employees() {
   const [isAdditionalVisible, setIsAdditionalVisible] = useState(false);
 

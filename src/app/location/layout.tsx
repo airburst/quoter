@@ -9,6 +9,7 @@ type PageLayoutProps = {
   children: ReactNode;
 };
 
+// eslint-disable-next-line react/function-component-definition
 export default function PageLayout({ children }: PageLayoutProps) {
   return (
     <>

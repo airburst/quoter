@@ -5,6 +5,7 @@ import { Box } from "@twilio-paste/box";
 import { BackButton } from "@components/BackButton";
 import { PageTitle } from "@components/PageTitle";
 
+// eslint-disable-next-line react/function-component-definition
 export default function WhatYouDo() {
   return (
     <>
@@ -16,5 +17,3 @@ export default function WhatYouDo() {
     </>
   );
 }
-
-// TODO: Redirect to /info sub-route

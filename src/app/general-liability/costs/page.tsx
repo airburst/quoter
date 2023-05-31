@@ -10,6 +10,7 @@ import { Text } from "@twilio-paste/text";
 import { DollarSignIcon } from "@components/Icon/DollarSignIcon";
 import { PageTitle } from "@components/PageTitle";
 
+// eslint-disable-next-line react/function-component-definition
 export default function Costs() {
   return (
     <>

@@ -9,6 +9,7 @@ import { NextButton } from "@components/NextButton";
 import { RadioOption } from "@components/RadioOption";
 import { PageTitle } from "@components/PageTitle";
 
+// eslint-disable-next-line react/function-component-definition
 export default function PolicyHolder() {
   return (
     <>

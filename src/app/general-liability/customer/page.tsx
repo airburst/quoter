@@ -11,6 +11,7 @@ import { Text } from "@twilio-paste/text";
 import { CheckboxOption } from "@components/CheckboxOption";
 import { PageTitle } from "@components/PageTitle";
 
+// eslint-disable-next-line react/function-component-definition
 export default function Customer() {
   return (
     <>

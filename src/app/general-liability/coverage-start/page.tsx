@@ -13,6 +13,7 @@ import { getToday, getTomorrow } from "@utils/dates";
 import { RadioOption } from "@components/RadioOption";
 import { PageTitle } from "@components/PageTitle";
 
+// eslint-disable-next-line react/function-component-definition
 export default function CoverageStart() {
   const [showDatePicker, setShowDatePicker] = useState<boolean>(false);
   const [isReadOnly, setIsReadOnly] = useState<boolean>(false);
