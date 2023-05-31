@@ -35,6 +35,7 @@ export const ListingItem = forwardRef(
           className={classes}
           data-key={trade.value}
         >
+          {/* eslint-disable-next-line react/no-danger */}
           <span dangerouslySetInnerHTML={{ __html: trade.label }} />
         </Button>
       </ListItem>
