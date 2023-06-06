@@ -98,7 +98,7 @@ export const TradeInput = (props: TradeInputProps) => {
               </Box>
               <Text as="p" fontSize="fontSize40">
                 We define ‘
-                <strong>{/*initialTrade*/}Weeding Photography</strong>’ as the
+                <strong>{/*initialTrade*/}Wedding Photography</strong>’ as the
                 art of practice of taking, editing, and processing photographs.
               </Text>
             </Box>
