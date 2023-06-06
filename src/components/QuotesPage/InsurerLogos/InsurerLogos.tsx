@@ -1,5 +1,6 @@
 import { Brand } from "./Brand";
 import styles from "./InsurerLogos.module.css";
+import travelers from "./images/travelers.png";
 import brand1 from "./images/brand1.png";
 import brand2 from "./images/brand2.png";
 import brand3 from "./images/brand3.png";
@@ -14,6 +15,11 @@ export const InsurerLogos = () => {
   return (
     <div className={styles.container}>
       <div className={styles.innerContainer}>
+        <Brand
+          key={travelers.src}
+          imageData={travelers}
+          desiredHeight={DESIRED_HEIGHT}
+        />
         <Brand
           key={brand1.src}
           imageData={brand1}
