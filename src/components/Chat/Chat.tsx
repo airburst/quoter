@@ -7,6 +7,7 @@ import { randomId } from "@utils/general";
 import { mockChatAPI } from "@/mocks/mockChatAPI";
 import styles from "./Chat.module.css";
 import { Message } from "./types";
+import clsx from "clsx";
 
 const INITIAL_MESSAGES: Message[] = [
   {
@@ -20,6 +21,7 @@ const INITIAL_MESSAGES: Message[] = [
 ];
 
 export const Chat = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const api = useMemo(() => new mockChatAPI(), []);
   const [log, setLog] = useState<Message[]>(INITIAL_MESSAGES);
 
@@ -38,11 +40,23 @@ export const Chat = () => {
     [api, log],
   );
 
+  const handleFocus = () => {
+    setIsOpen(true);
+  };
+
+  const containerClasses = clsx(styles.container, {
+    [styles.containerOpen]: isOpen,
+  });
+
   return (
-    <div className={styles.container}>
+    <div className={containerClasses}>
       <Flex vertical height="100%">
         <ChatLog log={log} />
-        <ChatInput onSubmit={handleMessage} />
+        <ChatInput
+          onSubmit={handleMessage}
+          onFocus={handleFocus}
+          isActive={isOpen}
+        />
       </Flex>
     </div>
   );
