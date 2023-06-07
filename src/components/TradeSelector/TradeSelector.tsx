@@ -131,11 +131,11 @@ export const TradeSelector = (props: TradeSelectorProps) => {
         labels={fieldLabels}
       />
       <TradeInput
+        id="trade_selector"
         inputRef={inputRef}
         // inputProps={inputProps}
         value={userInput}
         onChange={handleChange}
-        // label={ariaLabel}
         placeholder={fieldLabels.placeholder}
         initialTrade={currentTrade}
         onEdit={toggleEditMode}

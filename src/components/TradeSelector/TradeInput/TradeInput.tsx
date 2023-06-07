@@ -18,6 +18,7 @@ export type TradeInputProps = {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   inputRef: RefObject<HTMLInputElement>;
   inputProps?: AriaLabelingProps & DOMProps;
+  id?: string;
   value: string;
   className?: string;
   label?: string;
@@ -29,6 +30,7 @@ export type TradeInputProps = {
 
 export const TradeInput = (props: TradeInputProps) => {
   const {
+    id,
     onChange,
     onEdit,
     inputRef,
@@ -39,7 +41,7 @@ export const TradeInput = (props: TradeInputProps) => {
     placeholder,
     initialTrade,
     isEditable,
-    // ...otherProps
+    ...otherProps
   } = props;
   const selectedTrade = initialTrade && !isEditable;
   // const { isFocusVisible, focusProps } = useFocusRing({
@@ -108,7 +110,7 @@ export const TradeInput = (props: TradeInputProps) => {
         <Flex vAlignContent="center">
           <Flex grow paddingRight={isEditable ? "space50" : undefined}>
             <Input
-              // {...hoverProps}
+              id={id}
               {...inputProps}
               type="text"
               placeholder={placeholder}

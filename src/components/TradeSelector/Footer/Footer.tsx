@@ -4,8 +4,8 @@ import { Info } from "@components/Info";
 export const Footer = () => {
   return (
     <Info>
-      You can also choose from the{" "}
-      <Link href="#">full list of professions</Link>.
+      Can't find the trade you are looking for?{" "}
+      <Link href="/trade-chat">Try our chat search</Link>.
     </Info>
   );
 };
