@@ -12,3 +12,14 @@ const AMOUNT_OF_DAYS_TO_BE_ADDED = 1;
 
 export const getTomorrow = (): string =>
   formatDate(addDays(new Date(), AMOUNT_OF_DAYS_TO_BE_ADDED));
+
+export const getCurrentTime = () => {
+  const date = new Date();
+  const formattedTime = date.toLocaleString("en-GB", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true,
+  });
+
+  return formattedTime;
+};
