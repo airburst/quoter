@@ -15,6 +15,7 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+    "jest/globals": true,
   },
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint", "prettier", "jest", "jsx-a11y"],
