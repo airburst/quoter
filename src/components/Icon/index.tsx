@@ -4,6 +4,7 @@ export * from "./FileLinesIcon";
 export * from "./HeadsetIcon";
 export * from "./LightbulbIcon";
 export * from "./MinusIcon";
+export * from "./PaperPlaneIcon";
 export * from "./PlusIcon";
 export * from "./ShieldHalvedIcon";
 export * from "./SquarePlusIcon";
