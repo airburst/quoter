@@ -1,11 +1,12 @@
+import { ReactNode } from "react";
+
 type Suggestion = {
   title: string;
   description: string;
 };
 
 type Prompt = {
-  message: string;
-  handleClick: () => void;
+  component: ReactNode;
 };
 
 export type MessageContents = {

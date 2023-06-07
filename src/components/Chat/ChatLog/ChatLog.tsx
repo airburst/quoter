@@ -9,7 +9,6 @@ import {
 import { Box } from "@twilio-paste/box";
 import { Text } from "@twilio-paste/text";
 import { Stack } from "@twilio-paste/stack";
-import { Button } from "@twilio-paste/button";
 import { Fragment } from "react";
 import { Flex } from "@twilio-paste/flex";
 import styles from "./ChatLog.module.css";
@@ -57,12 +56,10 @@ export const ChatLog = ({ log }: ChatLogProps) => {
               )}
               {prompts && (
                 <Stack spacing="space40" orientation="vertical">
-                  {prompts.map(prompt => {
+                  {prompts.map((prompt, index) => {
                     return (
-                      <Flex key={prompt.message} hAlignContent="right">
-                        <Button variant="primary" onClick={prompt.handleClick}>
-                          {prompt.message}
-                        </Button>
+                      <Flex key={index} hAlignContent="right">
+                        {prompt.component}
                       </Flex>
                     );
                   })}

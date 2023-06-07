@@ -1,15 +1,14 @@
-import { useRouter } from "next/navigation";
 import { Button } from "@twilio-paste/button";
 import { ArrowRightIcon } from "@components/Icon";
 import { Box } from "@twilio-paste/box";
+import { useGoNext } from "@hooks/useGoNext";
 
 type NextButtonProps = {
   href: string;
 };
 
 export const NextButton = ({ href }: NextButtonProps) => {
-  const router = useRouter();
-  const goNext = () => router.push(href);
+  const goNext = useGoNext(href);
 
   return (
     <Box marginBottom="space100">

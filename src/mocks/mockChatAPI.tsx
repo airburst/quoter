@@ -1,8 +1,20 @@
 import { getMessage } from "@components/Chat/getMessage";
 import { Message } from "@components/Chat/types";
+import { useGoNext } from "@hooks/useGoNext";
+import { Button } from "@twilio-paste/button";
 import { delay } from "@utils/general";
 // This service returns a sequence of answers
 // to mock the behaviour of a chatGPT API
+
+const NextLink = () => {
+  const goNext = useGoNext("/location");
+
+  return (
+    <Button variant="primary" onClick={goNext}>
+      Yes, let's continue
+    </Button>
+  );
+};
 
 export const mockAnswers: Message[] = [
   {
@@ -22,12 +34,10 @@ export const mockAnswers: Message[] = [
     message: "Are you happy to get insurance quotes with this match?",
     prompts: [
       {
-        message: "Yes, let's continue",
-        handleClick: () => console.info("yes"),
+        component: <NextLink />,
       },
       {
-        message: "No, it's not quite right",
-        handleClick: () => console.info("no"),
+        component: <Button variant="primary">No, it's not quite right</Button>,
       },
     ],
   },
