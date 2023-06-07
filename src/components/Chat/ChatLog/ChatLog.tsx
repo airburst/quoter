@@ -8,11 +8,10 @@ import {
 } from "@twilio-paste/chat-log";
 import { Box } from "@twilio-paste/box";
 import { Text } from "@twilio-paste/text";
-import { Stack } from "@twilio-paste/stack";
 import { Fragment } from "react";
-import { Flex } from "@twilio-paste/flex";
-import styles from "./ChatLog.module.css";
+import { Prompts } from "./Prompts";
 import { Message } from "../types";
+import styles from "./ChatLog.module.css";
 
 type ChatLogProps = {
   log: Message[];
@@ -54,17 +53,7 @@ export const ChatLog = ({ log }: ChatLogProps) => {
                   </Text>
                 </Box>
               )}
-              {prompts && (
-                <Stack spacing="space40" orientation="vertical">
-                  {prompts.map((prompt, index) => {
-                    return (
-                      <Flex key={index} hAlignContent="right">
-                        {prompt.component}
-                      </Flex>
-                    );
-                  })}
-                </Stack>
-              )}
+              {prompts && <Prompts />}
               {type === "client" && (
                 <ChatMessage variant="outbound">
                   <ChatBubble>{message}</ChatBubble>

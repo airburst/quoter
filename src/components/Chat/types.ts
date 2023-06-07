@@ -1,18 +1,12 @@
-import { ReactNode } from "react";
-
 type Suggestion = {
   title: string;
   description: string;
 };
 
-type Prompt = {
-  component: ReactNode;
-};
-
 export type MessageContents = {
   message: string;
   suggestion?: Suggestion;
-  prompts?: Prompt[];
+  prompts?: boolean;
 };
 
 export type Message = {
