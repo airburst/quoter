@@ -1,12 +1,13 @@
 .container {
   width: 100%;
   display: flex;
-  justify-content: stretch;
   flex-grow: 1;
 }
 
 .container > * {
+  --chat-input-height: 92px;
+
   width: 100%;
-  max-height: 100svh;
+  max-height: calc(100svh - var(--chat-input-height));
   overflow-y: scroll;
 }
