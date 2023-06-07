@@ -15,7 +15,7 @@ export const getTomorrow = (): string =>
 
 export const getCurrentTime = () => {
   const date = new Date();
-  const formattedTime = date.toLocaleString("en-GB", {
+  const formattedTime = date.toLocaleString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
     hour12: true,
