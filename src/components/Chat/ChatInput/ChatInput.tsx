@@ -13,7 +13,7 @@ type ChatInputProps = {
   isActive: boolean;
 };
 
-const MINIMUM_INPUT_LENGTH = 3;
+const MINIMUM_INPUT_LENGTH = 1;
 
 export const ChatInput = ({ onSubmit, onClick, isActive }: ChatInputProps) => {
   const [input, setInput] = useState<string>("");
