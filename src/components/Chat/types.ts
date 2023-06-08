@@ -1,12 +1,12 @@
 type Suggestion = {
   title: string;
   description: string;
+  message: string;
 };
 
 export type MessageContents = {
   message: string;
   suggestion?: Suggestion;
-  prompts?: boolean;
 };
 
 export type Message = {

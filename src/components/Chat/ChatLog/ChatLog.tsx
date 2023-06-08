@@ -16,10 +16,11 @@ import styles from "./ChatLog.module.css";
 
 type ChatLogProps = {
   log: Message[];
+  onClick: () => void;
 };
 
 export const ChatLog = forwardRef(
-  ({ log }: ChatLogProps, ref: ForwardedRef<HTMLDivElement>) => {
+  ({ log, onClick }: ChatLogProps, ref: ForwardedRef<HTMLDivElement>) => {
     return (
       <div className={styles.container}>
         <PasteChatLog>
@@ -27,7 +28,7 @@ export const ChatLog = forwardRef(
             const {
               id,
               type,
-              contents: { message, suggestion, prompts },
+              contents: { message, suggestion },
               time,
             } = entry;
 
@@ -61,11 +62,10 @@ export const ChatLog = forwardRef(
                         {suggestion.description}
                       </Text>
                     </Box>
-                  </AnimatedBox>
-                )}
-                {prompts && (
-                  <AnimatedBox>
-                    <Prompts />
+                    <Heading as="h2" variant="heading20">
+                      {suggestion.message}
+                    </Heading>
+                    <Prompts onClick={onClick} />
                   </AnimatedBox>
                 )}
                 {type === "client" && (

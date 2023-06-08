@@ -16,11 +16,11 @@ export const mockAnswers: Message[] = [
       title: "Photographer",
       description:
         "We define photography as the art or practice of taking, editing, and processing photographs.",
+      message: "Are you happy to get insurance quotes with this match?",
     },
   },
   {
-    message: "Are you happy to get insurance quotes with this match?",
-    prompts: true,
+    message: "Let's try again. Please describe what your business does.",
   },
 ].map(message => getMessage({ ...message }, "server"));
 

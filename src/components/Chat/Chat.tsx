@@ -47,6 +47,16 @@ export const Chat = () => {
     [api, log],
   );
 
+  const handlePrompt = useCallback(async () => {
+    const serverMessage = await api.getAnswer();
+
+    if (serverMessage) {
+      setLog([...log, serverMessage]);
+
+      return;
+    }
+  }, [api, log]);
+
   const handleFocus = () => {
     setIsOpen(true);
   };
@@ -86,7 +96,7 @@ export const Chat = () => {
   return (
     <div className={containerClasses}>
       <Flex vertical height="100%">
-        <ChatLog ref={chatLogRef} log={log} />
+        <ChatLog ref={chatLogRef} log={log} onClick={handlePrompt} />
         <ChatInput
           onSubmit={handleMessage}
           onClick={handleFocus}
