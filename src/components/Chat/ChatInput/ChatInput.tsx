@@ -48,7 +48,8 @@ export const ChatInput = ({ onSubmit, onClick, isActive }: ChatInputProps) => {
 
   return (
     <Box
-      padding="space70"
+      paddingY="space50"
+      paddingX={isActive ? "space50" : "space0"}
       borderTopColor="colorBorder"
       borderTopStyle="solid"
       borderTopWidth={isActive ? "borderWidth10" : "borderWidth0"}

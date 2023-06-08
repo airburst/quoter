@@ -3,9 +3,19 @@
   width: 100%;
 }
 
+.container [data-paste-element="CHAT_LOG"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .containerOpen {
   position: fixed;
   top: 0;
   left: 0;
   height: 100svh;
+}
+
+.containerOpen [data-paste-element="CHAT_LOG"] {
+  padding-left: var(--size-30);
+  padding-right: var(--size-30);
 }
