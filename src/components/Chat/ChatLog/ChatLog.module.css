@@ -11,3 +11,9 @@
   max-height: calc(100svh - var(--chat-input-height));
   overflow-y: scroll;
 }
+
+.chatBubble [data-paste-element="CHAT_BUBBLE"] {
+  color: var(--color-neutral-700);
+  background-color: var(--color-azure-200);
+  border-radius: var(--radius-3) var(--radius-3) 0 var(--radius-3);
+}

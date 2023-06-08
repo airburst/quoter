@@ -9,13 +9,13 @@ import { getMessage } from "../getMessage";
 
 type ChatInputProps = {
   onSubmit: (message: Message) => void;
-  onFocus: () => void;
+  onClick: () => void;
   isActive: boolean;
 };
 
-const MINIMUM_INPUT_LENGTH = 3;
+const MINIMUM_INPUT_LENGTH = 1;
 
-export const ChatInput = ({ onSubmit, onFocus, isActive }: ChatInputProps) => {
+export const ChatInput = ({ onSubmit, onClick, isActive }: ChatInputProps) => {
   const [input, setInput] = useState<string>("");
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -42,13 +42,14 @@ export const ChatInput = ({ onSubmit, onFocus, isActive }: ChatInputProps) => {
     }
   };
 
-  const handleFocus = () => {
-    onFocus();
+  const handleClick = () => {
+    onClick();
   };
 
   return (
     <Box
-      padding="space70"
+      paddingY="space50"
+      paddingX={isActive ? "space50" : "space0"}
       borderTopColor="colorBorder"
       borderTopStyle="solid"
       borderTopWidth={isActive ? "borderWidth10" : "borderWidth0"}
@@ -73,7 +74,7 @@ export const ChatInput = ({ onSubmit, onFocus, isActive }: ChatInputProps) => {
         value={input}
         onChange={handleChange}
         onKeyUp={handleKeyUp}
-        onFocus={handleFocus}
+        onClick={handleClick}
       />
     </Box>
   );

@@ -3,7 +3,11 @@ import { Flex } from "@twilio-paste/flex";
 import { useGoNext } from "@hooks/useGoNext";
 import { Button } from "@twilio-paste/button";
 
-export const Prompts = () => {
+type PromptsProps = {
+  onClick: () => void;
+};
+
+export const Prompts = ({ onClick }: PromptsProps) => {
   const goNext = useGoNext("/location");
 
   return (
@@ -14,7 +18,9 @@ export const Prompts = () => {
         </Button>
       </Flex>
       <Flex hAlignContent="right">
-        <Button variant="primary">No, it's not quite right</Button>
+        <Button variant="primary" onClick={onClick}>
+          No, it's not quite right
+        </Button>
       </Flex>
     </Stack>
   );
