@@ -155,6 +155,10 @@ body {
   background-color: var(--color-background);
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 body > div:first-of-type {
   height: 100%;
   display: flex;

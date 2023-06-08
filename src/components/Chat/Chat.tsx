@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState, useEffect, useRef } from "react";
 import { Flex } from "@twilio-paste/flex";
 import { ChatLog } from "@components/Chat/ChatLog";
 import { ChatInput } from "@components/Chat/ChatInput";
@@ -21,9 +21,16 @@ const INITIAL_MESSAGES: Message[] = [
 ];
 
 export const Chat = () => {
+  const chatLogRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const api = useMemo(() => new mockChatAPI(), []);
   const [log, setLog] = useState<Message[]>(INITIAL_MESSAGES);
+
+  const scrollToBottom = () => {
+    chatLogRef.current?.lastElementChild?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
   const handleMessage = useCallback(
     async (message: Message) => {
@@ -48,13 +55,41 @@ export const Chat = () => {
     [styles.containerOpen]: isOpen,
   });
 
+  const handleKeyUp = (event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keyup", handleKeyUp, { passive: true });
+
+    return () => window.removeEventListener("keyup", handleKeyUp);
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("no-scroll");
+
+      return;
+    }
+
+    document.body.classList.remove("no-scroll");
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (chatLogRef.current && isOpen) {
+      scrollToBottom();
+    }
+  }, [log, isOpen]);
+
   return (
     <div className={containerClasses}>
       <Flex vertical height="100%">
-        <ChatLog log={log} />
+        <ChatLog ref={chatLogRef} log={log} />
         <ChatInput
           onSubmit={handleMessage}
-          onFocus={handleFocus}
+          onClick={handleFocus}
           isActive={isOpen}
         />
       </Flex>
