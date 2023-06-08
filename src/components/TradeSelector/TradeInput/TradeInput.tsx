@@ -41,7 +41,6 @@ export const TradeInput = (props: TradeInputProps) => {
     placeholder,
     initialTrade,
     isEditable,
-    ...otherProps
   } = props;
   const selectedTrade = initialTrade && !isEditable;
   // const { isFocusVisible, focusProps } = useFocusRing({
