@@ -30,3 +30,8 @@
 .TradeSelectorListTitleLink {
   color: var(--color-text-medium);
 }
+
+.container [data-paste-element="INPUT_ELEMENT"] {
+  /* Prevent browser from automatically zooming in on input element focus */
+  font-size: 16px;
+}

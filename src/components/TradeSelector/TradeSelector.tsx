@@ -11,6 +11,7 @@ import { TradeInput } from "./TradeInput";
 import { Text } from "@twilio-paste/text";
 import { SearchResults } from "./SearchResults";
 import { Footer } from "./Footer";
+import styles from "./styles/shared.module.css";
 
 export const ERROR_MESSAGE_SERVICE_UNAVAILABLE =
   "The service is currently unavailable. Please try again later";
@@ -123,7 +124,7 @@ export const TradeSelector = (props: TradeSelectorProps) => {
   }, [minInput, fetchTrades, userInput.length]);
 
   return (
-    <Box paddingY="space50">
+    <Box paddingY="space50" className={styles.container}>
       {/* <div ref={ref} className={classes} data-cy={props["data-cy"]}> */}
       <Header
         isOpen={!hideLabel}

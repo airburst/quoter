@@ -9,13 +9,20 @@
 }
 
 .containerOpen {
+  --container-height: 100svh;
   position: fixed;
   top: 0;
   left: 0;
-  height: 100svh;
+  height: var(--container-height);
 }
 
 .containerOpen [data-paste-element="CHAT_LOG"] {
   padding-left: var(--size-30);
   padding-right: var(--size-30);
+}
+
+.container [data-paste-element="INPUT_ELEMENT"],
+.containerOpen [data-paste-element="INPUT_ELEMENT"] {
+  /* Prevent browser from automatically zooming in on input element focus */
+  font-size: 16px;
 }
