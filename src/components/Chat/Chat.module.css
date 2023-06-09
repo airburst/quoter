@@ -19,3 +19,9 @@
   padding-left: var(--size-30);
   padding-right: var(--size-30);
 }
+
+.container [data-paste-element="INPUT_ELEMENT"],
+.containerOpen [data-paste-element="INPUT_ELEMENT"] {
+  /* Prevent browser from automatically zooming in on input element focus */
+  font-size: 16px;
+}
