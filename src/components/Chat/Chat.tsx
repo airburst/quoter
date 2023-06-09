@@ -1,4 +1,11 @@
-import { useCallback, useMemo, useState, useEffect, useRef } from "react";
+import {
+  useCallback,
+  useMemo,
+  useState,
+  useEffect,
+  useRef,
+  CSSProperties,
+} from "react";
 import { Flex } from "@twilio-paste/flex";
 import { ChatLog } from "@components/Chat/ChatLog";
 import { ChatInput } from "@components/Chat/ChatInput";
@@ -8,6 +15,8 @@ import { mockChatAPI } from "@/mocks/mockChatAPI";
 import styles from "./Chat.module.css";
 import { Message } from "./types";
 import clsx from "clsx";
+import { useOnScreenKeyboardScrollFix } from "@hooks/useOnScreenKeyboardScrollFix";
+import { useDocumentHeight } from "@hooks/useDocumentHeight";
 
 const INITIAL_MESSAGES: Message[] = [
   {
@@ -21,6 +30,9 @@ const INITIAL_MESSAGES: Message[] = [
 ];
 
 export const Chat = () => {
+  useOnScreenKeyboardScrollFix();
+
+  const height = useDocumentHeight();
   const chatLogRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const api = useMemo(() => new mockChatAPI(), []);
@@ -94,7 +106,14 @@ export const Chat = () => {
   }, [log, isOpen]);
 
   return (
-    <div className={containerClasses}>
+    <div
+      className={containerClasses}
+      style={
+        {
+          "--container-height": `${height}px`,
+        } as CSSProperties
+      }
+    >
       <Flex vertical height="100%">
         <ChatLog ref={chatLogRef} log={log} onClick={handlePrompt} />
         <ChatInput

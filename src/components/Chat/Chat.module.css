@@ -9,10 +9,11 @@
 }
 
 .containerOpen {
+  --container-height: 100svh;
   position: fixed;
   top: 0;
   left: 0;
-  height: 100svh;
+  height: var(--container-height);
 }
 
 .containerOpen [data-paste-element="CHAT_LOG"] {
